@@ -1,7 +1,10 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  images: {
+    domains: ["www.hiacuity.com"], // Add allowed domains here
+  },
+  // Other config options
 };
 
 export default nextConfig;

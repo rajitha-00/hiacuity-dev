@@ -11,6 +11,25 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        primary: {
+          main: "#3BB54A",
+          light: "#D9F2DC",
+          dark: "#194D1F",
+          foreground: "hsl(var(--primary-foreground))",
+        },
+        text: {
+          title: "#031602",
+          primary: "#313131",
+          greyDark: "#616161",
+          grey: "#919191",
+          greyLight: "#A4A5A7",
+        },
+        alert: {
+          success: "#379E08",
+          info: "#005DFF",
+          error: "#EC4A4A",
+          warning: "#F59E0B",
+        },
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         card: {
@@ -20,10 +39,6 @@ const config: Config = {
         popover: {
           DEFAULT: "hsl(var(--popover))",
           foreground: "hsl(var(--popover-foreground))",
-        },
-        primary: {
-          DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
@@ -56,6 +71,28 @@ const config: Config = {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+      },
+      keyframes: {
+        "accordion-down": {
+          from: {
+            height: "0",
+          },
+          to: {
+            height: "var(--radix-accordion-content-height)",
+          },
+        },
+        "accordion-up": {
+          from: {
+            height: "var(--radix-accordion-content-height)",
+          },
+          to: {
+            height: "0",
+          },
+        },
+      },
+      animation: {
+        "accordion-down": "accordion-down 0.2s ease-out",
+        "accordion-up": "accordion-up 0.2s ease-out",
       },
     },
   },

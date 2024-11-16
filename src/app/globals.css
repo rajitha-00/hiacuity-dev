@@ -3,7 +3,66 @@
 @tailwind utilities;
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Poppins, sans-serif;
+}
+/* Custom neon color and animation */
+.glass-card {
+  background: rgba(55, 255, 20, 0.276);
+}
+@layer utilities {
+  .neon-outline {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+  }
+  .bg-radial-gradient {
+    background: radial-gradient(circle at center, rgba(114, 244, 155, 0.3), rgba(132, 252, 146, 0.1), transparent);
+  }
+  .neon-outline::before,
+  .neon-outline::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 2px; /* Space between button and outline */
+    box-sizing: content-box;
+    z-index: -1;
+    border: 2px solid rgba(57, 255, 20, 1); /* Neon green outline color */
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  .neon-outline::before {
+    border-color: rgba(57, 255, 20, 0.5);
+    animation: neon-outline-pulse 2s ease-in-out infinite;
+  }
+
+  .neon-outline::after {
+    border-color: rgba(57, 255, 20, 1);
+    animation: neon-outline-pulse 2s ease-in-out infinite alternate;
+  }
+
+  /* Show outline on hover */
+  .neon-outline:hover::before,
+  .neon-outline:hover::after {
+    opacity: 1;
+  }
+}
+
+/* Keyframes for pulsing neon outline effect */
+@keyframes neon-outline-pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
 }
 
 @layer base {
