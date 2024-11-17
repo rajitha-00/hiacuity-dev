@@ -1,21 +1,24 @@
 "use client";
+import { Button } from "@/components/ui/button";
+import { ArrowRight } from "@/icons/Icons";
 import Image from "next/image";
-import HiringHomePageImage from "../assets/homepage/HiringHomePage.svg";
-import SmartScreeningImage from "../assets/homepage/SmartScreening.svg";
-import PartnerInsightsImage from "../assets/homepage/PartnerInsights.svg";
-import EffortlessHiringImage from "../assets/homepage/EffortlessHiring.svg";
-import JobOpeningsImage from "../assets/homepage/JobOpenings.svg";
-import AssesmentImage from "../assets/homepage/Assesment.svg";
-
 import { Fade } from "react-awesome-reveal";
+import HiringHomePageImage from "../assets/homepage/HiringHomePage.svg";
 import { SectionLeftImage } from "@/components/sectionLeft";
 import { AssesmentDemo, SectionRightImage } from "@/components/sectionRight";
+import EffortlessHiringImage from "../assets/homepage/EffortlessHiring.svg";
+import SmartScreeningImage from "../assets/homepage/SmartScreening.svg";
+import PartnerInsightsImage from "../assets/homepage/PartnerInsights.svg";
+import JobOpeningsImage from "../assets/homepage/JobOpenings.svg";
+import AssesmentImage from "../assets/homepage/Assesment.svg";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { FAQ } from "@/constants";
+
 export default function Home() {
   return (
-    <div>
-      <div className="relative isolate px-6 pt-14 lg:px-8 max-w-[1600px] mx-auto ">
+    <div className="flex w-full flex-col items-center  justify-center">
+      {/* Hero Section: Displays the main introduction and key messaging of the website */}
+      <div className="relative isolate px-6 pt-14 lg:px-8 w-full max-w-[1600px] mx-auto ">
         <div
           style={{
             background: "radial-gradient(circle, rgba(41,250,66,0.1) 5%, rgba(111,250,170,0.1) 40%, transparent 70%)",
@@ -43,10 +46,13 @@ export default function Home() {
               </p>
             </Fade>
             <Fade direction="up" triggerOnce delay={400}>
-              <div className=" flex  gap-x-6 justify-center lg:justify-start">
-                <button className="relative rounded-xl bg-primary-light px-4 py-2.5 text-sm font-semibold text-primary-dark shadow-md outline outline-2 outline-transparent hover:outline-neon animate-outline transition duration-300 ease-in-out">
-                  Get started <span aria-hidden="true">→</span>
-                </button>
+              <div className=" flex  gap-x-6 justify-center  lg:justify-start">
+                <Button className="relative rounded-xl bg-primary-light px-4 py-2.5 text-sm font-semibold text-primary-dark ">
+                  Get started{" "}
+                  <span aria-hidden="true">
+                    <ArrowRight />
+                  </span>
+                </Button>
               </div>
             </Fade>
           </div>
@@ -70,7 +76,8 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="relative isolate px-6 pt-40 lg:px-8 max-w-[1600px] mx-auto ">
+      {/* Enhance Your Management Section: Highlights features of our tools to improve management */}
+      <div className="relative isolate px-6 md:pt-40 w-full lg:px-8 max-w-[1600px] mx-auto ">
         <div
           style={{
             background: "radial-gradient(circle, rgba(41,250,66,0.1) 5%, rgba(111,250,170,0.1) 40%, transparent 70%)",
@@ -78,15 +85,15 @@ export default function Home() {
           className="absolute hidden md:block -right-[35%] top-[30%] z-0 w-[800px] h-[800px] rounded-full "
         ></div>
         <div className="text-center  w-full flex flex-col gap-5 z-10">
-          <h2 className="text-balance text-7xl font-extrabold tracking-tight ">
+          <h2 className="text-balance font-extrabold tracking-tight ">
             <Fade direction="up" triggerOnce delay={0}>
-              <span className="text-text-title font-bold md:text-6xl text-5xl">
+              <span className="text-text-title font-bold md:text-6xl text-4xl">
                 Enhance Your Corporate Management Efforts with AI!
               </span>
             </Fade>
           </h2>
           <Fade direction="up" triggerOnce delay={300}>
-            <p className=" text-pretty text-lg font-medium text-text-primary text-center sm:text-xl/8">
+            <p className=" text-pretty md:text-lg font-medium text-text-primary text-center sm:text-xl/8">
               HiAcuity is free to trial for as long as you’d like
             </p>
           </Fade>
@@ -125,7 +132,9 @@ export default function Home() {
           />
         </div>
       </div>
-      <div className="relative isolate px-6 pt-40 lg:px-8 max-w-[1600px] mx-auto ">
+
+      {/* Hiring Solutions Section: Showcases hiring services and solutions offered */}
+      <div className="relative isolate px-6 pt-20 md:pt-40 w-full lg:px-8 max-w-[1600px] mx-auto ">
         <div
           style={{
             background: "radial-gradient(circle, rgba(41,250,66,0.1) 5%, rgba(111,250,170,0.1) 40%, transparent 70%)",
@@ -133,13 +142,13 @@ export default function Home() {
           className="absolute hidden md:block -left-[35%] top-[40%] z-0 w-[800px] h-[800px] rounded-full "
         ></div>
         <div className="text-center z-10  w-full flex flex-col gap-5">
-          <h2 className="text-balance text-7xl font-extrabold tracking-tight ">
+          <h2 className="text-balance font-extrabold tracking-tight ">
             <Fade direction="up" triggerOnce delay={0}>
-              <span className="text-text-title font-bold md:text-6xl text-5xl">Hiring Solutions</span>
+              <span className="text-text-title font-bold md:text-6xl text-4xl">Hiring Solutions</span>
             </Fade>
           </h2>
         </div>
-        <div className="flex flex-col z-10 gap-32 pt-20">
+        <div className="flex flex-col z-10 gap-16  md:gap-32 pt-10 md:pt-20">
           <SectionLeftImage
             title="Smart Screening"
             description=" Automated filtering quickly identifies top candidates, making it easy to spot the most qualified
@@ -157,8 +166,10 @@ export default function Home() {
           />
         </div>
       </div>
-      <div className="w-full h-auto py-10 bg-primary-dark mt-40">
-        <div className="relative isolate px-6 py-20 lg:px-8 max-w-[1600px] mx-auto">
+
+      {/* Assessment Demo Section: Provides a demo of the assessment process */}
+      <div className="h-auto py-10 bg-primary-dark w-full mt-20 md:mt-40">
+        <div className="relative isolate px-6 md:py-8 lg:px-8 max-w-[1600px] mx-auto">
           <AssesmentDemo
             title="Assement Demo"
             description="A seamless recruitment process is achieved by using intuitive tools that simplify each step, making it easier for recruiters to manage and track progress. Quick onboarding is facilitated through automated workflows, allowing hiring to accelerate efficiently. This enhanced approach improves overall satisfaction for both candidates and recruiters, creating a positive and streamlined experience."
@@ -167,18 +178,25 @@ export default function Home() {
           />
         </div>
       </div>
-      <div className="relative isolate px-6 pt-40 lg:px-8 max-w-[1600px] mx-auto ">
-        <div className="text-center z-10  w-full flex flex-col gap-5">
-          <h2 className="text-balance text-7xl font-extrabold tracking-tight ">
+
+      {/* FAQ Section: Lists frequently asked questions to address common user queries */}
+      <div className="relative isolate px-6 mt-20 md:pt-40 w-full lg:px-8 max-w-[1600px] mx-auto">
+        <div className="text-center z-10 w-full flex flex-col gap-5">
+          <h2 className="text-balance font-extrabold tracking-tight">
             <Fade direction="up" triggerOnce delay={0}>
-              <span className="text-text-title font-bold md:text-6xl text-5xl">Frequently Asked Questions (FAQ)</span>
+              <span className="text-text-title font-bold md:text-6xl text-4xl">Frequently Asked Questions (FAQ)</span>
             </Fade>
           </h2>
         </div>
-        <Accordion type="single" collapsible className="flex mt-20 z-10 flex-col gap-3">
+        <Accordion
+          type="single"
+          collapsible
+          className="flex w-full mt-10 md:mt-20 z-10 flex-col gap-3"
+          defaultValue={FAQ[0].question}
+        >
           {FAQ.map((faq) => (
             <AccordionItem key={faq.question} value={faq.question}>
-              <AccordionTrigger className="text-text-primary shadow-sm border bg-white z-10 hover:text-primary-dark px-5 data-[state=open]:text-primary-dark data-[state=open]:shadow-md">
+              <AccordionTrigger className="text-text-primary shadow-sm border bg-white z-10 w-full hover:text-primary-dark data-[state=open]:text-primary-dark data-[state=open]:shadow-md">
                 {faq.question}
               </AccordionTrigger>
               <AccordionContent>

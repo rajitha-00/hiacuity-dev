@@ -1,7 +1,9 @@
 "use client";
 
+import { ArrowRight } from "@/icons/Icons";
+import { Button } from "../ui/button";
 import { Input } from "../ui/input";
-import { Select, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectTrigger, SelectValue } from "../ui/select";
+import { Select, SelectContent, SelectGroup, SelectItem, SelectTrigger, SelectValue } from "../ui/select";
 
 interface IAssesmentDemo {
   label?: string;
@@ -29,16 +31,16 @@ export const AssesmentDemo = (props: IAssesmentDemo) => {
           ${hasPadding ? "py-20 px-10" : ""}
         `}
       >
-        <div className="text-center w-full justify-center  lg:text-start max-w-2xl">
-          <p className="text-lg font-medium w-[110px] text-justify bg-primary-light px-2 rounded-md text-green-700 mr-2 mb-4">
-            {label}
-          </p>
-          <h2 className="text-5xl font-bold text-primary-light">{title}</h2>
-          <p className="mt-2 text-justify text-gray-50">{description}</p>
+        <div className="text-start md:text-center w-full justify-center  lg:text-start max-w-2xl">
+          <h2 className="text-3xl md:text-5xl font-semibold text-primary-light">{title}</h2>
+          <p className="mt-2 text-start text-sm md:text-md md:text-justify text-gray-50">{description}</p>
         </div>
         <div className=" w-full justify-center lg:text-start  max-w-2xl">
           <div>
-            <div className="form backdrop-blur-md bg-white bg-opacity-30 bg-blur-sm p-10 rounded-3xl border">
+            <div className="form backdrop-blur-md bg-white bg-opacity-30 bg-blur-sm p-10 rounded-xl border">
+              <p className="text-lg font-medium w-[110px] text-justify bg-primary-light px-2 rounded-md text-green-700 mr-2 mb-4">
+                {label}
+              </p>
               <Input type="text" placeholder="Ask for Demo" className="text-white placeholder:text-white" />
               <Select>
                 <SelectTrigger className="w-full mt-3 text-white">
@@ -46,18 +48,18 @@ export const AssesmentDemo = (props: IAssesmentDemo) => {
                 </SelectTrigger>
                 <SelectContent>
                   <SelectGroup>
-                    <SelectLabel>Fruits</SelectLabel>
-                    <SelectItem value="apple">Apple</SelectItem>
-                    <SelectItem value="banana">Banana</SelectItem>
-                    <SelectItem value="blueberry">Blueberry</SelectItem>
-                    <SelectItem value="grapes">Grapes</SelectItem>
-                    <SelectItem value="pineapple">Pineapple</SelectItem>
+                    <SelectItem value="english">English</SelectItem>
+                    <SelectItem value="spanish">Spanish</SelectItem>
+                    <SelectItem value="german">German</SelectItem>
                   </SelectGroup>
                 </SelectContent>
               </Select>
-              <button className="mt-3 w-auto inline-flex items-center px-4 py-2 text-sm font-medium text-primary-dark bg-primary-light shadow-sm rounded-lg ">
-                {buttonLabel} <span className="ml-2">→</span>
-              </button>
+              <Button className="relative mt-4 rounded-xl bg-primary-light px-4 py-2.5 text-sm font-semibold text-primary-dark shadow-md outline outline-2 outline-transparent hover:outline-neon animate-outline transition duration-300 ease-in-out">
+                {buttonLabel}{" "}
+                <span aria-hidden="true">
+                  <ArrowRight />
+                </span>
+              </Button>
             </div>
           </div>
         </div>

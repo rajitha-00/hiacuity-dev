@@ -1,6 +1,8 @@
 "use client";
+import { ArrowRight } from "@/icons/Icons";
 import Image from "next/image";
 import { Fade } from "react-awesome-reveal";
+import { Button } from "../ui/button";
 
 interface ISectionRightImage {
   label?: string;
@@ -26,16 +28,19 @@ export const SectionRightImage = (props: ISectionRightImage) => {
     >
       <div
         className={`mx-auto flex flex-col lg:flex-row gap-10 items-center justify-between
-          ${hasPadding ? "py-20 px-16" : ""}
+          ${hasPadding ? "py-5 md:py-20 px-5 md:px-16" : ""}
         `}
       >
-        <div className="text-center w-full max-w-2xl justify-center lg:text-start">
-          <p className="text-lg font-semibold text-green-700 mr-2 mb-4">{label}</p>
-          <h2 className="text-5xl font-bold text-text-primary">{title}</h2>
-          <p className="mt-2 text-justify text-text-greyDark">{description}</p>
-          <button className="mt-4 inline-flex items-center px-4 py-2 text-sm font-medium text-primary-dark bg-white bg-opacity-20 rounded-lg hover:bg-primary-main backdrop-blur-sm border border-green-300 hover:bg-opacity-30">
-            {buttonLabel} <span className="ml-2">→</span>
-          </button>
+        <div className="text-start md:text-center w-full max-w-2xl justify-center lg:text-start">
+          <p className="text-lg font-semibold text-green-700 mr-2 md:mb-4">{label}</p>
+          <h2 className="text-3xl md:text-5xl font-semibold text-text-primary">{title}</h2>
+          <p className="mt-2 text-start text-sm md:text-md md:text-justify text-text-greyDark">{description}</p>
+          <Button className="relative mt-4 rounded-xl bg-primary-light px-4 py-2.5 text-sm font-semibold text-primary-dark shadow-md outline outline-2 outline-transparent hover:outline-neon animate-outline transition duration-300 ease-in-out">
+            {buttonLabel}{" "}
+            <span aria-hidden="true">
+              <ArrowRight />
+            </span>
+          </Button>
         </div>
         <div className="relative w-full max-w-2xl h-auto" style={{ aspectRatio: "16 / 10" }}>
           <Fade triggerOnce delay={100}>

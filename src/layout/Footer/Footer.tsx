@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export const Footer = () => {
   return (
-    <div className="justify-center items-center mt-40 bg-[#1B1D21] z-20">
+    <div className="justify-center items-center mt-20 md:mt-40 bg-[#1B1D21] z-20">
       <div className=" w-full py-8 mx-auto px-10 max-w-[1600px] ">
         <div className="flex flex-row flex-wrap justify-between gap-10 py-10">
           <div className="flex flex-col gap-5 max-w-lg">
@@ -59,8 +59,12 @@ export const Footer = () => {
               <p className="text-primary-main font-inter font-[600]">News Letters</p>
               <div className="flex flex-col gap-5">
                 <div className="flex">
-                  <Input type="email" placeholder="Email" className="text-white placeholder:text-white" />
-                  <Button className="bg-primary-light text-primary-dark">Request Demo</Button>
+                  <Input
+                    type="email"
+                    placeholder="Email"
+                    className="text-white placeholder:text-white rounded-l-md rounded-r-none"
+                  />
+                  <Button className="bg-primary-light text-primary-dark rounded-r-md rounded-l-none">Subscribe</Button>
                 </div>
 
                 <p className="text-white text-sm  text-justify">
