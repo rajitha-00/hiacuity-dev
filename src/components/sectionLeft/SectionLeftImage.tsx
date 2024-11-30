@@ -8,7 +8,7 @@ interface ISectionLeftImage {
   label?: string;
   title: string;
   description: string;
-  buttonLabel: string;
+  buttonLabel?: string;
   imageSrc: string;
   hasBg?: boolean;
   hasPadding?: boolean;
@@ -21,7 +21,7 @@ export const SectionLeftImage = (props: ISectionLeftImage) => {
       className={`relative mx-auto w-full h-auto  z-10
         ${
           hasBg
-            ? "bg-radial-gradient backdrop-blur-md rounded-3xl border shadow-lg bg-opacity-30 border-primary-light"
+            ? "bg-gradient-to-bl from-[rgba(210,240,212,0.4)] via-[rgba(210,240,212,0.2)] to-transparent backdrop-blur-md rounded-3xl border shadow-lg border-primary-light/30 hover:shadow-xl  transition-all duration-500 ease-out hover:scale-[1.01]"
             : "border-transparent"
         }
       `}
@@ -42,15 +42,25 @@ export const SectionLeftImage = (props: ISectionLeftImage) => {
           </Fade>
         </div>
         <div className="text-start md:text-center w-full max-w-2xl justify-center lg:text-start">
-          <p className="text-lg font-semibold text-green-700 mr-2 md:mb-4">{label}</p>
-          <h2 className="text-3xl md:text-5xl font-semibold text-text-primary">{title}</h2>
-          <p className="mt-2 text-start text-sm md:text-md md:text-justify text-text-greyDark">{description}</p>
-          <Button className="relative mt-4 rounded-xl bg-primary-light px-4 py-2.5 text-sm font-semibold text-primary-dark shadow-md outline outline-2 outline-transparent hover:outline-neon animate-outline transition duration-300 ease-in-out">
-            {buttonLabel}{" "}
-            <span aria-hidden="true">
-              <ArrowRight />
-            </span>
-          </Button>
+          <Fade triggerOnce direction="up" delay={100}>
+            <p className="text-lg font-semibold text-green-700 mr-2 md:mb-4">{label}</p>
+          </Fade>
+          <Fade triggerOnce direction="up" delay={200}>
+            <h2 className="text-3xl md:text-5xl font-semibold text-text-primary">{title}</h2>
+          </Fade>
+          <Fade triggerOnce direction="up" delay={300}>
+            <p className="mt-2 text-start text-sm md:text-lg md:text-justify text-text-primary">{description}</p>
+          </Fade>
+          <Fade triggerOnce direction="up" delay={400}>
+            {buttonLabel && (
+              <Button className="relative mt-4 rounded-xl bg-primary-light px-4 py-2.5 text-sm font-semibold text-primary-dark shadow-md    transition duration-300 ease-in-out">
+                {buttonLabel}{" "}
+                <span aria-hidden="true">
+                  <ArrowRight />
+                </span>
+              </Button>
+            )}
+          </Fade>
         </div>
       </div>
     </div>

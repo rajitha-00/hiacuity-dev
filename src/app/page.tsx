@@ -77,7 +77,7 @@ export default function Home() {
       </div>
 
       {/* Enhance Your Management Section: Highlights features of our tools to improve management */}
-      <div className="relative isolate px-6 md:pt-40 w-full lg:px-8 max-w-[1600px] mx-auto ">
+      <div className="relative isolate px-6 mt-20 md:mt-40 w-full lg:px-8 max-w-[1600px] mx-auto ">
         <div
           style={{
             background: "radial-gradient(circle, rgba(41,250,66,0.1) 5%, rgba(111,250,170,0.1) 40%, transparent 70%)",
@@ -168,7 +168,7 @@ export default function Home() {
       </div>
 
       {/* Assessment Demo Section: Provides a demo of the assessment process */}
-      <div className="h-auto py-10 bg-primary-dark w-full mt-20 md:mt-40">
+      <div className="h-auto py-10 bg-text-title w-full mt-20 md:mt-40">
         <div className="relative isolate px-6 md:py-8 lg:px-8 max-w-[1600px] mx-auto">
           <AssesmentDemo
             title="Assement Demo"
@@ -180,7 +180,7 @@ export default function Home() {
       </div>
 
       {/* FAQ Section: Lists frequently asked questions to address common user queries */}
-      <div className="relative isolate px-6 mt-20 md:pt-40 w-full lg:px-8 max-w-[1600px] mx-auto">
+      <div className="relative isolate px-6 pt-20 md:pt-40 w-full lg:px-8 max-w-[1600px] mx-auto ">
         <div className="text-center z-10 w-full flex flex-col gap-5">
           <h2 className="text-balance font-extrabold tracking-tight">
             <Fade direction="up" triggerOnce delay={0}>
@@ -196,7 +196,7 @@ export default function Home() {
         >
           {FAQ.map((faq) => (
             <AccordionItem key={faq.question} value={faq.question}>
-              <AccordionTrigger className="text-text-primary shadow-sm border bg-white z-10 w-full hover:text-primary-dark data-[state=open]:text-primary-dark data-[state=open]:shadow-md">
+              <AccordionTrigger className="text-text-primary px-5 shadow-sm border bg-white z-10 w-full hover:text-primary-dark data-[state=open]:text-primary-dark data-[state=open]:shadow-md">
                 {faq.question}
               </AccordionTrigger>
               <AccordionContent>

@@ -1,4 +1,4 @@
-"use client";
+"use client"; // Declare the client component usage
 
 import { Button } from "@/components/ui/button";
 import { Fade } from "react-awesome-reveal";
@@ -35,7 +35,7 @@ export default function NotFound() {
         <Fade triggerOnce direction="up">
           <Button onClick={navigateToHome}>
             <div
-              className={`inline-flex items-center flex-none rounded-md px-3 py-2 text-md font-[600] font-poppins ${"bg-accentColor hover:text-white text-primary-dark"}`}
+              className={`inline-flex items-center flex-none rounded-md px-3 py-2 text-md font-[600] font-poppins bg-accentColor hover:text-white text-primary-dark`}
             >
               Back to Homepage
             </div>

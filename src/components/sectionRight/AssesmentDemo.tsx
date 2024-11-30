@@ -32,29 +32,39 @@ export const AssesmentDemo = (props: IAssesmentDemo) => {
         `}
       >
         <div className="text-start md:text-center w-full justify-center  lg:text-start max-w-2xl">
+          <p className="text-lg font-medium w-[110px] text-justify bg-primary-light px-2 rounded-md text-green-700 mr-2 mb-4">
+            {label}
+          </p>
           <h2 className="text-3xl md:text-5xl font-semibold text-primary-light">{title}</h2>
-          <p className="mt-2 text-start text-sm md:text-md md:text-justify text-gray-50">{description}</p>
+          <p className="mt-2 text-start text-sm md:text-lg md:text-justify text-gray-50">{description}</p>
         </div>
         <div className=" w-full justify-center lg:text-start  max-w-2xl">
           <div>
             <div className="form backdrop-blur-md bg-white bg-opacity-30 bg-blur-sm p-10 rounded-xl border">
-              <p className="text-lg font-medium w-[110px] text-justify bg-primary-light px-2 rounded-md text-green-700 mr-2 mb-4">
-                {label}
-              </p>
-              <Input type="text" placeholder="Ask for Demo" className="text-white placeholder:text-white" />
-              <Select>
-                <SelectTrigger className="w-full mt-3 text-white">
-                  <SelectValue placeholder="Select a Lanugae" className="text-white " />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectGroup>
-                    <SelectItem value="english">English</SelectItem>
-                    <SelectItem value="spanish">Spanish</SelectItem>
-                    <SelectItem value="german">German</SelectItem>
-                  </SelectGroup>
-                </SelectContent>
-              </Select>
-              <Button className="relative mt-4 rounded-xl bg-primary-light px-4 py-2.5 text-sm font-semibold text-primary-dark shadow-md outline outline-2 outline-transparent hover:outline-neon animate-outline transition duration-300 ease-in-out">
+              <div className="mt-4">
+                <p className="text-white text-xs">Ask for Demo</p>
+                <Input
+                  type="text"
+                  placeholder="Ask for Demo"
+                  className="text-text-primary mt-2 placeholder:text-text-greyDark"
+                />
+              </div>
+              <div className="mt-4">
+                <p className="text-white text-xs">Select a Language</p>
+                <Select>
+                  <SelectTrigger className="w-full mt-3 text-text-primary">
+                    <SelectValue placeholder="Select a Language" className="text-text-primary mt-2" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectGroup>
+                      <SelectItem value="english">English</SelectItem>
+                      <SelectItem value="spanish">Spanish</SelectItem>
+                      <SelectItem value="german">German</SelectItem>
+                    </SelectGroup>
+                  </SelectContent>
+                </Select>
+              </div>
+              <Button className="relative mt-6 rounded-xl bg-primary-light px-4 py-2.5 text-sm font-semibold text-primary-dark shadow-md  transition duration-300 ease-in-out">
                 {buttonLabel}{" "}
                 <span aria-hidden="true">
                   <ArrowRight />

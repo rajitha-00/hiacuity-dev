@@ -1,6 +1,6 @@
 "use client";
 
-import * as React from "react";
+import React from "react";
 import Link from "next/link";
 
 import { cn } from "@/lib/utils";
@@ -51,11 +51,11 @@ export const Header = () => {
       <header className="fixed inset-x-0 top-0 z-50 px-3  my-2 ">
         <nav
           aria-label="Global"
-          className="flex px-5 bg-primary-dark rounded-full shadow-md shadow-slate-800 w-auto lg:max-w-[1600px] mx-auto items-center justify-between py-2 lg:px-8 "
+          className="flex px-4 bg-primary-dark rounded-full shadow-md shadow-slate-800 w-auto lg:max-w-[1600px] mx-auto items-center justify-between py-2  "
         >
           <div className="flex gap-5 items-center">
             <div className="flex lg:flex-1">
-              <Link href="/" passHref className="-m-1.5 p-1.5">
+              <Link href="/" passHref className="px-2">
                 <span className="sr-only">HiAcuity</span>
                 <Image
                   alt="HiAcuity Logo"
@@ -153,14 +153,18 @@ export const Header = () => {
                   <Accordion className="px-2" type="single" collapsible={false}>
                     <AccordionItem value="item-1">
                       <AccordionTrigger collapsible={false} className="text-primary-dark">
-                        About Us
+                        <Link href="/about" passHref>
+                          About Us
+                        </Link>
                       </AccordionTrigger>
                     </AccordionItem>
                   </Accordion>
                   <Accordion className="px-2" type="single" collapsible={false}>
                     <AccordionItem value="item-1">
                       <AccordionTrigger collapsible={false} className="text-primary-dark">
-                        Contact Us
+                        <Link href="/contact" passHref>
+                          Contact Us
+                        </Link>
                       </AccordionTrigger>
                     </AccordionItem>
                   </Accordion>
@@ -225,18 +229,13 @@ export const Header = () => {
                     <NavigationMenuLink className={navigationMenuTriggerStyle()}>About Us</NavigationMenuLink>
                   </Link>
                 </NavigationMenuItem>
-                <NavigationMenuItem className="text-white">
-                  <Link href="/about" legacyBehavior passHref>
-                    <NavigationMenuLink className={navigationMenuTriggerStyle()}>Contact Us</NavigationMenuLink>
-                  </Link>
-                </NavigationMenuItem>
               </NavigationMenuList>
             </NavigationMenu>
           </div>
           <div className="hidden lg:flex  lg:justify-end">
             <Link
               href="/contact"
-              className="relative rounded-xl bg-primary-light px-4 py-2.5 text-sm font-semibold text-primary-dark shadow-md outline outline-2 outline-transparent hover:outline-neon animate-outline transition duration-300 ease-in-out"
+              className="relative rounded-3xl bg-primary-light px-4 py-2.5 text-sm font-semibold text-primary-dark shadow-md outline outline-2   transition duration-300 ease-in-out"
             >
               Contact Us
             </Link>
