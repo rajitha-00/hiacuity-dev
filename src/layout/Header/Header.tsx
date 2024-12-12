@@ -215,12 +215,12 @@ export const Header = () => {
                   </NavigationMenuContent>
                 </NavigationMenuItem>
                 <NavigationMenuItem className="text-white">
-                  <Link href="/about" legacyBehavior passHref>
+                  <Link href="/pricing" legacyBehavior passHref>
                     <NavigationMenuLink className={navigationMenuTriggerStyle()}>Pricing</NavigationMenuLink>
                   </Link>
                 </NavigationMenuItem>
                 <NavigationMenuItem className="text-white">
-                  <Link href="/about" legacyBehavior passHref>
+                  <Link href="/blogs" legacyBehavior passHref>
                     <NavigationMenuLink className={navigationMenuTriggerStyle()}>Blogs</NavigationMenuLink>
                   </Link>
                 </NavigationMenuItem>

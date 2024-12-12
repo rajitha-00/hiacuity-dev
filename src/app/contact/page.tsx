@@ -23,6 +23,7 @@ export default function Contact() {
         url={HiringHomePageImage}
         cta=""
         heroText=""
+        hasImage
       />
       <div className="h-auto py-10 bg-text-title w-full mt-20 md:0">
         <div className="relative isolate px-6 md:py-8 lg:px-8 max-w-[1600px] mx-auto">

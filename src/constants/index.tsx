@@ -106,3 +106,76 @@ export const CONTACT_US = [
     icon: <Call className="text-primary-light w-36 h-36" />,
   },
 ];
+export const BLOG_DATA = [
+  {
+    id: 1,
+    imageSrc: "https://www.hiacuity.com/static/media/HiAcuity_Partner-Assessment.72492ec97213588b32fa.png",
+    title: "The Future of Artificial Intelligence",
+    date: "November 25, 2024",
+    shares: 1200,
+    description:
+      "Explore how AI is transforming industries, from healthcare to finance, and what lies ahead in the era of machine learning.",
+  },
+  {
+    id: 2,
+    imageSrc: "https://www.hiacuity.com/static/media/HiAcuity_Partner-Assessment.72492ec97213588b32fa.png",
+    title: "Top 10 Destinations for 2025",
+    date: "December 10, 2024",
+    shares: 850,
+    description:
+      "Discover the most breathtaking travel destinations you must visit in 2025 and tips to make the most of your journey.",
+  },
+  {
+    id: 3,
+    imageSrc: "https://www.hiacuity.com/static/media/HiAcuity_Partner-Assessment.72492ec97213588b32fa.png",
+    title: "5 Simple Tips for a Healthier Lifestyle",
+    date: "October 15, 2024",
+    shares: 500,
+    description:
+      "Learn easy and effective ways to incorporate fitness and wellness into your daily routine without drastic changes.",
+  },
+  {
+    id: 4,
+    imageSrc: "https://www.hiacuity.com/static/media/HiAcuity_Partner-Assessment.72492ec97213588b32fa.png",
+    title: "Mastering the Art of Home Cooking",
+    date: "September 20, 2024",
+    shares: 680,
+    description: "A step-by-step guide to cooking delicious meals at home with simple recipes and pro tips from chefs.",
+  },
+  {
+    id: 5,
+    imageSrc: "https://www.hiacuity.com/static/media/HiAcuity_Partner-Assessment.72492ec97213588b32fa.png",
+    title: "How to Save Money on a Tight Budget",
+    date: "August 5, 2024",
+    shares: 1100,
+    description:
+      "Practical advice on managing your finances, cutting unnecessary expenses, and building savings for the future.",
+  },
+  {
+    id: 6,
+    imageSrc: "https://www.hiacuity.com/static/media/HiAcuity_Partner-Assessment.72492ec97213588b32fa.png",
+    title: "Web Development Trends for 2025",
+    date: "November 1, 2024",
+    shares: 950,
+    description:
+      "Stay ahead in the tech world with the latest trends in web development, from AI integration to new frameworks.",
+  },
+  {
+    id: 7,
+    imageSrc: "https://www.hiacuity.com/static/media/HiAcuity_Partner-Assessment.72492ec97213588b32fa.png",
+    title: "The Evolution of Online Learning",
+    date: "July 30, 2024",
+    shares: 670,
+    description:
+      "How online education platforms are shaping the future of learning and providing accessible education for everyone.",
+  },
+  {
+    id: 8,
+    imageSrc: "https://www.hiacuity.com/static/media/HiAcuity_Partner-Assessment.72492ec97213588b32fa.png",
+    title: "Minimalism: Living with Less",
+    date: "June 10, 2024",
+    shares: 740,
+    description:
+      "Discover the benefits of a minimalist lifestyle and how it can lead to more happiness and less stress.",
+  },
+];

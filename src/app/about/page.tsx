@@ -19,7 +19,8 @@ export default function About() {
         url={HiringHomePageImage}
         cta=""
         heroText=""
-      />{" "}
+        hasImage
+      />
       <div
         className="h-auto py-10  w-full mt-20 md:mt-40"
         style={{ background: "linear-gradient(135deg, #031602 0%, #194D1F 50%, #194D1F 100%)" }}
