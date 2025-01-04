@@ -18,7 +18,8 @@ export const Footer = () => {
               className="md:w-52 w-40"
             />
             <p className="text-white text-sm  ">
-              The proper Footer on proper time can preserve you protection. We assist you make sureeverybody forward.
+              The proper Footer on proper time can preserve you protection. We
+              assist you make sureeverybody forward.
             </p>
             <div className="flex flex-row gap-5 ">
               {FOLLOW_US.map((item) => (
@@ -43,11 +44,16 @@ export const Footer = () => {
 
           <div className="flex flex-row flex-wrap gap-10">
             <div className="w-[250px] flex flex-col gap-5">
-              <p className="text-primary-main font-Inter font-[600]">Services</p>
+              <p className="text-primary-main font-Inter font-[600]">
+                Services
+              </p>
               <div>
                 {SERVICES.map((item) => (
                   <div className="py-1" key={item.name}>
-                    <Link href={item.url} className="text-white text-sm font-inter py-1">
+                    <Link
+                      href={item.url}
+                      className="text-white text-sm font-inter py-1"
+                    >
                       {item.name}
                     </Link>
                   </div>
@@ -56,7 +62,9 @@ export const Footer = () => {
             </div>
             {/* Stay Connected */}
             <div className="max-w-lg flex flex-col gap-5">
-              <p className="text-primary-main font-inter font-[600]">News Letters</p>
+              <p className="text-primary-main font-inter font-[600]">
+                News Letters
+              </p>
               <div className="flex flex-col gap-5">
                 <div className="flex">
                   <Input
@@ -64,13 +72,17 @@ export const Footer = () => {
                     placeholder="Email"
                     className="text-white placeholder:text-white rounded-l-md rounded-r-none"
                   />
-                  <Button className="bg-primary-light text-primary-dark rounded-r-md rounded-l-none">Subscribe</Button>
+                  <Button className="bg-primary-light text-primary-dark rounded-r-md rounded-l-none">
+                    Subscribe
+                  </Button>
                 </div>
 
                 <p className="text-white text-sm  text-justify">
-                  Subscribe to our newsletter and unlock a world of exclusive benefits. Be the first to know about our
-                  latest products, special promotions, and exciting updates. Join our community of like-minded
-                  individuals who share a passion for [your niche/industry].
+                  Subscribe to our newsletter and unlock a world of exclusive
+                  benefits. Be the first to know about our latest products,
+                  special promotions, and exciting updates. Join our community
+                  of like-minded individuals who share a passion for [your
+                  niche/industry].
                 </p>
               </div>
             </div>
@@ -79,7 +91,10 @@ export const Footer = () => {
       </div>
       <div className="w-full flex items-center border-t-[0.5px] border-gray-600 py-2 justify-center">
         <div className="">
-          <p key={20} className="text-white text-xs font-inter px-10 text-center">
+          <p
+            key={20}
+            className="text-white text-xs font-inter px-10 text-center"
+          >
             © 2024 HiAcuity | Empowering Minds Globally
           </p>
         </div>
