@@ -65,19 +65,17 @@ export const JobOpenings = () => {
         {BUSINESS_TYPES.map((card, index) => (
           <Fade key={card.title} triggerOnce direction="up" delay={100 * index}>
             <div
-              className={`relative px-5 md:px-10 py-8 bg-[${
-                card.bgColor
-              }] backdrop-blur-md transition-all duration-300 ease-in-out 
+              className={`relative px-5 md:px-10 py-8 bg-[${card.bgColor}] 
                 z-10 hover:!blur-none md:hover:h-[380px] min-h-[360px] hover:z-30 md:hover:rounded-lg
-                outline outline-primary-dark outline-1 hover:outline hover:outline-primary-light hover:outline-1 
-                hover:bg-gradient-to-r hover:from-primary-dark hover:to-primary-dark hover:text-white 
+                outline outline-primary-dark outline-1 bg-gradient-to-bl from-[rgba(210,240,212,0.4)] via-[rgba(210,240,212,0.2)] to-transparent backdrop-blur-md rounded-3xl border shadow-lg border-primary-light/30 hover:shadow-xl  transition-all duration-500 ease-out 
+                  
                 ${getRoundedClass(
                   index,
                   BUSINESS_TYPES.length
                 )} hover:rounded-lg`}
             >
               <h3
-                className={`text-md uppercase font-semibold ${card.textColor} hover:text-white`}
+                className={`text-md uppercase font-semibold ${card.textColor} `}
               >
                 {card.title}
               </h3>

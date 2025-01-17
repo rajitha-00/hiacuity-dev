@@ -141,11 +141,8 @@ export const PricingCards = () => {
         {currentData.cards.map((card, index) => (
           <Fade key={card.title} triggerOnce direction="up" delay={100 * index}>
             <div
-              className={`relative px-10 py-8 bg-[rgba(210,240,212,0.54)] backdrop-blur-md transition-all duration-300 ease-in-out 
-      z-10 hover:!blur-none hover:h-[380px] hover:z-30 hover:rounded-lg
-      hover:outline hover:outline-primary-light hover:outline-1 
-      hover:bg-gradient-to-r hover:from-primary-dark hover:via-text-title hover:to-primary-dark 
-      hover:text-white 
+              className={`relative px-10 py-8  backdrop-blur-md transition-all duration-300 ease-in-out 
+      z-10 hover:!blur-none hover:h-[360px] bg-gradient-to-bl from-[rgba(210,240,212,0.4)] via-[rgba(210,240,212,0.2)] to-transparent  rounded-3xl border shadow-lg border-primary-light/30 hover:shadow-xl  
                ${getRoundedClass(
                  index,
                  currentData.cards.length
