@@ -3,7 +3,14 @@
 import { ArrowRight } from "@/icons/Icons";
 import { Button } from "../ui/button";
 import { Input } from "../ui/input";
-import { Select, SelectContent, SelectGroup, SelectItem, SelectTrigger, SelectValue } from "../ui/select";
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "../ui/select";
 
 interface IAssesmentDemo {
   label?: string;
@@ -35,8 +42,12 @@ export const AssesmentDemo = (props: IAssesmentDemo) => {
           <p className="text-lg font-medium w-[110px] text-justify bg-primary-light px-2 rounded-md text-green-700 mr-2 mb-4">
             {label}
           </p>
-          <h2 className="text-3xl md:text-5xl font-semibold text-primary-light">{title}</h2>
-          <p className="mt-2 text-start text-sm md:text-lg md:text-justify text-gray-50">{description}</p>
+          <h2 className="text-3xl md:text-5xl font-semibold text-primary-light">
+            {title}
+          </h2>
+          <p className="mt-2 text-start text-sm md:text-lg md:text-justify text-gray-50">
+            {description}
+          </p>
         </div>
         <div className=" w-full justify-center lg:text-start  max-w-2xl">
           <div>
@@ -53,7 +64,10 @@ export const AssesmentDemo = (props: IAssesmentDemo) => {
                 <p className="text-white text-xs">Select a Language</p>
                 <Select>
                   <SelectTrigger className="w-full mt-3 text-text-primary">
-                    <SelectValue placeholder="Select a Language" className="text-text-primary mt-2" />
+                    <SelectValue
+                      placeholder="Select a Language"
+                      className="text-text-primary mt-2"
+                    />
                   </SelectTrigger>
                   <SelectContent>
                     <SelectGroup>
@@ -64,7 +78,7 @@ export const AssesmentDemo = (props: IAssesmentDemo) => {
                   </SelectContent>
                 </Select>
               </div>
-              <Button className="relative mt-6 rounded-xl bg-primary-light px-4 py-2.5 text-sm font-semibold text-primary-dark shadow-md  transition duration-300 ease-in-out">
+              <Button className="relative mt-6 rounded-xl  px-4 py-2.5 text-sm font-semibold text-primary-dark shadow-md  transition duration-300 ease-in-out">
                 {buttonLabel}{" "}
                 <span aria-hidden="true">
                   <ArrowRight />

@@ -15,7 +15,15 @@ interface ISectionRightImage {
 }
 
 export const SectionRightImage = (props: ISectionRightImage) => {
-  const { label, title, description, buttonLabel, imageSrc, hasBg, hasPadding } = props;
+  const {
+    label,
+    title,
+    description,
+    buttonLabel,
+    imageSrc,
+    hasBg,
+    hasPadding,
+  } = props;
   return (
     <div
       className={`relative mx-auto w-full h-auto rounded-3xl z-10
@@ -33,17 +41,23 @@ export const SectionRightImage = (props: ISectionRightImage) => {
       >
         <div className="text-start md:text-center w-full max-w-2xl justify-center lg:text-start">
           <Fade triggerOnce direction="up" delay={100}>
-            <p className="text-lg font-semibold text-green-700 mr-2 md:mb-4">{label}</p>
+            <p className="text-lg font-semibold text-green-700 mr-2 md:mb-4">
+              {label}
+            </p>
           </Fade>
           <Fade triggerOnce direction="up" delay={200}>
-            <h2 className="text-3xl md:text-5xl font-semibold text-text-primary">{title}</h2>
+            <h2 className="text-3xl md:text-5xl font-semibold text-text-primary">
+              {title}
+            </h2>
           </Fade>
           <Fade triggerOnce direction="up" delay={300}>
-            <p className="mt-2 text-start text-sm md:text-lg md:text-justify text-text-primary">{description}</p>
+            <p className="mt-2 text-start text-sm md:text-lg md:text-justify text-text-primary">
+              {description}
+            </p>
           </Fade>
           <Fade triggerOnce direction="up" delay={400}>
             {buttonLabel && (
-              <Button className="relative mt-4 rounded-xl bg-primary-light px-4 py-2.5 text-sm font-semibold text-primary-dark shadow-md transition duration-300 ease-in-out">
+              <Button className="relative mt-4 rounded-xl  px-4 py-2.5 text-sm font-semibold text-primary-dark shadow-md transition duration-300 ease-in-out">
                 {buttonLabel}
                 <span aria-hidden="true">
                   <ArrowRight />
@@ -52,7 +66,10 @@ export const SectionRightImage = (props: ISectionRightImage) => {
             )}
           </Fade>
         </div>
-        <div className="relative w-full max-w-2xl h-auto" style={{ aspectRatio: "16 / 10" }}>
+        <div
+          className="relative w-full max-w-2xl h-auto"
+          style={{ aspectRatio: "16 / 10" }}
+        >
           <Fade triggerOnce delay={100}>
             <Image
               alt="HIAcuity is ai hiring platform"

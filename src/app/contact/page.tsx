@@ -32,7 +32,7 @@ export default function Contact() {
         heroText=""
         hasImage
       />
-      <div className="h-auto py-10 bg-text-title w-full mt-20 md:0">
+      <div className="h-auto z-20 py-10 bg-text-title w-full mt-20 md:0">
         <div className="relative isolate px-6 md:py-8 lg:px-8 max-w-[1600px] mx-auto">
           <SectionHeader hasLightTitle title="Contact Our Friendly Team" />
           <ValuesCard />
