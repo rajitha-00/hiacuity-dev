@@ -4,7 +4,7 @@ import { JobOpenings } from "@/components/PricingCards/JobOpenings";
 import PricingHero from "../../assets/images/PricingPageHero.png";
 import { Metadata } from "next";
 export const metadata: Metadata = {
-  title: "HiAcuity | Pricing",
+  title: "HiAcuity | Employee Assements",
 };
 export default function Pricing() {
   return (

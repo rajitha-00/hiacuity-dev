@@ -2,7 +2,24 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   images: {
-    domains: ["www.hiacuity.com", "cdn.leonardo.ai", "img.freepik.com", "storage.googleapis.com"], // Add allowed domains here
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "www.hiacuity.com",
+      },
+      {
+        protocol: "https",
+        hostname: "cdn.leonardo.ai",
+      },
+      {
+        protocol: "https",
+        hostname: "img.freepik.com",
+      },
+      {
+        protocol: "https",
+        hostname: "storage.googleapis.com",
+      },
+    ],
   },
   // Other config options
 };

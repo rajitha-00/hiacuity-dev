@@ -82,7 +82,10 @@ export const JobOpenings = () => {
               <p className={`mt-2 text-sm md:text-md ${card.textColor}`}>
                 Our experienced team is well-versed in
               </p>
-              <Button className="mt-4 w-full px-4 py-2 text-primary-dark">
+              <Button
+                variant={"outline"}
+                className="mt-4 w-full px-4 py-2 text-primary-dark hover:text-primary-dark hover:font-semibold hover:bg-white "
+              >
                 Start For Free
               </Button>
               {card.priceMonthly !== "Call us for the price" ? (

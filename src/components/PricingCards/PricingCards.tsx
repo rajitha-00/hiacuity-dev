@@ -142,7 +142,7 @@ export const PricingCards = () => {
           <Fade key={card.title} triggerOnce direction="up" delay={100 * index}>
             <div
               className={`relative px-10 py-8  backdrop-blur-md transition-all duration-300 ease-in-out 
-      z-10 hover:!blur-none hover:h-[360px] bg-gradient-to-bl from-[rgba(210,240,212,0.4)] via-[rgba(210,240,212,0.2)] to-transparent  rounded-3xl border shadow-lg border-primary-light/30 hover:shadow-xl  
+      z-10 hover:!blur-none hover:h-[350px] bg-gradient-to-bl from-[rgba(210,240,212,0.4)] via-[rgba(210,240,212,0.2)] to-transparent  rounded-3xl border shadow-lg border-primary-light/30 hover:shadow-xl  
                ${getRoundedClass(
                  index,
                  currentData.cards.length
@@ -154,7 +154,10 @@ export const PricingCards = () => {
               <p className="mt-2 text-sm md:text-md text-white">
                 Our experienced team is well-versed in
               </p>
-              <Button className="mt-4 w-full px-4 py-2 text-primary-dark">
+              <Button
+                variant={"outline"}
+                className="mt-4 w-full px-4 py-2 text-primary-dark hover:text-primary-dark hover:font-semibold hover:bg-white "
+              >
                 Start For Free
               </Button>
               <div className="mt-6">

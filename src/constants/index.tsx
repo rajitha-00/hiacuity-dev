@@ -2,7 +2,24 @@ import FacebookIcon from "../icons/FacebookIcon.svg";
 import TwitterIcon from "../icons/TwitterIcon.svg";
 import InstaIcon from "../icons/IntagramIcon.svg";
 import YotubeIcon from "../icons/YoutubeIcon.svg";
-import { Ai, Approch, Bolt, Call, Clock, Glob, Modern, TransForm } from "@/icons/Icons";
+import WhatsSetUsApart from "../assets/images/WhatsSetusApart.png";
+
+import {
+  Ai,
+  Approch,
+  Bolt,
+  Call,
+  Clock,
+  Glob,
+  Modern,
+  TransForm,
+  Foward,
+  CutCall,
+  Filter,
+  Gear,
+  Hand,
+  Rocket,
+} from "@/icons/Icons";
 
 export const FAQ = [
   {
@@ -16,12 +33,14 @@ export const FAQ = [
       "Yes! Our platform allows you to fully customize job posting templates. You can tailor them to reflect your company’s branding and include role-specific requirements to attract the ideal candidates.",
   },
   {
-    question: "Is it possible to track the status of each application in real-time?",
+    question:
+      "Is it possible to track the status of each application in real-time?",
     answer:
       "Absolutely. Our system provides a real-time application tracker that lets you monitor every step of the hiring process, from submission to onboarding, ensuring transparency and efficiency.",
   },
   {
-    question: "What kind of analytics and reporting does the application offer?",
+    question:
+      "What kind of analytics and reporting does the application offer?",
     answer:
       "Our platform delivers in-depth analytics and reporting, including metrics on candidate sources, time-to-hire, and application trends. These insights empower you to make data-driven decisions and optimize your hiring process.",
   },
@@ -60,17 +79,20 @@ export const SERVICES = [
 export const OUR_VALUES = [
   {
     title: "Approachable",
-    description: "We uphold the highest standards of honesty and ethics in all our operations and interactions.",
+    description:
+      "We uphold the highest standards of honesty and ethics in all our operations and interactions.",
     icon: <Approch className="text-primary-light" />,
   },
   {
     title: "AI Driven",
-    description: "We are committed to continuous improvement and the pursuit of groundbreaking AI solutions.",
+    description:
+      "We are committed to continuous improvement and the pursuit of groundbreaking AI solutions.",
     icon: <Ai className="text-primary-light" />,
   },
   {
     title: "Transformational",
-    description: "We believe in the power of teamwork and partnerships to achieve common goals.",
+    description:
+      "We believe in the power of teamwork and partnerships to achieve common goals.",
     icon: <TransForm className="text-primary-light" />,
   },
   {
@@ -84,32 +106,119 @@ export const CONTACT_US = [
   {
     index: 1,
     title: "24/7 Support",
-    description: "Our dedicated support team is available 24/7 to address your inquiries and resolve issues promptly.",
+    description:
+      "Our dedicated support team is available 24/7 to address your inquiries and resolve issues promptly.",
     icon: <Clock className="text-primary-light w-36 h-36" />,
   },
   {
     index: 2,
     title: "Quick Response",
-    description: "We prioritize efficiency and strive to provide quick responses to your requests.",
+    description:
+      "We prioritize efficiency and strive to provide quick responses to your requests.",
     icon: <Bolt className="text-primary-light w-36 h-36" />,
   },
   {
     index: 3,
     title: "Multiple Channels",
-    description: "Reach out to us through your preferred channel: email, phone, or live chat",
+    description:
+      "Reach out to us through your preferred channel: email, phone, or live chat",
     icon: <Glob className="text-primary-light w-36 h-36" />,
   },
   {
     index: 4,
     title: "Expert Guidance",
-    description: "Our experienced team is well-versed in our products and services, ready to provide expert advice.",
+    description:
+      "Our experienced team is well-versed in our products and services, ready to provide expert advice.",
     icon: <Call className="text-primary-light w-36 h-36" />,
+  },
+];
+export const JOB_OPENINGS_FETURED = [
+  {
+    index: 1,
+    title: "Hire Top Talent Faster ",
+    description: "Speed up your hiring process.",
+    icon: <Foward className="text-primary-main w-36 h-36" />,
+  },
+  {
+    index: 2,
+    title: "Cut Screening Calls",
+    description: "Focus only on the best candidates.",
+    icon: <CutCall className="text-primary-main w-36 h-36" />,
+  },
+  {
+    index: 3,
+    title: "Eliminate Unfit Candidates Quickly",
+    description: "No more wasted time.",
+    icon: <Filter className="text-primary-main w-36 h-36" />,
+  },
+  {
+    index: 4,
+    title: "Automate Admin Tasks",
+    description: "Reduce manual effort.",
+    icon: <Gear className="text-primary-main w-36 h-36" />,
+  },
+  {
+    index: 5,
+    title: "Enhance Candidate Experience",
+    description: "Make hiring seamless.",
+    icon: <Hand className="text-primary-main w-36 h-36" />,
+  },
+  {
+    index: 6,
+    title: "Boost Recruiter Efficiency",
+    description: "Work smarter, not harder.",
+    icon: <Rocket className="text-primary-main w-36 h-36" />,
+  },
+];
+export const JOB_OPENINGS_WHAT_SET_US_APART = [
+  {
+    index: 1,
+    title: "Job Posting",
+    description:
+      "One-click applications eliminate form-filling. AI extracts details instantly and reads every resume for the perfect match.",
+    url: WhatsSetUsApart,
+  },
+  {
+    index: 2,
+    title: "Applicant Analysis",
+    description:
+      "Analyze thousands of applicants in one view. AI-powered filtering, keyword matching, and 3D clustering refine selections effortlessly.",
+    url: WhatsSetUsApart,
+  },
+  {
+    index: 3,
+    title: "Auto Suitability",
+    description:
+      "AI identifies qualified candidates instantly and notifies unsuccessful applicants with optional rejection reasons.",
+    url: WhatsSetUsApart,
+  },
+  {
+    index: 4,
+    title: "Auto Outstanding",
+    description:
+      "Spot top talent the moment they apply. Engage, interview, and hire outstanding candidates before competitors do.",
+    url: WhatsSetUsApart,
+  },
+  {
+    index: 5,
+    title: "Auto Assessments",
+    description:
+      "Validate skills with AI-generated tests. Build assessments in seconds and shortlist the most qualified candidates.",
+    url: WhatsSetUsApart,
+  },
+  {
+    index: 6,
+    title: "Faster Hiring, Better Results",
+    description:
+      "Reduce screening calls, automate tasks, and eliminate wasted time for a seamless hiring experience.",
+    url: WhatsSetUsApart,
   },
 ];
 export const BLOG_DATA = [
   {
     id: 1,
-    imageSrc: "https://www.hiacuity.com/static/media/HiAcuity_Partner-Assessment.72492ec97213588b32fa.png",
+    imageSrc:
+      "https://www.hiacuity.com/static/media/HiAcuity_Partner-Assessment.72492ec97213588b32fa.png",
     title: "The Future of Artificial Intelligence",
     date: "November 25, 2024",
     shares: 1200,
@@ -118,7 +227,8 @@ export const BLOG_DATA = [
   },
   {
     id: 2,
-    imageSrc: "https://www.hiacuity.com/static/media/HiAcuity_Partner-Assessment.72492ec97213588b32fa.png",
+    imageSrc:
+      "https://www.hiacuity.com/static/media/HiAcuity_Partner-Assessment.72492ec97213588b32fa.png",
     title: "Top 10 Destinations for 2025",
     date: "December 10, 2024",
     shares: 850,
@@ -127,7 +237,8 @@ export const BLOG_DATA = [
   },
   {
     id: 3,
-    imageSrc: "https://www.hiacuity.com/static/media/HiAcuity_Partner-Assessment.72492ec97213588b32fa.png",
+    imageSrc:
+      "https://www.hiacuity.com/static/media/HiAcuity_Partner-Assessment.72492ec97213588b32fa.png",
     title: "5 Simple Tips for a Healthier Lifestyle",
     date: "October 15, 2024",
     shares: 500,
@@ -136,15 +247,18 @@ export const BLOG_DATA = [
   },
   {
     id: 4,
-    imageSrc: "https://www.hiacuity.com/static/media/HiAcuity_Partner-Assessment.72492ec97213588b32fa.png",
+    imageSrc:
+      "https://www.hiacuity.com/static/media/HiAcuity_Partner-Assessment.72492ec97213588b32fa.png",
     title: "Mastering the Art of Home Cooking",
     date: "September 20, 2024",
     shares: 680,
-    description: "A step-by-step guide to cooking delicious meals at home with simple recipes and pro tips from chefs.",
+    description:
+      "A step-by-step guide to cooking delicious meals at home with simple recipes and pro tips from chefs.",
   },
   {
     id: 5,
-    imageSrc: "https://www.hiacuity.com/static/media/HiAcuity_Partner-Assessment.72492ec97213588b32fa.png",
+    imageSrc:
+      "https://www.hiacuity.com/static/media/HiAcuity_Partner-Assessment.72492ec97213588b32fa.png",
     title: "How to Save Money on a Tight Budget",
     date: "August 5, 2024",
     shares: 1100,
@@ -153,7 +267,8 @@ export const BLOG_DATA = [
   },
   {
     id: 6,
-    imageSrc: "https://www.hiacuity.com/static/media/HiAcuity_Partner-Assessment.72492ec97213588b32fa.png",
+    imageSrc:
+      "https://www.hiacuity.com/static/media/HiAcuity_Partner-Assessment.72492ec97213588b32fa.png",
     title: "Web Development Trends for 2025",
     date: "November 1, 2024",
     shares: 950,
@@ -162,7 +277,8 @@ export const BLOG_DATA = [
   },
   {
     id: 7,
-    imageSrc: "https://www.hiacuity.com/static/media/HiAcuity_Partner-Assessment.72492ec97213588b32fa.png",
+    imageSrc:
+      "https://www.hiacuity.com/static/media/HiAcuity_Partner-Assessment.72492ec97213588b32fa.png",
     title: "The Evolution of Online Learning",
     date: "July 30, 2024",
     shares: 670,
@@ -171,7 +287,8 @@ export const BLOG_DATA = [
   },
   {
     id: 8,
-    imageSrc: "https://www.hiacuity.com/static/media/HiAcuity_Partner-Assessment.72492ec97213588b32fa.png",
+    imageSrc:
+      "https://www.hiacuity.com/static/media/HiAcuity_Partner-Assessment.72492ec97213588b32fa.png",
     title: "Minimalism: Living with Less",
     date: "June 10, 2024",
     shares: 740,

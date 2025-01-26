@@ -2,7 +2,14 @@ import { HeroSectionCommon } from "@/components/HeroSection";
 import HiringHomePageImage from "../../assets/homepage/HiringHomePage.svg";
 import { SectionHeader } from "@/components/Typography";
 import { Input } from "@/components/ui/input";
-import { Select, SelectContent, SelectGroup, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
 import { ValuesCard } from "@/components/ContactUs/ValuesCard";
 import { Button } from "@/components/ui/button";
@@ -10,7 +17,7 @@ import { ArrowRight } from "@/icons/Icons";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Contact Us",
+  title: "HiAcuity | Contact Us",
 };
 
 export default function Contact() {
@@ -34,7 +41,8 @@ export default function Contact() {
       <div className="relative isolate px-6 pt-20 md:pt-40 w-full lg:px-8 max-w-[1600px] mx-auto ">
         <div
           style={{
-            background: "radial-gradient(circle, rgba(41,250,66,0.1) 5%, rgba(111,250,170,0.1) 40%, transparent 70%)",
+            background:
+              "radial-gradient(circle, rgba(41,250,66,0.1) 5%, rgba(111,250,170,0.1) 40%, transparent 70%)",
           }}
           className="absolute hidden md:block -right-[35%] top-[30%] z-0 w-[800px] h-[800px] rounded-full "
         ></div>
@@ -74,7 +82,10 @@ export default function Contact() {
                   <p className="text-text-greyDark text-xs">Select a Country</p>
                   <Select>
                     <SelectTrigger className="w-full mt-2 text-text-primary">
-                      <SelectValue placeholder="Select a Language" className="text-text-primary mt-2" />
+                      <SelectValue
+                        placeholder="Select a Language"
+                        className="text-text-primary mt-2"
+                      />
                     </SelectTrigger>
                     <SelectContent>
                       <SelectGroup>
@@ -96,10 +107,15 @@ export default function Contact() {
                   />
                 </div>
                 <div className=" w-full">
-                  <p className="text-text-greyDark text-xs">Select a Industry</p>
+                  <p className="text-text-greyDark text-xs">
+                    Select a Industry
+                  </p>
                   <Select>
                     <SelectTrigger className="w-full mt-2 text-text-primary">
-                      <SelectValue placeholder="Select a Language" className="text-text-primary mt-2" />
+                      <SelectValue
+                        placeholder="Select a Language"
+                        className="text-text-primary mt-2"
+                      />
                     </SelectTrigger>
                     <SelectContent>
                       <SelectGroup>

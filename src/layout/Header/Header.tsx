@@ -14,35 +14,50 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import Image from "next/image";
-import { Drawer, DrawerClose, DrawerContent, DrawerHeader, DrawerTitle, DrawerTrigger } from "@/components/ui/drawer";
+import {
+  Drawer,
+  DrawerClose,
+  DrawerContent,
+  DrawerHeader,
+  DrawerTitle,
+  DrawerTrigger,
+} from "@/components/ui/drawer";
 import { Button } from "@/components/ui/button";
 import { FiMenu } from "react-icons/fi";
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import { XMark } from "@/icons/Icons";
 
-const ListItem = React.forwardRef<React.ElementRef<"a">, React.ComponentPropsWithoutRef<"a">>(
-  ({ className, title, children, ...props }, ref) => {
-    return (
-      <li>
-        <NavigationMenuLink asChild>
-          <Link
-            href={props.href ?? "#"}
-            passHref
-            ref={ref}
-            className={cn(
-              "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
-              className
-            )}
-            {...props}
-          >
-            <div className="text-sm font-medium leading-none">{title}</div>
-            <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">{children}</p>
-          </Link>
-        </NavigationMenuLink>
-      </li>
-    );
-  }
-);
+const ListItem = React.forwardRef<
+  React.ElementRef<"a">,
+  React.ComponentPropsWithoutRef<"a">
+>(({ className, title, children, ...props }, ref) => {
+  return (
+    <li>
+      <NavigationMenuLink asChild>
+        <Link
+          href={props.href ?? "#"}
+          passHref
+          ref={ref}
+          className={cn(
+            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+            className
+          )}
+          {...props}
+        >
+          <div className="text-sm font-medium leading-none">{title}</div>
+          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+            {children}
+          </p>
+        </Link>
+      </NavigationMenuLink>
+    </li>
+  );
+});
 ListItem.displayName = "ListItem";
 
 export const Header = () => {
@@ -81,7 +96,9 @@ export const Header = () => {
               <DrawerContent className="w-full md:w-1/3">
                 <div className="mx-auto w-full bg-gradient-to-t from-primary-light to-white flex-1 h-full ">
                   <DrawerHeader className="hidden">
-                    <DrawerTitle className="hidden">Mobile Nav menu</DrawerTitle>
+                    <DrawerTitle className="hidden">
+                      Mobile Nav menu
+                    </DrawerTitle>
                   </DrawerHeader>
                   <div className="flex items-center justify-between px-3 py-3 mt-2 bg-primary-dark">
                     <div className="flex lg:flex-1">
@@ -109,17 +126,22 @@ export const Header = () => {
                   </div>
                   <Accordion className="px-2" type="single" collapsible>
                     <AccordionItem value="item-1">
-                      <AccordionTrigger className="text-primary-dark">Products</AccordionTrigger>
+                      <AccordionTrigger className="text-primary-dark">
+                        Products
+                      </AccordionTrigger>
                       <AccordionContent>
                         <Link
-                          href="/"
+                          href="/job-openings"
                           passHref
                           className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
                         >
-                          <div className="mb-2 mt-4 text-lg font-medium">HiAcuity</div>
+                          <div className="mb-2 mt-4 text-lg font-medium">
+                            HiAcuity
+                          </div>
                           <p className="text-sm leading-tight text-muted-foreground">
-                            Beautifully designed components that you can copy and paste into your apps. Accessible.
-                            Customizable. Open Source.
+                            Beautifully designed components that you can copy
+                            and paste into your apps. Accessible. Customizable.
+                            Open Source.
                           </p>
                         </Link>
                         <Link
@@ -127,10 +149,13 @@ export const Header = () => {
                           passHref
                           className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
                         >
-                          <div className="mb-2 mt-4 text-lg font-medium">HiAcuity</div>
+                          <div className="mb-2 mt-4 text-lg font-medium">
+                            HiAcuity
+                          </div>
                           <p className="text-sm leading-tight text-muted-foreground">
-                            Beautifully designed components that you can copy and paste into your apps. Accessible.
-                            Customizable. Open Source.
+                            Beautifully designed components that you can copy
+                            and paste into your apps. Accessible. Customizable.
+                            Open Source.
                           </p>
                         </Link>
                       </AccordionContent>
@@ -138,21 +163,30 @@ export const Header = () => {
                   </Accordion>
                   <Accordion className="px-2" type="single" collapsible={false}>
                     <AccordionItem value="item-1">
-                      <AccordionTrigger collapsible={false} className="text-primary-dark">
+                      <AccordionTrigger
+                        collapsible={false}
+                        className="text-primary-dark"
+                      >
                         Pricing
                       </AccordionTrigger>
                     </AccordionItem>
                   </Accordion>
                   <Accordion className="px-2" type="single" collapsible={false}>
                     <AccordionItem value="item-1">
-                      <AccordionTrigger collapsible={false} className="text-primary-dark">
+                      <AccordionTrigger
+                        collapsible={false}
+                        className="text-primary-dark"
+                      >
                         Blog
                       </AccordionTrigger>
                     </AccordionItem>
                   </Accordion>
                   <Accordion className="px-2" type="single" collapsible={false}>
                     <AccordionItem value="item-1">
-                      <AccordionTrigger collapsible={false} className="text-primary-dark">
+                      <AccordionTrigger
+                        collapsible={false}
+                        className="text-primary-dark"
+                      >
                         <Link href="/about" passHref>
                           About Us
                         </Link>
@@ -161,7 +195,10 @@ export const Header = () => {
                   </Accordion>
                   <Accordion className="px-2" type="single" collapsible={false}>
                     <AccordionItem value="item-1">
-                      <AccordionTrigger collapsible={false} className="text-primary-dark">
+                      <AccordionTrigger
+                        collapsible={false}
+                        className="text-primary-dark"
+                      >
                         <Link href="/contact" passHref>
                           Contact Us
                         </Link>
@@ -182,14 +219,17 @@ export const Header = () => {
                       <li className="row-span-3">
                         <NavigationMenuLink asChild>
                           <Link
-                            href="/"
+                            href="/job-openings"
                             passHref
                             className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
                           >
                             {/* <Icons.logo className="h-6 w-6" /> */}
-                            <div className="mb-2 mt-4 text-lg font-medium">Job Opening</div>
+                            <div className="mb-2 mt-4 text-lg font-medium">
+                              Job Opening
+                            </div>
                             <p className="text-sm leading-tight text-muted-foreground">
-                              Beautifully designed components that you can copy and paste into your apps. Accessible.
+                              Beautifully designed components that you can copy
+                              and paste into your apps. Accessible.
                               Customizable. Open Source.
                             </p>
                           </Link>
@@ -198,14 +238,17 @@ export const Header = () => {
                       <li className="row-span-3">
                         <NavigationMenuLink asChild>
                           <Link
-                            href="/"
+                            href="/employee-assements"
                             passHref
                             className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
                           >
                             {/* <Icons.logo className="h-6 w-6" /> */}
-                            <div className="mb-2 mt-4 text-lg font-medium">Assesments</div>
+                            <div className="mb-2 mt-4 text-lg font-medium">
+                              Assesments
+                            </div>
                             <p className="text-sm leading-tight text-muted-foreground">
-                              Beautifully designed components that you can copy and paste into your apps. Accessible.
+                              Beautifully designed components that you can copy
+                              and paste into your apps. Accessible.
                               Customizable. Open Source.
                             </p>
                           </Link>
@@ -216,17 +259,29 @@ export const Header = () => {
                 </NavigationMenuItem>
                 <NavigationMenuItem className="text-white">
                   <Link href="/pricing" legacyBehavior passHref>
-                    <NavigationMenuLink className={navigationMenuTriggerStyle()}>Pricing</NavigationMenuLink>
+                    <NavigationMenuLink
+                      className={navigationMenuTriggerStyle()}
+                    >
+                      Pricing
+                    </NavigationMenuLink>
                   </Link>
                 </NavigationMenuItem>
                 <NavigationMenuItem className="text-white">
                   <Link href="/blogs" legacyBehavior passHref>
-                    <NavigationMenuLink className={navigationMenuTriggerStyle()}>Blogs</NavigationMenuLink>
+                    <NavigationMenuLink
+                      className={navigationMenuTriggerStyle()}
+                    >
+                      Blogs
+                    </NavigationMenuLink>
                   </Link>
                 </NavigationMenuItem>
                 <NavigationMenuItem className="text-white">
                   <Link href="/about" legacyBehavior passHref>
-                    <NavigationMenuLink className={navigationMenuTriggerStyle()}>About Us</NavigationMenuLink>
+                    <NavigationMenuLink
+                      className={navigationMenuTriggerStyle()}
+                    >
+                      About Us
+                    </NavigationMenuLink>
                   </Link>
                 </NavigationMenuItem>
               </NavigationMenuList>
