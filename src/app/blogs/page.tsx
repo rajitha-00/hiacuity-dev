@@ -9,7 +9,13 @@ export const metadata: Metadata = {
 export default function Blogs() {
   return (
     <div className="flex w-full flex-col items-center  justify-center">
-      <BlogsHeroSection />
+      <BlogsHeroSection
+        date={"2025/01/31"}
+        title={"Blog"}
+        title2={"Title"}
+        image=""
+        description="New Blog"
+      />
       <BlogCards />
       <div className="relative isolate px-6 pt-20 md:pt-40 w-full lg:px-8 max-w-[1600px] mx-auto ">
         <BecomeATeamMember

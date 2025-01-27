@@ -29,7 +29,7 @@ export const SectionLeftImage = (props: ISectionLeftImage) => {
       className={`relative mx-auto w-full h-auto  z-10
         ${
           hasBg
-            ? "bg-gradient-to-bl from-[rgba(210,240,212,0.4)] via-[rgba(210,240,212,0.2)] to-transparent backdrop-blur-md rounded-3xl border shadow-lg border-primary-light/30 hover:shadow-xl  transition-all duration-500 ease-out hover:scale-[1.01]"
+            ? "absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,1)_10%,rgba(224,255,240,0.8)_95%)]  rounded-3xl border shadow-lg border-primary-light/30 hover:shadow-xl  transition-all duration-500 ease-out hover:scale-[1.01]"
             : "border-transparent"
         }
       `}

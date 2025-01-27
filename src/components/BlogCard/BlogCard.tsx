@@ -1,6 +1,6 @@
 import React from "react";
-import { Button } from "../ui/button";
 import Link from "next/link";
+import Image from "next/image";
 
 type BlogCardProps = {
   id: number;
@@ -11,14 +11,24 @@ type BlogCardProps = {
   description: string;
 };
 
-const BlogCard: React.FC<BlogCardProps> = ({ id, imageSrc, title, date, shares, description }) => {
+const BlogCard: React.FC<BlogCardProps> = ({
+  id,
+  imageSrc,
+  title,
+  date,
+  shares,
+  description,
+}) => {
   return (
-    <div className="w-full bg-white border border-gray-200 rounded-lg shadow-lg overflow-hidden group transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
-      <img
-        src={imageSrc}
-        alt={title}
-        className="w-[95%] p-2 mt-2 rounded-lg mx-auto border border-red-50 h-80 object-cover transition-transform duration-300 group-hover:scale-105"
-      />
+    <div className="w-full bg-white border border-gray-200 rounded-3xl shadow-lg overflow-hidden group transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
+      <div className="relative w-[95%] h-80 p-2 mt-2 rounded-lg mx-auto border border-red-50 overflow-hidden">
+        <Image
+          src={imageSrc}
+          alt={title}
+          fill
+          className="object-cover rounded-lg transition-transform duration-300 group-hover:scale-105"
+        />
+      </div>
       <div className="p-4">
         <h3 className="text-lg font-semibold text-gray-800 mb-2 group-hover:text-primary transition-colors duration-300">
           {title}
@@ -28,16 +38,17 @@ const BlogCard: React.FC<BlogCardProps> = ({ id, imageSrc, title, date, shares, 
           <span className="text-gray-400">•</span>
           <span>{shares} shares</span>
         </div>
-        <p className="text-sm text-gray-600 group-hover:text-gray-800 transition-colors duration-300">{description}</p>
+        <p className="text-sm text-gray-600 group-hover:text-gray-800 transition-colors duration-300">
+          {description}
+        </p>
       </div>
       <div className="p-4 flex justify-start">
-        <Link href={`/blogs/${id}`} passHref>
-          <Button
-            variant="link"
-            className="text-sm font-semibold text-primary-dark transition-transform duration-300 hover:underline group-hover:translate-x-1"
-          >
-            Read More
-          </Button>
+        <Link
+          href={`/blogs/${id}`}
+          passHref
+          className="text-sm text-primary-dark font-semibold hover:underline"
+        >
+          Read More
         </Link>
       </div>
     </div>

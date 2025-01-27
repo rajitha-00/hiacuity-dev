@@ -22,7 +22,7 @@ import { FAQ } from "@/constants";
 export default function Home() {
   return (
     <div className="flex w-full flex-col items-center  justify-center">
-      <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,1)_10%,rgba(224,255,240,0.8)_80%)] blur-3xl"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,1)_10%,rgba(224,255,240,0.8)_95%)] blur-3xl"></div>
 
       <div className="relative isolate px-6 pt-14 lg:px-8 w-full max-w-[1600px] mx-auto ">
         <div className="mx-auto py-20 min-h-[85vh] flex flex-col lg:flex-row gap-10 items-center justify-between">
