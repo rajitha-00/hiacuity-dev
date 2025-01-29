@@ -5,14 +5,9 @@ import Image from "next/image";
 import HireSmater from "../../assets/images/HireSmaterImage.png";
 export const RequestDemoOrTrial = () => {
   return (
-    <div
-      className={`relative mx-auto w-full h-auto  z-10
-        
-      `}
-    >
+    <div className={`relative mx-auto w-full h-auto  z-10`}>
       <div
-        className={`mx-auto flex rounded-[50px] shadow-md flex-col-reverse lg:flex-row  outline outline-1 outline-gray-100 items-center justify-between 
-        `}
+        className={`mx-auto flex rounded-[50px] shadow-md flex-col-reverse lg:flex-row  outline outline-1 outline-gray-100 items-center justify-between`}
       >
         <div
           className="relative w-full h-auto"
@@ -27,7 +22,7 @@ export const RequestDemoOrTrial = () => {
             />
           </Fade>
         </div>
-        <div className="text-start md:text-center pr-16 w-full justify-center lg:text-start">
+        <div className="text-start p-16 w-full justify-center ">
           <Fade triggerOnce direction="up" delay={200}>
             <h2 className="text-3xl md:text-5xl font-semibold text-text-primary">
               Hire Smarter, <br /> Faster & With Confidence

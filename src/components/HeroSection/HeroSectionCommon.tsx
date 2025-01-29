@@ -21,8 +21,8 @@ export const HeroSectionCommon = (props: IHeroSectionCommon) => {
       <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,1)_10%,rgba(224,255,240,0.8)_95%)] blur-3xl"></div>
       <div className="relative isolate px-6 pt-14 lg:px-8 w-full max-w-[1600px] mx-auto ">
         <div
-          className={`mx-auto py-20 min-h-[75vh] flex flex-col lg:flex-row gap-10 items-center justify-between ${
-            hasImage ? "min-h-[75vh]" : "min-h-[40vh]"
+          className={`mx-auto py-20 pt-44  flex flex-col lg:flex-row gap-10 items-center justify-between ${
+            hasImage ? "min-h-[75vh]" : "min-h-[50vh]"
           }`}
         >
           <div

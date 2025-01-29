@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 
 import { cn } from "@/lib/utils";
@@ -14,23 +14,8 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import Image from "next/image";
-import {
-  Drawer,
-  DrawerClose,
-  DrawerContent,
-  DrawerHeader,
-  DrawerTitle,
-  DrawerTrigger,
-} from "@/components/ui/drawer";
-import { Button } from "@/components/ui/button";
-import { FiMenu } from "react-icons/fi";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
-import { XMark } from "@/icons/Icons";
+import { FiMenu, FiX } from "react-icons/fi";
+import { usePathname, useRouter } from "next/navigation";
 
 const ListItem = React.forwardRef<
   React.ElementRef<"a">,
@@ -61,12 +46,16 @@ const ListItem = React.forwardRef<
 ListItem.displayName = "ListItem";
 
 export const Header = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const router = useRouter();
+  const pathname = usePathname();
+  const closeMenu = () => setIsOpen(false);
   return (
     <div className="relative">
-      <header className="fixed inset-x-0 top-0 z-50 px-3  my-2 ">
+      <header className="fixed inset-x-0 top-0 z-50 md:px-3  md:my-2 ">
         <nav
           aria-label="Global"
-          className="flex px-4 bg-primary-dark rounded-full shadow-md shadow-slate-800 w-auto lg:max-w-[1600px] mx-auto items-center justify-between py-2  "
+          className="flex px-4 bg-primary-dark md:rounded-full shadow-md shadow-slate-800 w-auto lg:max-w-[1600px] mx-auto items-center justify-between py-2  "
         >
           <div className="flex gap-5 items-center">
             <div className="flex lg:flex-1">
@@ -83,131 +72,72 @@ export const Header = () => {
             </div>
           </div>
           <div className="lg:hidden">
-            <Drawer direction="right">
-              <DrawerTrigger asChild>
-                <Button
-                  variant="outline"
-                  size="icon"
-                  className="h-8 w-8 shrink-0 rounded-full text-primary-dark bg-primary-light"
+            {/* Menu Button */}
+            <button
+              onClick={() => setIsOpen(true)}
+              className="h-10 w-10 flex items-center justify-center rounded-full bg-primary-light text-primary-dark transition-all hover:scale-105"
+            >
+              <FiMenu size={24} />
+            </button>
+
+            {/* Overlay */}
+            <div
+              className={`fixed inset-0 z-40 bg-black/50 transition-opacity duration-300 ${
+                isOpen ? "opacity-100 visible" : "opacity-0 invisible"
+              }`}
+              onClick={closeMenu}
+            ></div>
+
+            {/* Sidebar */}
+            <div
+              className={`fixed right-0 top-0 z-50 h-full w-4/5 max-w-sm bg-white shadow-xl transform transition-transform duration-300 ${
+                isOpen ? "translate-x-0" : "translate-x-full"
+              }`}
+            >
+              {/* Header */}
+              <div className="flex items-center justify-between p-4 bg-primary-dark text-white">
+                <Link
+                  href="/"
+                  className="flex items-center"
+                  onClick={closeMenu}
                 >
-                  <FiMenu />
-                </Button>
-              </DrawerTrigger>
-              <DrawerContent className="w-full md:w-1/3">
-                <div className="mx-auto w-full bg-gradient-to-t from-primary-light to-white flex-1 h-full ">
-                  <DrawerHeader className="hidden">
-                    <DrawerTitle className="hidden">
-                      Mobile Nav menu
-                    </DrawerTitle>
-                  </DrawerHeader>
-                  <div className="flex items-center justify-between px-3 py-3 mt-2 bg-primary-dark">
-                    <div className="flex lg:flex-1">
-                      <Link href="/" passHref className="-m-1.5 p-1.5">
-                        <span className="sr-only">HiAcuity</span>
-                        <Image
-                          alt="HiAcuity Logo"
-                          src="https://www.hiacuity.com/static/media/logo%20Main%202.9982694dad756def5917.png"
-                          className="h-8 w-auto"
-                          width={150}
-                          height={80}
-                        />
-                      </Link>
-                    </div>
-                    <DrawerClose asChild>
-                      <Button
-                        variant="outline"
-                        size="icon"
-                        className="h-8 w-8 shrink-0 rounded-full text-primary-dark bg-primary-light"
-                      >
-                        <XMark />
-                        <span className="sr-only">Increase</span>
-                      </Button>
-                    </DrawerClose>
-                  </div>
-                  <Accordion className="px-2" type="single" collapsible>
-                    <AccordionItem value="item-1">
-                      <AccordionTrigger className="text-primary-dark">
-                        Products
-                      </AccordionTrigger>
-                      <AccordionContent>
-                        <Link
-                          href="/job-openings"
-                          passHref
-                          className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
-                        >
-                          <div className="mb-2 mt-4 text-lg font-medium">
-                            HiAcuity
-                          </div>
-                          <p className="text-sm leading-tight text-muted-foreground">
-                            Beautifully designed components that you can copy
-                            and paste into your apps. Accessible. Customizable.
-                            Open Source.
-                          </p>
-                        </Link>
-                        <Link
-                          href="/"
-                          passHref
-                          className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
-                        >
-                          <div className="mb-2 mt-4 text-lg font-medium">
-                            HiAcuity
-                          </div>
-                          <p className="text-sm leading-tight text-muted-foreground">
-                            Beautifully designed components that you can copy
-                            and paste into your apps. Accessible. Customizable.
-                            Open Source.
-                          </p>
-                        </Link>
-                      </AccordionContent>
-                    </AccordionItem>
-                  </Accordion>
-                  <Accordion className="px-2" type="single" collapsible={false}>
-                    <AccordionItem value="item-1">
-                      <AccordionTrigger
-                        collapsible={false}
-                        className="text-primary-dark"
-                      >
-                        Pricing
-                      </AccordionTrigger>
-                    </AccordionItem>
-                  </Accordion>
-                  <Accordion className="px-2" type="single" collapsible={false}>
-                    <AccordionItem value="item-1">
-                      <AccordionTrigger
-                        collapsible={false}
-                        className="text-primary-dark"
-                      >
-                        Blog
-                      </AccordionTrigger>
-                    </AccordionItem>
-                  </Accordion>
-                  <Accordion className="px-2" type="single" collapsible={false}>
-                    <AccordionItem value="item-1">
-                      <AccordionTrigger
-                        collapsible={false}
-                        className="text-primary-dark"
-                      >
-                        <Link href="/about" passHref>
-                          About Us
-                        </Link>
-                      </AccordionTrigger>
-                    </AccordionItem>
-                  </Accordion>
-                  <Accordion className="px-2" type="single" collapsible={false}>
-                    <AccordionItem value="item-1">
-                      <AccordionTrigger
-                        collapsible={false}
-                        className="text-primary-dark"
-                      >
-                        <Link href="/contact" passHref>
-                          Contact Us
-                        </Link>
-                      </AccordionTrigger>
-                    </AccordionItem>
-                  </Accordion>
-                </div>
-              </DrawerContent>
-            </Drawer>
+                  <Image
+                    src="https://www.hiacuity.com/static/media/logo%20Main%202.9982694dad756def5917.png"
+                    alt="HiAcuity Logo"
+                    width={120}
+                    height={50}
+                  />
+                </Link>
+                <button onClick={closeMenu} className="text-white">
+                  <FiX size={24} />
+                </button>
+              </div>
+
+              {/* Navigation Links */}
+              <nav className="flex flex-col gap-2 p-4">
+                {[
+                  { href: "/", label: "Home" },
+                  { href: "/job-openings", label: "Job Openings" },
+                  { href: "/employee-assements", label: "Assessments" },
+                  { href: "/pricing", label: "Pricing" },
+                  { href: "/about", label: "About Us" },
+                  { href: "/contact", label: "Contact Us" },
+                ].map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    onClick={closeMenu}
+                    className={`block p-3 rounded-lg transition ${
+                      pathname === link.href
+                        ? "bg-primary-light hover:text-primary-dark" // Active route styling
+                        : "bg-gray-100 hover:bg-primary-light hover:text-primary-dark"
+                    }`}
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </nav>
+            </div>
           </div>
           <div className="hidden lg:flex lg:gap-x-12 ">
             <NavigationMenu>

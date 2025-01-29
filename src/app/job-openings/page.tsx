@@ -24,12 +24,11 @@ export default function Pricing() {
         heroText="HiAcuity  Web transforms job recruitment with AI-driven precision. Automate candidate screening, match talent to the right roles, and streamline hiring with smart insights."
         hasImage={false}
       />
-      <div className="h-auto   w-full ">
+      <div className="h-auto pt-20  w-full ">
         <div className="relative isolate px-6 md:py-8 lg:px-8 max-w-[1600px] mx-auto">
           <WhyChooseHiAcuity />
         </div>
       </div>
-
       <div className="relative h-auto w-full mt-20 md:mt-32 py-20 bg-[radial-gradient(circle,rgba(255,255,255,1)_10%,rgba(224,255,240,0.8)_80%)] min-h-[500px]">
         {/* Content Wrapper with Background Image */}
         <div
