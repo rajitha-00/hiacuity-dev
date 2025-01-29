@@ -15,7 +15,7 @@ import {
 } from "@/components/ui/navigation-menu";
 import Image from "next/image";
 import { FiMenu, FiX } from "react-icons/fi";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 
 const ListItem = React.forwardRef<
   React.ElementRef<"a">,
@@ -47,7 +47,6 @@ ListItem.displayName = "ListItem";
 
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const router = useRouter();
   const pathname = usePathname();
   const closeMenu = () => setIsOpen(false);
   return (
