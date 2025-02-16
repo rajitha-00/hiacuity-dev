@@ -7,12 +7,15 @@ export const OurValues = () => {
     <div className="y-10">
       <div className="text-start md:text-center w-full justify-center  lg:text-start ">
         <Fade triggerOnce direction="up" delay={100}>
-          <h2 className="text-3xl md:text-5xl font-semibold text-primary-light">Our values</h2>
+          <h2 className="text-3xl md:text-5xl font-semibold text-primary-light">
+            Our values
+          </h2>
         </Fade>
         <Fade triggerOnce direction="up" delay={200}>
           <p className="mt-10 lg:text-start text-sm md:text-lg text-center text-gray-50">
-            Automated filtering quickly identifies top candidates, making it easy to spot the most qualified individuals
-            early in the hiring process. Enhanced by{" "}
+            Automated filtering quickly identifies top candidates, making it
+            easy to spot the most qualified individuals early in the hiring
+            process. Enhanced by{" "}
           </p>
         </Fade>
       </div>
@@ -28,7 +31,9 @@ export const OurValues = () => {
               >
                 <div className="col-span-1 max-w-sm">
                   <div className="rounded-full w-10 h-10">{value.icon}</div>
-                  <h3 className="mt-3 text-lg font-semibold text-primary-light mr-2 md:mb-4">{value.title}</h3>
+                  <h3 className="mt-3 text-lg font-semibold text-primary-light mr-2 md:mb-4">
+                    {value.title}
+                  </h3>
                   <p className="text-md mt-3">{value.description}</p>
                 </div>
               </Fade>
@@ -36,11 +41,16 @@ export const OurValues = () => {
           </div>
         </div>
         <div className="max-w-2xl w-full">
-          <div className="w-full mt-14 rounded-lg relative" style={{ paddingTop: "56.25%" }}>
+          <div
+            className="w-full mt-14 rounded-lg relative"
+            style={{ paddingTop: "56.25%" }}
+          >
             <Fade triggerOnce delay={100}>
               <Image
                 alt="HIAcuity is AI hiring platform"
-                src={"https://www.hiacuity.com/static/media/HiAcuity_Employer-Assessment_1.024bfe83d6bdd201db59.png"}
+                src={
+                  "https://www.hiacuity.com/static/media/HiAcuity_Employer-Assessment_1.024bfe83d6bdd201db59.png"
+                }
                 fill
                 className="rounded-3xl object-cover"
               />

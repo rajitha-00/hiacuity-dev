@@ -20,7 +20,30 @@ import {
   Hand,
   Rocket,
 } from "@/icons/Icons";
-
+import {
+  Coins,
+  FilterIcon,
+  User,
+  SortAsc,
+  Pin,
+  Medal,
+  User2,
+  AlertCircle,
+  Lightbulb,
+  ChartArea,
+  Search,
+  AlertTriangle,
+  Trophy,
+  BookUser,
+  RocketIcon,
+  ClipboardCheck,
+  BarChart,
+  UserCheck,
+  Clock1,
+  Target,
+  Plug,
+} from "lucide-react";
+import AssementsWhats from "../assets/images/AssementsWhats.png";
 export const FAQ = [
   {
     question: "How does the automated screening feature work?",
@@ -294,5 +317,203 @@ export const BLOG_DATA = [
     shares: 740,
     description:
       "Discover the benefits of a minimalist lifestyle and how it can lead to more happiness and less stress.",
+  },
+];
+export type UserType = "candidates" | "employees" | "partners";
+
+export const USER_TYPE: Record<
+  UserType,
+  {
+    label: string;
+    featureTitle: string;
+    description: string;
+    url: any;
+    benefits: { point: string; icon: JSX.Element }[];
+    whyUseTitle?: string;
+    whyUseURL?: any;
+    whyUseRight?: {
+      point: string;
+      pointDescription: string;
+      icon: JSX.Element;
+    }[];
+    whyUseLeft?: {
+      point: string;
+      pointDescription: string;
+      icon: JSX.Element;
+    }[];
+  }
+> = {
+  candidates: {
+    label: "Candidates",
+    featureTitle: "Smarter Hiring, Faster Results",
+    url: AssementsWhats,
+    description:
+      "Hiring delays cost businesses time and money. Our assessments eliminate unqualified candidates, reduce time-to-hire, and ensure only the best talent moves forward.",
+    benefits: [
+      { point: "Cut hiring time from 25+ days.", icon: <Coins size={24} /> },
+      {
+        point: "Filter out time-wasting candidates.",
+        icon: <FilterIcon size={24} />,
+      },
+      { point: "Identify high-potential talent.", icon: <User size={24} /> },
+    ],
+    whyUseTitle: "Why Using SISO For Candidate Assessments",
+    whyUseURL: AssementsWhats,
+    whyUseRight: [
+      {
+        point: "Instant Skill Assessment",
+        pointDescription: "Quickly evaluate candidates' abilities.",
+        icon: <BarChart size={24} />,
+      },
+      {
+        point: "Automated Ranking",
+        pointDescription: "Rank applicants based on their skills.",
+        icon: <SortAsc size={24} />,
+      },
+      {
+        point: "Smart Shortlisting",
+        pointDescription: "Identify top talent with accuracy.",
+        icon: <UserCheck size={24} />,
+      },
+    ],
+    whyUseLeft: [
+      {
+        point: "Time-Saving Process",
+        pointDescription: "Reduce manual screening efforts.",
+        icon: <Clock1 size={24} />,
+      },
+      {
+        point: "Objective Evaluation",
+        pointDescription: "Eliminate bias with data-driven insights.",
+        icon: <Target size={24} />,
+      },
+      {
+        point: "Seamless Integration",
+        pointDescription: "Easily fits into your hiring workflow.",
+        icon: <Plug size={24} />,
+      },
+    ],
+  },
+  employees: {
+    label: "Employees",
+    featureTitle: "Elevating Employee Performance",
+    url: AssementsWhats,
+    description:
+      "Traditional performance reviews are biased and outdated. Regular, objective assessments help employees stay sharp, track their growth, and stay motivated through KPI-driven evaluations.",
+    benefits: [
+      { point: "Keep skills sharp.", icon: <Lightbulb size={24} /> },
+      {
+        point: "Identify top & bottom performers.",
+        icon: <SortAsc size={24} />,
+      },
+      {
+        point: "Pinpoint areas for employee development.",
+        icon: <Pin size={24} />,
+      },
+    ],
+    whyUseTitle: "Why Using SISO For Employee Assessments",
+    whyUseURL: AssementsWhats,
+    whyUseRight: [
+      {
+        point: "Skill Tracking",
+        pointDescription: "Monitor employee skill development.",
+        icon: <ChartArea size={24} />,
+      },
+      {
+        point: "Skill Comparison",
+        pointDescription: "Compare competencies across teams.",
+        icon: <Search size={24} />,
+      },
+      {
+        point: "Identify Skill Gaps",
+        pointDescription: "Detect and address weaknesses.",
+        icon: <AlertTriangle size={24} />,
+      },
+    ],
+    whyUseLeft: [
+      {
+        point: "Nurture High Achievers",
+        pointDescription: "Support top performers.",
+        icon: <Trophy size={24} />,
+      },
+      {
+        point: "Foster Continuous Learning",
+        pointDescription: "Encourage ongoing skill development.",
+        icon: <BookUser size={24} />,
+      },
+      {
+        point: "Drive Growth",
+        pointDescription: "Enhance team efficiency and productivity.",
+        icon: <RocketIcon size={24} />,
+      },
+    ],
+  },
+  partners: {
+    label: "Partners",
+    featureTitle: "Strengthening Partner Networks",
+    url: AssementsWhats,
+    description:
+      "Business partners drive success, but assessing their expertise is time-consuming. Our automated competency evaluations ensure you work with only the best partners, reducing risk and boosting performance.",
+    benefits: [
+      { point: "Ensure partner credibility.", icon: <Medal size={24} /> },
+      { point: "Work with top-tier experts.", icon: <User2 size={24} /> },
+      { point: "Reduce project risks.", icon: <AlertCircle size={24} /> },
+    ],
+    whyUseTitle: "Why Using SISO For Partner Assessments",
+    whyUseURL: AssementsWhats,
+    whyUseRight: [
+      {
+        point: "Skill Tracking",
+        pointDescription: "Monitor employee skill development.",
+        icon: <ChartArea size={24} />,
+      },
+      {
+        point: "Skill Comparison",
+        pointDescription: "Compare competencies across teams and vendors.",
+        icon: <Search size={24} />,
+      },
+      {
+        point: "Identify Skill Gaps",
+        pointDescription: "Detect and address weaknesses.",
+        icon: <AlertTriangle size={24} />,
+      },
+    ],
+    whyUseLeft: [
+      {
+        point: "Nurture High Achievers",
+        pointDescription: "Support top performers.",
+        icon: <Trophy size={24} />,
+      },
+      {
+        point: "Foster Continuous Learning",
+        pointDescription: "Encourage ongoing skill development.",
+        icon: <BookUser size={24} />,
+      },
+      {
+        point: "Vendor Assessment",
+        pointDescription:
+          "Evaluate contractors and partners for better collaboration.",
+        icon: <ClipboardCheck size={24} />,
+      },
+    ],
+  },
+};
+interface Reason {
+  title: string;
+  description?: string;
+}
+
+export const reasons: Reason[] = [
+  {
+    title: "Speed",
+  },
+  {
+    title: "Insightful",
+  },
+  {
+    title: "Scalable",
+  },
+  {
+    title: "Objective",
   },
 ];
