@@ -44,6 +44,7 @@ import {
   Plug,
 } from "lucide-react";
 import AssementsWhats from "../assets/images/AssementsWhats.png";
+import { StaticImageData } from "next/image";
 export const FAQ = [
   {
     question: "How does the automated screening feature work?",
@@ -327,10 +328,10 @@ export const USER_TYPE: Record<
     label: string;
     featureTitle: string;
     description: string;
-    url: any;
+    url: StaticImageData;
     benefits: { point: string; icon: JSX.Element }[];
     whyUseTitle?: string;
-    whyUseURL?: any;
+    whyUseURL?: StaticImageData;
     whyUseRight?: {
       point: string;
       pointDescription: string;
