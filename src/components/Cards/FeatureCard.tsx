@@ -30,7 +30,7 @@ export const FeatureCard = (props: ICard) => {
       <div className="text-start md:text-center w-full max-w-2xl justify-center lg:text-start">
         <Fade triggerOnce direction="up" delay={200}>
           <Link href={navigateTo}>
-            <h2 className="text-3xl mt-5  font-semibold text-green-700 ">
+            <h2 className="text-xl md:text-3xl mt-5  font-semibold text-green-700 ">
               {title}
             </h2>
           </Link>

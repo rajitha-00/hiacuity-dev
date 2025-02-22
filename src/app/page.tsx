@@ -45,7 +45,7 @@ export default function Home() {
       </div>
 
       <div className="relative isolate px-6 pt-14 lg:px-8 w-full max-w-[1600px] mx-auto ">
-        <div className="mx-auto py-20 min-h-[85vh] flex flex-col lg:flex-col items-center justify-between">
+        <div className="mx-auto py-20 md:min-h-[85vh] flex flex-col lg:flex-col items-center md:justify-between">
           <div className="text-center mt-10 lg:text-start w-full flex flex-col gap-5 z-10">
             <Fade direction="up" triggerOnce delay={300}>
               <div className="bg-primary-light p-1 rounded-full outline outline-1 outline-primary-main max-w-xs mx-auto">
@@ -54,21 +54,21 @@ export default function Home() {
                 </p>
               </div>
             </Fade>
-            <h1 className="text-center text-7xl mt-5 font-semibold tracking-tight bg-gradient-to-tr from-primary-dark bg-primary-main bg-clip-text text-transparent">
+            <h1 className="text-center mt-5 font-semibold tracking-tight bg-gradient-to-tr from-primary-dark bg-primary-main bg-clip-text text-transparent">
               <Fade direction="up">
-                <span className="text-balance md:text-8xl text-7xl font-semibold tracking-tight bg-gradient-to-tr from-primary-dark bg-primary-main bg-clip-text text-transparent">
+                <span className="text-balance md:text-8xl text-5xl font-semibold tracking-tight bg-gradient-to-tr from-primary-dark bg-primary-main bg-clip-text text-transparent">
                   HiAcuity
                 </span>
               </Fade>
               <Fade direction="up" triggerOnce delay={100}>
-                <span className="text-text-title pt-5 font-semibold md:text-7xl text-5xl">
+                <span className="text-text-title  font-semibold md:text-7xl text-3xl">
                   Hiring Made Simple!
                 </span>
               </Fade>
             </h1>
           </div>
           <div
-            className="relative w-full h-auto "
+            className="relative w-full mt-10 md:mt-0 h-auto "
             style={{ aspectRatio: "16 / 10" }}
           >
             <Fade triggerOnce delay={100}>
@@ -76,7 +76,7 @@ export default function Home() {
                 alt="HIAcuity is ai hiring platform"
                 src={HiringHomePageImage}
                 fill
-                className="object-contain"
+                className="object-cover md:object-contain"
               />
             </Fade>
           </div>
@@ -91,8 +91,8 @@ export default function Home() {
                   <Image
                     alt={feature.title}
                     src={feature.src}
-                    width={140}
-                    height={140}
+                    width={120}
+                    height={120}
                   />
                 </div>
               </Fade>
@@ -108,15 +108,15 @@ export default function Home() {
       {/* Enhance Your Management Section: Highlights features of our tools to improve management */}
       <div className="relative isolate px-6 mt-20 md:mt-40 w-full lg:px-8 max-w-[1600px] mx-auto ">
         <div className=" p-10 ">
-          <h2 className="text-balance text-center mt-10 tracking-tight ">
+          <h2 className="md:text-balance text-center mt-10 tracking-tight ">
             <Fade direction="up" triggerOnce delay={0}>
-              <span className="text-text-title  font-semibold md:text-6xl text-4xl">
+              <span className="text-text-title  font-semibold md:text-6xl text-3xl">
                 Enhance Your Corporate Management Efforts with AI!
               </span>
             </Fade>
           </h2>
         </div>
-        <div className="flex flex-col z-10 gap-20 pt-20">
+        <div className="flex flex-col z-10 gap-20 md:pt-20">
           <SectionLeftImage
             label="JOB OPENINGS"
             title="Smart Screening"
@@ -163,7 +163,7 @@ export default function Home() {
           </h2>
         </div>
         <div className="flex flex-col z-20 gap-16  md:gap-32 pt-10 md:pt-20 ">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-20">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 ">
             <div className="col-span-1">
               <FeatureCard
                 description="Automated filtering quickly identifies top candidates, making it easy to spot the most qualified
@@ -190,7 +190,7 @@ export default function Home() {
         <div className="text-center z-10  w-full flex flex-col gap-5">
           <h2 className="text-balance font-extrabold tracking-tight ">
             <Fade direction="up" triggerOnce delay={0}>
-              <span className="text-text-title font-semibold md:text-6xl text-4xl">
+              <span className="text-text-title font-semibold md:text-6xl text-3xl">
                 Shaping The World Of Tomorrow.{" "}
               </span>
             </Fade>
@@ -211,8 +211,8 @@ export default function Home() {
         </div>
         <div className="flex flex-col z-20 gap-16  md:gap-32 pt-10 md:pt-20 "></div>
       </div>
-      <div className="relative isolate px-6 pt-20 md:pt-40 w-full lg:px-8 max-w-[1600px] mx-auto ">
-        <div className="relative mx-auto flex rounded-[50px] shadow-md flex-col lg:flex-row outline outline-1 outline-gray-100 items-center justify-between overflow-hidden px-20 py-20">
+      <div className="relative isolate px-6 pt-10 w-full lg:px-8 max-w-[1600px] mx-auto ">
+        <div className="relative mx-auto flex rounded-[50px] shadow-md flex-col lg:flex-row outline outline-1 outline-gray-100 items-center justify-between overflow-hidden p-10 md:px-20 md:py-20">
           <Image
             src={BGImage}
             alt="Graduation Hat"
@@ -225,12 +225,12 @@ export default function Home() {
           {/* Right Section - Content */}
           <div className="relative text-start md:p-16 w-full justify-center z-10">
             <Fade triggerOnce direction="up" delay={200}>
-              <h2 className="text-3xl md:text-5xl font-medium text-white">
+              <h2 className="text-xl md:text-5xl font-medium text-white">
                 Get Assessment Demo
               </h2>
             </Fade>
             <Fade triggerOnce direction="up" delay={300}>
-              <p className="mt-10 text-start text-sm md:text-lg md:text-justify text-white">
+              <p className="mt-5 md:mt-10 text-start text-sm md:text-lg md:text-justify text-white">
                 Hiring delays cost businesses time and money. Our assessments
                 eliminate unqualified candidates, reduce time-to-hire, and
                 ensure only the best talent moves forward.
@@ -238,13 +238,13 @@ export default function Home() {
             </Fade>
             <ul>
               <li>
-                <div className="col-span-1 py-6 rounded-xl">
+                <div className="col-span-1 py-3 md:py-6 rounded-xl">
                   <div className="flex items-start flex-row gap-3">
                     <div className="flex-shrink-0">
                       <CircleCheckBig size={24} className="text-white" />
                     </div>
                     <div>
-                      <h3 className="text-xl font-medium text-white">
+                      <h3 className="text-sm md:text-xl font-medium text-white">
                         Cut hiring time from 25+ days.
                       </h3>
                     </div>
@@ -252,13 +252,13 @@ export default function Home() {
                 </div>
               </li>
               <li>
-                <div className="col-span-1 py-6 rounded-xl">
+                <div className="col-span-1 pb-3 md:py-6 rounded-xl">
                   <div className="flex items-start flex-row gap-3">
                     <div className="flex-shrink-0">
                       <CircleCheckBig size={24} className="text-white" />
                     </div>
                     <div>
-                      <h3 className="text-xl font-medium text-white">
+                      <h3 className="text-sm md:text-xl font-medium text-white">
                         Filter out time-wasting candidates.
                       </h3>
                     </div>
@@ -266,13 +266,13 @@ export default function Home() {
                 </div>
               </li>
               <li>
-                <div className="col-span-1 py-6 rounded-xl">
+                <div className="col-span-1 pb-3 md:py-6 rounded-xl">
                   <div className="flex items-start flex-row gap-3">
                     <div className="flex-shrink-0">
                       <CircleCheckBig size={24} className="text-white" />
                     </div>
                     <div>
-                      <h3 className="text-xl font-medium text-white">
+                      <h3 className="text-sm md:text-xl font-medium text-white">
                         Identify high-potential talent.
                       </h3>
                     </div>
@@ -291,7 +291,7 @@ export default function Home() {
         <div className="text-center z-10 w-full flex flex-col gap-5">
           <h2 className="text-balance font-extrabold tracking-tight">
             <Fade direction="up" triggerOnce delay={0}>
-              <span className="text-text-title font-semibold md:text-6xl text-4xl">
+              <span className="text-text-title font-semibold md:text-6xl text-3xl">
                 Frequently Asked Questions (FAQ)
               </span>
             </Fade>

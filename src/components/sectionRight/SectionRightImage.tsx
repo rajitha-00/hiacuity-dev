@@ -39,14 +39,14 @@ export const SectionRightImage = (props: ISectionRightImage) => {
           ${hasPadding ? "py-5 md:py-20 px-5 md:px-16" : ""}
         `}
       >
-        <div className="text-start md:text-center w-full max-w-2xl justify-center lg:text-start">
+        <div className="text-start  md:text-center w-full max-w-2xl justify-center lg:text-start">
           <Fade triggerOnce direction="up" delay={100}>
-            <p className="text-lg font-semibold text-green-700 mr-2 md:mb-4">
+            <p className="text-sm md:text-xl font-semibold text-green-700 mr-2 md:mb-4">
               {label}
             </p>
           </Fade>
           <Fade triggerOnce direction="up" delay={200}>
-            <h2 className="text-3xl md:text-5xl font-semibold text-text-primary">
+            <h2 className="text-xl md:text-5xl font-semibold text-text-primary">
               {title}
             </h2>
           </Fade>
@@ -75,7 +75,7 @@ export const SectionRightImage = (props: ISectionRightImage) => {
               alt="HIAcuity is ai hiring platform"
               src={imageSrc}
               fill
-              className="object-contain" // Ensures the image covers the entire container
+              className="object-cover md:object-contain" // Ensures the image covers the entire container
             />
           </Fade>
         </div>

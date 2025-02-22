@@ -1,16 +1,14 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 
 import { cn } from "@/lib/utils";
 import {
   NavigationMenu,
-  NavigationMenuContent,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
-  NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import Image from "next/image";
@@ -49,12 +47,33 @@ export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
   const closeMenu = () => setIsOpen(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
     <div className="relative">
       <header className="fixed inset-x-0 top-0 z-50 md:px-3  md:my-2 ">
         <nav
           aria-label="Global"
-          className="flex px-4 bg-primary-dark md:rounded-full shadow-md shadow-slate-800 w-auto lg:max-w-[1600px] mx-auto items-center justify-between py-2  "
+          className={cn(
+            "flex px-4 md:rounded-full shadow-md  w-auto lg:max-w-[1600px] mx-auto items-center justify-between py-2  ",
+            isScrolled
+              ? "bg-gray-800/40 backdrop-blur-xl"
+              : "bg-primary-dark shadow-slate-800 "
+          )}
         >
           <div className="flex gap-5 items-center">
             <div className="flex lg:flex-1">
@@ -74,7 +93,7 @@ export const Header = () => {
             {/* Menu Button */}
             <button
               onClick={() => setIsOpen(true)}
-              className="h-10 w-10 flex items-center justify-center rounded-full bg-primary-light text-primary-dark transition-all hover:scale-105"
+              className="h-10 w-10 flex items-center justify-center rounded-full  text-white transition-all hover:scale-105"
             >
               <FiMenu size={24} />
             </button>
@@ -107,7 +126,7 @@ export const Header = () => {
                     height={50}
                   />
                 </Link>
-                <button onClick={closeMenu} className="text-white">
+                <button onClick={closeMenu} className={cn("text-white")}>
                   <FiX size={24} />
                 </button>
               </div>
@@ -141,52 +160,25 @@ export const Header = () => {
           <div className="hidden lg:flex lg:gap-x-12 ">
             <NavigationMenu>
               <NavigationMenuList>
-                <NavigationMenuItem className="text-white">
-                  <NavigationMenuTrigger>Products</NavigationMenuTrigger>
-                  <NavigationMenuContent>
-                    <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[1fr_1fr]">
-                      <li className="row-span-3">
-                        <NavigationMenuLink asChild>
-                          <Link
-                            href="/job-openings"
-                            passHref
-                            className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
-                          >
-                            {/* <Icons.logo className="h-6 w-6" /> */}
-                            <div className="mb-2 mt-4 text-lg font-medium">
-                              Job Opening
-                            </div>
-                            <p className="text-sm leading-tight text-muted-foreground">
-                              Beautifully designed components that you can copy
-                              and paste into your apps. Accessible.
-                              Customizable. Open Source.
-                            </p>
-                          </Link>
-                        </NavigationMenuLink>
-                      </li>
-                      <li className="row-span-3">
-                        <NavigationMenuLink asChild>
-                          <Link
-                            href="/employee-assements"
-                            passHref
-                            className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
-                          >
-                            {/* <Icons.logo className="h-6 w-6" /> */}
-                            <div className="mb-2 mt-4 text-lg font-medium">
-                              Assesments
-                            </div>
-                            <p className="text-sm leading-tight text-muted-foreground">
-                              Beautifully designed components that you can copy
-                              and paste into your apps. Accessible.
-                              Customizable. Open Source.
-                            </p>
-                          </Link>
-                        </NavigationMenuLink>
-                      </li>
-                    </ul>
-                  </NavigationMenuContent>
+                <NavigationMenuItem className={cn("text-white")}>
+                  <Link href="/job-openings" legacyBehavior passHref>
+                    <NavigationMenuLink
+                      className={navigationMenuTriggerStyle()}
+                    >
+                      Job Openings
+                    </NavigationMenuLink>
+                  </Link>
                 </NavigationMenuItem>
-                <NavigationMenuItem className="text-white">
+                <NavigationMenuItem className={cn("text-white")}>
+                  <Link href="/employee-assements" legacyBehavior passHref>
+                    <NavigationMenuLink
+                      className={navigationMenuTriggerStyle()}
+                    >
+                      Assements
+                    </NavigationMenuLink>
+                  </Link>
+                </NavigationMenuItem>
+                <NavigationMenuItem className={cn("text-white")}>
                   <Link href="/pricing" legacyBehavior passHref>
                     <NavigationMenuLink
                       className={navigationMenuTriggerStyle()}
@@ -195,7 +187,7 @@ export const Header = () => {
                     </NavigationMenuLink>
                   </Link>
                 </NavigationMenuItem>
-                <NavigationMenuItem className="text-white">
+                <NavigationMenuItem className={cn("text-white")}>
                   <Link href="/blogs" legacyBehavior passHref>
                     <NavigationMenuLink
                       className={navigationMenuTriggerStyle()}
@@ -204,7 +196,7 @@ export const Header = () => {
                     </NavigationMenuLink>
                   </Link>
                 </NavigationMenuItem>
-                <NavigationMenuItem className="text-white">
+                <NavigationMenuItem className={cn("text-white")}>
                   <Link href="/about" legacyBehavior passHref>
                     <NavigationMenuLink
                       className={navigationMenuTriggerStyle()}
@@ -219,7 +211,7 @@ export const Header = () => {
           <div className="hidden lg:flex  lg:justify-end">
             <Link
               href="/contact"
-              className="relative rounded-3xl bg-primary-light px-4 py-2.5 text-sm font-semibold text-primary-dark shadow-md outline outline-2   transition duration-300 ease-in-out"
+              className="relative rounded-3xl bg-primary-light px-4 py-2.5 text-sm font-semibold text-primary-dark shadow-md    transition duration-300 ease-in-out"
             >
               Contact Us
             </Link>

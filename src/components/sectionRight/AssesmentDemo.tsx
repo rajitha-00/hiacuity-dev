@@ -35,7 +35,7 @@ export const AssesmentDemo = (props: IAssesmentDemo) => {
       >
         <div className=" w-full justify-center lg:text-start  max-w-2xl">
           <div>
-            <div className="form backdrop-blur-md bg-white bg-opacity-30 bg-blur-sm p-10 rounded-xl border">
+            <div className="form backdrop-blur-md bg-white bg-opacity-30 bg-blur-sm p-5 md:p-10 rounded-xl border">
               <div className="flex flex-row gap-3 items-end">
                 <BookOpenCheck size={60} className="text-white" />
                 <h3 className="text-white text-xl">SISO : Assesment</h3>
@@ -67,7 +67,7 @@ export const AssesmentDemo = (props: IAssesmentDemo) => {
                   </SelectContent>
                 </Select>
               </div>
-              <Button className="relative mt-6 rounded-xl  px-4 py-2.5 text-sm font-semibold text-primary-dark shadow-md  transition duration-300 ease-in-out">
+              <Button className="relative mt-6 rounded-xl w-full md:w-auto  px-4 py-2.5 text-sm font-semibold text-primary-dark shadow-md  transition duration-300 ease-in-out">
                 {buttonLabel}
               </Button>
             </div>
