@@ -1,6 +1,6 @@
 "use client";
 import { ArrowRight } from "@/icons/Icons";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { Fade } from "react-awesome-reveal";
 import { Button } from "../ui/button";
 
@@ -9,7 +9,7 @@ interface ISectionRightImage {
   title: string;
   description: string;
   buttonLabel?: string;
-  imageSrc: string;
+  imageSrc: string | StaticImageData;
   hasBg?: boolean;
   hasPadding?: boolean;
 }
