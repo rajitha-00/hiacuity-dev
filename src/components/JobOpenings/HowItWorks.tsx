@@ -1,112 +1,71 @@
 "use client";
 import { Fade } from "react-awesome-reveal";
-import {
-  CheckMark,
-  MegaPhone,
-  MagnifyingGlass,
-  Folder,
-  ClipBoard,
-  Speech,
-  Bulb,
-  Briefcase,
-} from "@/icons/Icons";
+import { HowItWorksVT, HowItWorksHT } from "@/icons/Icons";
+import { STEPS } from "@/constants";
+
 export const HowItWorks = () => {
   return (
-    <>
-      <div className="text-center  w-full flex flex-col gap-5 z-10">
-        <h2 className="text-balance font-extrabold tracking-tight ">
+    <section className="relative flex flex-col items-center w-full px-6 md:px-12">
+      {/* Title */}
+      <div className="text-center w-full flex flex-col gap-5 z-10">
+        <h2 className="text-balance font-extrabold tracking-tight">
           <Fade direction="up" triggerOnce delay={0}>
-            <span className="text-text-title font-bold md:text-6xl text-4xl">
+            <span className="text-text-title font-semibold md:text-6xl text-4xl">
               How it works
             </span>
           </Fade>
         </h2>
       </div>
 
-      {/* Process Steps */}
-      <div className="flex justify-center flex-row md:flex-col gap-10 max-w-5xl mx-auto mt-20">
-        <div className="flex flex-row md:flex-col items-start">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-20 relative">
-            {/* Row 1 */}
-            {[
-              {
-                number: "01",
-                text: "Job Request Approved",
-                icon: <CheckMark className="text-primary-dark" />,
-              },
-              {
-                number: "03",
-                text: "Analyze Applicants",
-                icon: <MagnifyingGlass className="text-primary-dark" />,
-              },
-              {
-                number: "05",
-                text: "Skills Assessment",
-                icon: <ClipBoard className="text-primary-dark" />,
-              },
-              {
-                number: "07",
-                text: "Make Decision",
-                icon: <Bulb className="text-primary-dark " />,
-              },
-            ].map((item) => (
-              <div key={item.number} className="col-span-1 flex justify-center">
-                <div className="group bg-white hover:bg-primary-dark w-44 h-44 rounded-2xl flex flex-col items-center justify-center shadow-md transition-all duration-300 outline-1 outline outline-gray-100">
-                  <div className="rounded-full w-12 h-12 mb-2">{item.icon}</div>
+      {/* Steps Container */}
+      <div className="relative flex flex-col items-center lg:flex-row mt-20 mx-auto md:mt-60">
+        {/* Desktop Horizontal Wave */}
+        <Fade triggerOnce>
+          <HowItWorksHT className="hidden lg:block" />
+        </Fade>
+        {/* Mobile Vertical Wave */}
+        <Fade triggerOnce delay={100}>
+          <HowItWorksVT className="lg:hidden" />
+        </Fade>
 
-                  <p className="text-3xl font-bold text-primary-dark group-hover:text-white transition-all duration-300">
-                    {item.number}
-                  </p>
-                  <p className="text-center text-sm group-hover:text-white transition-all duration-300">
-                    {item.text}
+        {/* Steps */}
+        {STEPS.map((item, index) => (
+          <Fade
+            direction="up"
+            triggerOnce
+            delay={index * 100}
+            key={item.number}
+          >
+            <div
+              className={`relative flex flex-col items-center ${
+                index % 2 === 0
+                  ? "-translate-x-32 lg:translate-y-32 lg:translate-x-0"
+                  : "lg:-translate-y-32  translate-x-32 lg:translate-x-0"
+              }`}
+            >
+              {/* Step Card */}
+              <div className="relative flex flex-col items-center md:bg-transparent  md:min-h-[160px] rounded-xl  transition-all duration-300">
+                {/* Step Icon */}
+                <div className="rounded-full w-12 h-12  flex items-center justify-center ">
+                  {item.icon}
+                </div>
+
+                {/* Step Number */}
+                <div className="bg-primary-main/20 backdrop-blur-lg p-2 px-6 w-[120px] rounded-full mt-3 shadow-sm">
+                  <p className="text-md font-semibold text-primary-dark tracking-wide">
+                    STEP {item.number}
                   </p>
                 </div>
-              </div>
-            ))}
-          </div>
-        </div>
 
-        <div className="flex flex-col items-end mt-24">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-20 relative">
-            {/* Row 2 */}
-            {[
-              {
-                number: "02",
-                text: "Job Posting",
-                icon: <MegaPhone className="text-primary-dark" />,
-              },
-              {
-                number: "04",
-                text: "Shortlist Applicants",
-                icon: <Folder className="text-primary-dark" />,
-              },
-              {
-                number: "06",
-                text: "Human Interviews",
-                icon: <Speech className="text-primary-dark" />,
-              },
-              {
-                number: "08",
-                text: "Offer Job",
-                icon: <Briefcase className="text-primary-dark" />,
-              },
-            ].map((item) => (
-              <div key={item.number} className="col-span-1 flex justify-center">
-                <div className="group bg-white hover:bg-primary-dark w-44 h-44 rounded-2xl flex flex-col items-center justify-center shadow-md transition-all duration-300 outline-1 outline outline-gray-100">
-                  <div className="rounded-full w-12 h-12 mb-2">{item.icon}</div>
-
-                  <p className="text-3xl font-bold text-primary-dark group-hover:text-white transition-all duration-300">
-                    {item.number}
-                  </p>
-                  <p className="text-center text-sm group-hover:text-white transition-all duration-300">
-                    {item.text}
-                  </p>
-                </div>
+                {/* Step Text */}
+                <p className="text-center font-semibold text-primary-dark mt-4 text-lg max-w-[150px] md:max-w-auto">
+                  {item.text}
+                </p>
               </div>
-            ))}
-          </div>
-        </div>
+            </div>
+          </Fade>
+        ))}
       </div>
-    </>
+    </section>
   );
 };

@@ -5,8 +5,8 @@ import {
   HowSISOWorks,
   WhyChooseHiAcuityAssesments,
 } from "@/components/Assesments";
-import { GetADemoAssesment } from "@/components/Assesments/GetADemoAssement";
 import { AssesmentFlow } from "@/components/Assesments/AssementFlow";
+import { RequestDemoOrTrial } from "@/components/JobOpenings";
 
 export const metadata: Metadata = {
   title: "HiAcuity | Employee Assements",
@@ -37,7 +37,7 @@ export default function Pricing() {
       </div>
       <div className="h-auto   w-full mt-20 md:mt-32  ">
         <div className="relative isolate px-6 md:py-8 lg:px-8 max-w-[1600px] mx-auto">
-          <GetADemoAssesment />
+          <RequestDemoOrTrial />
         </div>
       </div>
     </div>

@@ -36,7 +36,7 @@ export const SectionLeftImage = (props: ISectionLeftImage) => {
     >
       <div
         className={`mx-auto flex flex-col-reverse lg:flex-row gap-10 items-center justify-between
-          ${hasPadding ? "py-5 md:py-20 px-5 md:px-16" : ""}
+          ${hasPadding ? "py-5 md:py-20 px-5 " : ""}
         `}
       >
         <div
@@ -52,19 +52,19 @@ export const SectionLeftImage = (props: ISectionLeftImage) => {
             />
           </Fade>
         </div>
-        <div className="text-start md:text-center w-full max-w-2xl justify-center lg:text-start">
+        <div className="text-start md:text-center w-full max-w-2xl justify-center md:pr-16 lg:text-start">
           <Fade triggerOnce direction="up" delay={100}>
             <p className="text-sm md:text-lg font-semibold text-green-700 mr-2 md:mb-4">
               {label}
             </p>
           </Fade>
           <Fade triggerOnce direction="up" delay={200}>
-            <h2 className="text-xl md:text-5xl font-semibold text-text-primary">
+            <h2 className="text-xl md:text-6xl font-semibold text-text-primary">
               {title}
             </h2>
           </Fade>
           <Fade triggerOnce direction="up" delay={300}>
-            <p className="mt-2 text-start text-sm md:text-lg md:text-justify text-text-primary">
+            <p className="mt-5 text-start text-sm md:text-xl md:text-justify text-text-primary">
               {description}
             </p>
           </Fade>

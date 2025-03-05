@@ -19,6 +19,14 @@ import {
   Gear,
   Hand,
   Rocket,
+  CheckMark,
+  MegaPhone,
+  MagnifyingGlass,
+  Folder,
+  ClipBoard,
+  Speech,
+  Bulb,
+  Briefcase,
 } from "@/icons/Icons";
 import {
   Coins,
@@ -332,12 +340,7 @@ export const USER_TYPE: Record<
     benefits: { point: string; icon: JSX.Element }[];
     whyUseTitle?: string;
     whyUseURL?: StaticImageData;
-    whyUseRight?: {
-      point: string;
-      pointDescription: string;
-      icon: JSX.Element;
-    }[];
-    whyUseLeft?: {
+    whyFeaturedOn?: {
       point: string;
       pointDescription: string;
       icon: JSX.Element;
@@ -358,26 +361,9 @@ export const USER_TYPE: Record<
       },
       { point: "Identify high-potential talent.", icon: <User size={24} /> },
     ],
-    whyUseTitle: "Why Using SISO For Candidate Assessments",
+    whyUseTitle: "Featured On",
     whyUseURL: AssementsWhats,
-    whyUseRight: [
-      {
-        point: "Instant Skill Assessment",
-        pointDescription: "Quickly evaluate candidates' abilities.",
-        icon: <BarChart size={24} />,
-      },
-      {
-        point: "Automated Ranking",
-        pointDescription: "Rank applicants based on their skills.",
-        icon: <SortAsc size={24} />,
-      },
-      {
-        point: "Smart Shortlisting",
-        pointDescription: "Identify top talent with accuracy.",
-        icon: <UserCheck size={24} />,
-      },
-    ],
-    whyUseLeft: [
+    whyFeaturedOn: [
       {
         point: "Time-Saving Process",
         pointDescription: "Reduce manual screening efforts.",
@@ -392,6 +378,21 @@ export const USER_TYPE: Record<
         point: "Seamless Integration",
         pointDescription: "Easily fits into your hiring workflow.",
         icon: <Plug size={24} />,
+      },
+      {
+        point: "Instant Skill Assessment",
+        pointDescription: "Quickly evaluate candidates' abilities.",
+        icon: <BarChart size={24} />,
+      },
+      {
+        point: "Automated Ranking",
+        pointDescription: "Rank applicants based on their skills.",
+        icon: <SortAsc size={24} />,
+      },
+      {
+        point: "Smart Shortlisting",
+        pointDescription: "Identify top talent with accuracy.",
+        icon: <UserCheck size={24} />,
       },
     ],
   },
@@ -412,9 +413,24 @@ export const USER_TYPE: Record<
         icon: <Pin size={24} />,
       },
     ],
-    whyUseTitle: "Why Using SISO For Employee Assessments",
+    whyUseTitle: "Featured On",
     whyUseURL: AssementsWhats,
-    whyUseRight: [
+    whyFeaturedOn: [
+      {
+        point: "Nurture High Achievers",
+        pointDescription: "Support top performers.",
+        icon: <Trophy size={24} />,
+      },
+      {
+        point: "Foster Continuous Learning",
+        pointDescription: "Encourage ongoing skill development.",
+        icon: <BookUser size={24} />,
+      },
+      {
+        point: "Drive Growth",
+        pointDescription: "Enhance team efficiency and productivity.",
+        icon: <RocketIcon size={24} />,
+      },
       {
         point: "Skill Tracking",
         pointDescription: "Monitor employee skill development.",
@@ -431,23 +447,6 @@ export const USER_TYPE: Record<
         icon: <AlertTriangle size={24} />,
       },
     ],
-    whyUseLeft: [
-      {
-        point: "Nurture High Achievers",
-        pointDescription: "Support top performers.",
-        icon: <Trophy size={24} />,
-      },
-      {
-        point: "Foster Continuous Learning",
-        pointDescription: "Encourage ongoing skill development.",
-        icon: <BookUser size={24} />,
-      },
-      {
-        point: "Drive Growth",
-        pointDescription: "Enhance team efficiency and productivity.",
-        icon: <RocketIcon size={24} />,
-      },
-    ],
   },
   partners: {
     label: "Partners",
@@ -460,26 +459,9 @@ export const USER_TYPE: Record<
       { point: "Work with top-tier experts.", icon: <User2 size={24} /> },
       { point: "Reduce project risks.", icon: <AlertCircle size={24} /> },
     ],
-    whyUseTitle: "Why Using SISO For Partner Assessments",
+    whyUseTitle: "Featured on",
     whyUseURL: AssementsWhats,
-    whyUseRight: [
-      {
-        point: "Skill Tracking",
-        pointDescription: "Monitor employee skill development.",
-        icon: <ChartArea size={24} />,
-      },
-      {
-        point: "Skill Comparison",
-        pointDescription: "Compare competencies across teams and vendors.",
-        icon: <Search size={24} />,
-      },
-      {
-        point: "Identify Skill Gaps",
-        pointDescription: "Detect and address weaknesses.",
-        icon: <AlertTriangle size={24} />,
-      },
-    ],
-    whyUseLeft: [
+    whyFeaturedOn: [
       {
         point: "Nurture High Achievers",
         pointDescription: "Support top performers.",
@@ -495,6 +477,21 @@ export const USER_TYPE: Record<
         pointDescription:
           "Evaluate contractors and partners for better collaboration.",
         icon: <ClipboardCheck size={24} />,
+      },
+      {
+        point: "Skill Tracking",
+        pointDescription: "Monitor employee skill development.",
+        icon: <ChartArea size={24} />,
+      },
+      {
+        point: "Skill Comparison",
+        pointDescription: "Compare competencies across teams and vendors.",
+        icon: <Search size={24} />,
+      },
+      {
+        point: "Identify Skill Gaps",
+        pointDescription: "Detect and address weaknesses.",
+        icon: <AlertTriangle size={24} />,
       },
     ],
   },
@@ -516,5 +513,47 @@ export const reasons: Reason[] = [
   },
   {
     title: "Objective",
+  },
+];
+export const STEPS = [
+  {
+    number: "01",
+    text: "Job Request Approved",
+    icon: <CheckMark className="text-primary-dark" />,
+  },
+  {
+    number: "02",
+    text: "Job Posting",
+    icon: <MegaPhone className="text-primary-dark" />,
+  },
+  {
+    number: "03",
+    text: "Analyze Applicants",
+    icon: <MagnifyingGlass className="text-primary-dark" />,
+  },
+  {
+    number: "04",
+    text: "Short List Applicants",
+    icon: <Folder className="text-primary-dark" />,
+  },
+  {
+    number: "05",
+    text: "Skills Assessment",
+    icon: <ClipBoard className="text-primary-dark" />,
+  },
+  {
+    number: "06",
+    text: "Human Interviews",
+    icon: <Speech className="text-primary-dark" />,
+  },
+  {
+    number: "07",
+    text: "Make Decision",
+    icon: <Bulb className="text-primary-dark" />,
+  },
+  {
+    number: "08",
+    text: "Offer Job",
+    icon: <Briefcase className="text-primary-dark" />,
   },
 ];

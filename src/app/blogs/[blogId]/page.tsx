@@ -26,7 +26,7 @@ export default function BlogDetail() {
         alt={blog.title}
         className="w-full h-80 object-cover rounded-md mb-6"
       />
-      <h1 className="text-3xl font-bold mb-4">{blog.title}</h1>
+      <h1 className="text-3xl font-semibold mb-4">{blog.title}</h1>
       <div className="text-gray-500 text-sm mb-4">
         <span>{blog.date}</span>
         <span className="text-gray-400 mx-2">•</span>

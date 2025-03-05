@@ -31,14 +31,14 @@ export const WhyChooseHiAcuity = () => {
       <div className="mx-auto flex flex-col lg:flex-row items-center justify-between">
         <div className="text-start w-full lg:text-start">
           <Fade triggerOnce direction="up" delay={100}>
-            <div className="border border-primary-dark rounded-3xl p-2 w-[160px] flex justify-center items-center mr-2 md:mb-4">
-              <p className="text-lg font-semibold text-primary-dark">
+            <div className="border border-primary-dark rounded-3xl p-2 w-[120px] md:w-[160px] flex justify-center items-center mr-2 md:mb-4">
+              <p className="text-sm md:text-lg font-semibold text-primary-dark">
                 Why Choose
               </p>
             </div>
           </Fade>
           <Fade triggerOnce direction="up" delay={200}>
-            <h2 className="text-3xl mt-5 md:text-5xl font-semibold text-text-primary">
+            <h2 className="text-5xl mt-5 md:text-6xl font-semibold text-text-primary">
               HIAcuity;
               <br />
               Smarter Hiring,
@@ -52,16 +52,18 @@ export const WhyChooseHiAcuity = () => {
             </p>
           </Fade>
         </div>
-        <div className="grid gap-5 grid-cols-2 w-full">
+        <div className="grid gap-5 mt-10 md:mt-0 grid-cols-1 md:grid-cols-2 w-full">
           {reasons.map((reason) => (
             <div
               key={reason.title}
-              className="col-span-1 outline outline-1 outline-gray-100 my-5 bg-white px-5 rounded-xl min-h-[150px]"
+              className="col-span-1 outline outline-1 outline-gray-100 bg-white/80 backdrop-blur-lg border border-white/30 shadow-lg shadow-black/10 px-6 py-5 rounded-2xl md:min-h-[150px] transition-transform duration-300 hover:scale-[1.02]"
             >
-              <h3 className="mt-5 text-xl font-semibold text-text-title mr-2 md:mb-4">
+              <h3 className="mt-2 text-lg md:text-xl font-semibold  text-primary-dark mr-2 md:mb-3 ">
                 {reason.title}
               </h3>
-              <p className="text-md mt-3">{reason.description}</p>
+              <p className="text-sm md:text-md my-3 text-text-title">
+                {reason.description}
+              </p>
             </div>
           ))}
         </div>

@@ -3,7 +3,7 @@ import { Fade } from "react-awesome-reveal";
 import { Button } from "../ui/button";
 import { ArrowRight } from "@/icons/Icons";
 import Image, { StaticImageData } from "next/image";
-
+import BGPattern from "../../assets/hero/heroPattern.svg";
 interface IHeroSectionCommon {
   title1: string;
   title2: string;
@@ -18,11 +18,19 @@ export const HeroSectionCommon = (props: IHeroSectionCommon) => {
   const { title1, title2, title3, heroText, cta, url, hasImage } = props;
   return (
     <>
-      <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,1)_10%,rgba(224,255,240,0.8)_95%)] blur-3xl"></div>
+      <div className="absolute inset-0 flex justify-center items-center">
+        <Image
+          src={BGPattern}
+          alt="Hero Background"
+          layout="fill"
+          objectFit="contain"
+          className="opacity-50"
+        />
+      </div>
       <div className="relative isolate px-6 pt-14 lg:px-8 w-full max-w-[1600px] mx-auto ">
         <div
           className={`mx-auto py-20 pt-44  flex flex-col lg:flex-row gap-10 items-center justify-between ${
-            hasImage ? "min-h-[75vh]" : "min-h-[50vh]"
+            hasImage ? "md:min-h-[75vh]" : "md:min-h-[50vh]"
           }`}
         >
           <div
@@ -30,26 +38,30 @@ export const HeroSectionCommon = (props: IHeroSectionCommon) => {
               hasImage ? "text-center lg:text-start" : "text-center"
             }`}
           >
-            <h1 className="text-balance text-7xl font-semibold tracking-tight bg-gradient-to-tr from-primary-dark bg-primary-main bg-clip-text text-transparent">
+            <h2>
               <Fade direction="up" triggerOnce delay={0}>
-                <span className="text-text-title font-semibold md:text-7xl text-5xl">
+                <span className="text-text-title font-semibold md:text-6xl text-3xl">
                   {title1}
                 </span>
               </Fade>
+            </h2>
+            <h1 className="text-balance font-semibold tracking-tight bg-gradient-to-tr from-primary-dark bg-primary-main bg-clip-text text-transparent">
               <Fade direction="up">
-                <span className="text-balance md:text-9xl text-7xl font-semibold tracking-tight bg-gradient-to-tr from-primary-dark bg-primary-main bg-clip-text text-transparent">
+                <span className="text-balance md:text-8xl text-5xl font-semibold tracking-tight bg-gradient-to-tr from-primary-dark bg-primary-main bg-clip-text text-transparent">
                   {title2}
                 </span>
               </Fade>
+            </h1>
+            <h2>
               <Fade direction="up" triggerOnce delay={100}>
-                <span className="text-text-title pt-5 font-semibold md:text-7xl text-5xl">
+                <span className="text-text-title pt-5 font-semibold md:text-6xl text-5xl">
                   {title3}
                 </span>
               </Fade>
-            </h1>
+            </h2>
             <Fade direction="up" triggerOnce delay={300}>
               <p
-                className={`text-pretty mt-5 mx-auto text-lg font-medium ${
+                className={`text-pretty md:mt-5 mx-auto text-sm md:text-lg font-medium ${
                   hasImage ? "max-w-max" : "max-w-4xl"
                 } text-text-primary sm:text-xl/8`}
               >

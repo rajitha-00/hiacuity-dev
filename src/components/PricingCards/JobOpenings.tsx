@@ -50,7 +50,7 @@ export const JobOpenings = () => {
       <div className="text-center  w-full flex flex-col gap-5 z-10">
         <h2 className="text-balance font-extrabold tracking-tight ">
           <Fade direction="up" triggerOnce delay={0}>
-            <span className="text-text-title font-bold md:text-6xl text-4xl">
+            <span className="text-text-title font-semibold md:text-6xl text-4xl">
               Job Openings
             </span>
           </Fade>
@@ -92,7 +92,7 @@ export const JobOpenings = () => {
                 <div className="mt-6">
                   <p className={`text-sm ${card.textColor}`}>From</p>
                   <p
-                    className={`text-xl lg:text-3xl font-bold ${card.textColor}`}
+                    className={`text-xl lg:text-3xl font-semibold ${card.textColor}`}
                   >
                     {card.priceMonthly}
                     <span className="text-sm lg:text-xl font-medium">
@@ -102,7 +102,7 @@ export const JobOpenings = () => {
                   <div className="border-t border-primary-dark  my-4"></div>
                   {card.priceYearly && (
                     <p
-                      className={`text-xl lg:text-3xl font-bold ${card.textColor}`}
+                      className={`text-xl lg:text-3xl font-semibold ${card.textColor}`}
                     >
                       {card.priceYearly}{" "}
                       <span className="text-sm lg:text-xl font-medium">
@@ -115,7 +115,7 @@ export const JobOpenings = () => {
                 <div className="mt-6">
                   <Call className="w-8 h-8 my-5 mx-auto" />
                   <p
-                    className={`md:text-3xl font-bold text-center ${card.textColor}`}
+                    className={`md:text-3xl font-semibold text-center ${card.textColor}`}
                   >
                     {card.priceMonthly}
                   </p>

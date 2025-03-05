@@ -106,7 +106,7 @@ export const PricingCards = () => {
       <div className="text-center  w-full flex flex-col gap-5 z-10">
         <h2 className="text-balance font-extrabold tracking-tight ">
           <Fade direction="up" triggerOnce delay={0}>
-            <span className="text-primary-light font-bold md:text-6xl text-4xl">
+            <span className="text-primary-light font-semibold md:text-6xl text-4xl">
               Assesments
             </span>
           </Fade>
@@ -162,12 +162,12 @@ export const PricingCards = () => {
               </Button>
               <div className="mt-6">
                 <p className="text-sm text-white">From</p>
-                <p className="text-3xl font-bold text-white">
+                <p className="text-3xl font-semibold text-white">
                   {card.priceMonthly}{" "}
                   <span className="text-xl font-medium">/ Month</span>
                 </p>
                 <div className="border-t border-white my-4"></div>
-                <p className="text-3xl font-bold text-white">
+                <p className="text-3xl font-semibold text-white">
                   {card.priceYearly}{" "}
                   <span className="text-xl font-medium">/ Year</span>
                 </p>

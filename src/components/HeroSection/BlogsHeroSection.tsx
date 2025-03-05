@@ -26,7 +26,7 @@ export const BlogsHeroSection = (props: IBlogHeroSection) => {
         <div className="relative z-10 flex flex-col justify-end h-full px-6 pb-10 text-white">
           <h1 className="text-balance text-7xl font-extrabold tracking-tight bg-gradient-to-tr from-text-title bg-primary-main bg-clip-text text-transparent">
             <Fade direction="up" triggerOnce delay={0}>
-              <span className="text-white font-bold md:text-6xl text-5xl">
+              <span className="text-white font-semibold md:text-6xl text-5xl">
                 {title}
               </span>
             </Fade>

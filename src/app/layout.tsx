@@ -22,7 +22,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${poppins.variable} antialiased overflow-x-hidden`}>
+      <body
+        className={`${poppins.variable} antialiased overflow-x-hidden bg-gradient-to-r from-gray-100 via-white to-gray-100`}
+      >
         <Header />
         {children}
         <Footer />

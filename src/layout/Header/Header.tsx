@@ -2,221 +2,139 @@
 
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
-
-import { cn } from "@/lib/utils";
-import {
-  NavigationMenu,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  navigationMenuTriggerStyle,
-} from "@/components/ui/navigation-menu";
-import Image from "next/image";
 import { FiMenu, FiX } from "react-icons/fi";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
-
-const ListItem = React.forwardRef<
-  React.ElementRef<"a">,
-  React.ComponentPropsWithoutRef<"a">
->(({ className, title, children, ...props }, ref) => {
-  return (
-    <li>
-      <NavigationMenuLink asChild>
-        <Link
-          href={props.href ?? "#"}
-          passHref
-          ref={ref}
-          className={cn(
-            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
-            className
-          )}
-          {...props}
-        >
-          <div className="text-sm font-medium leading-none">{title}</div>
-          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-            {children}
-          </p>
-        </Link>
-      </NavigationMenuLink>
-    </li>
-  );
-});
-ListItem.displayName = "ListItem";
+import { cn } from "@/lib/utils";
+import { Fade } from "react-awesome-reveal";
 
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
-  const closeMenu = () => setIsOpen(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
+      setIsScrolled(window.scrollY > 50);
     };
-
     window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
   return (
     <div className="relative">
-      <header className="fixed inset-x-0 top-0 z-50 md:px-3  md:my-2 ">
+      <header className="fixed inset-x-0 md:top-2 z-50 w-full">
         <nav
-          aria-label="Global"
           className={cn(
-            "flex px-4 md:rounded-full shadow-md  w-auto lg:max-w-[1600px] mx-auto items-center justify-between py-2  ",
-            isScrolled
-              ? "bg-gray-800/40 backdrop-blur-xl"
-              : "bg-primary-dark shadow-slate-800 "
+            "flex items-center justify-between px-4 py-3 transition-all duration-300 shadow-md md:px-6 lg:mx-auto lg:max-w-[1600px] md:rounded-full",
+            isScrolled ? "bg-gray-800/60 backdrop-blur-lg" : "bg-primary-dark"
           )}
         >
-          <div className="flex gap-5 items-center">
-            <div className="flex lg:flex-1">
-              <Link href="/" passHref className="px-2">
-                <span className="sr-only">HiAcuity</span>
-                <Image
-                  alt="HiAcuity Logo"
-                  src="https://www.hiacuity.com/static/media/logo%20Main%202.9982694dad756def5917.png"
-                  className="h-8 w-auto"
-                  width={150}
-                  height={80}
-                />
+          {/* Logo */}
+          <Link href="/" className="flex items-center">
+            <Image
+              src="https://www.hiacuity.com/static/media/logo%20Main%202.9982694dad756def5917.png"
+              alt="HiAcuity Logo"
+              width={150}
+              height={80}
+              className="h-8 w-auto"
+            />
+          </Link>
+
+          {/* Desktop Navigation */}
+          <div className="hidden lg:flex gap-x-8">
+            {[
+              { href: "/", label: "Home" },
+              { href: "/job-openings", label: "Job Openings" },
+              { href: "/employee-assements", label: "Assessments" },
+              { href: "/pricing", label: "Pricing" },
+              { href: "/about", label: "About Us" },
+            ].map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={` transition hover:text-gray-300 ${
+                  pathname === link.href ? "text-primary-light" : "text-white"
+                }`}
+              >
+                {link.label}
               </Link>
-            </div>
+            ))}
           </div>
-          <div className="lg:hidden">
-            {/* Menu Button */}
-            <button
-              onClick={() => setIsOpen(true)}
-              className="h-10 w-10 flex items-center justify-center rounded-full  text-white transition-all hover:scale-105"
-            >
-              <FiMenu size={24} />
-            </button>
 
-            {/* Overlay */}
-            <div
-              className={`fixed inset-0 z-40 bg-black/50 transition-opacity duration-300 ${
-                isOpen ? "opacity-100 visible" : "opacity-0 invisible"
-              }`}
-              onClick={closeMenu}
-            ></div>
-
-            {/* Sidebar */}
-            <div
-              className={`fixed right-0 top-0 z-50 h-full w-4/5 max-w-sm bg-white shadow-xl transform transition-transform duration-300 ${
-                isOpen ? "translate-x-0" : "translate-x-full"
-              }`}
-            >
-              {/* Header */}
-              <div className="flex items-center justify-between p-4 bg-primary-dark text-white">
-                <Link
-                  href="/"
-                  className="flex items-center"
-                  onClick={closeMenu}
-                >
-                  <Image
-                    src="https://www.hiacuity.com/static/media/logo%20Main%202.9982694dad756def5917.png"
-                    alt="HiAcuity Logo"
-                    width={120}
-                    height={50}
-                  />
-                </Link>
-                <button onClick={closeMenu} className={cn("text-white")}>
-                  <FiX size={24} />
-                </button>
-              </div>
-
-              {/* Navigation Links */}
-              <nav className="flex flex-col gap-2 p-4">
-                {[
-                  { href: "/", label: "Home" },
-                  { href: "/job-openings", label: "Job Openings" },
-                  { href: "/employee-assements", label: "Assessments" },
-                  { href: "/pricing", label: "Pricing" },
-                  { href: "/about", label: "About Us" },
-                  { href: "/contact", label: "Contact Us" },
-                ].map((link) => (
-                  <Link
-                    key={link.href}
-                    href={link.href}
-                    onClick={closeMenu}
-                    className={`block p-3 rounded-lg transition ${
-                      pathname === link.href
-                        ? "bg-primary-light hover:text-primary-dark" // Active route styling
-                        : "bg-gray-100 hover:bg-primary-light hover:text-primary-dark"
-                    }`}
-                  >
-                    {link.label}
-                  </Link>
-                ))}
-              </nav>
-            </div>
-          </div>
-          <div className="hidden lg:flex lg:gap-x-12 ">
-            <NavigationMenu>
-              <NavigationMenuList>
-                <NavigationMenuItem className={cn("text-white")}>
-                  <Link href="/job-openings" legacyBehavior passHref>
-                    <NavigationMenuLink
-                      className={navigationMenuTriggerStyle()}
-                    >
-                      Job Openings
-                    </NavigationMenuLink>
-                  </Link>
-                </NavigationMenuItem>
-                <NavigationMenuItem className={cn("text-white")}>
-                  <Link href="/employee-assements" legacyBehavior passHref>
-                    <NavigationMenuLink
-                      className={navigationMenuTriggerStyle()}
-                    >
-                      Assements
-                    </NavigationMenuLink>
-                  </Link>
-                </NavigationMenuItem>
-                <NavigationMenuItem className={cn("text-white")}>
-                  <Link href="/pricing" legacyBehavior passHref>
-                    <NavigationMenuLink
-                      className={navigationMenuTriggerStyle()}
-                    >
-                      Pricing
-                    </NavigationMenuLink>
-                  </Link>
-                </NavigationMenuItem>
-                <NavigationMenuItem className={cn("text-white")}>
-                  <Link href="/blogs" legacyBehavior passHref>
-                    <NavigationMenuLink
-                      className={navigationMenuTriggerStyle()}
-                    >
-                      Blogs
-                    </NavigationMenuLink>
-                  </Link>
-                </NavigationMenuItem>
-                <NavigationMenuItem className={cn("text-white")}>
-                  <Link href="/about" legacyBehavior passHref>
-                    <NavigationMenuLink
-                      className={navigationMenuTriggerStyle()}
-                    >
-                      About Us
-                    </NavigationMenuLink>
-                  </Link>
-                </NavigationMenuItem>
-              </NavigationMenuList>
-            </NavigationMenu>
-          </div>
-          <div className="hidden lg:flex  lg:justify-end">
+          {/* Contact Button */}
+          <div className="hidden lg:flex">
             <Link
               href="/contact"
-              className="relative rounded-3xl bg-primary-light px-4 py-2.5 text-sm font-semibold text-primary-dark shadow-md    transition duration-300 ease-in-out"
+              className="rounded-full bg-primary-light px-4 py-2 text-sm font-semibold text-primary-dark shadow-md transition hover:bg-primary-dark hover:text-white"
             >
               Contact Us
             </Link>
           </div>
+
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setIsOpen(true)}
+            className="lg:hidden p-2 rounded-full text-white transition hover:scale-105"
+          >
+            <FiMenu size={28} />
+          </button>
         </nav>
+
+        {/* Mobile Overlay */}
+        {isOpen && (
+          <div
+            className="fixed inset-0 z-40 bg-black/50 backdrop-blur-sm transition-opacity"
+            onClick={() => setIsOpen(false)}
+          ></div>
+        )}
+
+        {/* Mobile Sidebar */}
+        <div
+          className={cn(
+            "fixed right-0 top-0 z-50 h-full w-4/5 max-w-sm bg-gray-800/40 backdrop-blur-lg shadow-xl transform transition-transform duration-300",
+            isOpen ? "translate-x-0" : "translate-x-full"
+          )}
+        >
+          <div className="flex items-center justify-between p-4 bg-primary-dark text-white">
+            <Image
+              src="https://www.hiacuity.com/static/media/logo%20Main%202.9982694dad756def5917.png"
+              alt="HiAcuity Logo"
+              width={120}
+              height={50}
+            />
+            <button onClick={() => setIsOpen(false)}>
+              <FiX size={24} />
+            </button>
+          </div>
+
+          {/* Mobile Navigation */}
+          <Fade cascade direction="right">
+            <nav className="flex flex-col gap-2 p-4">
+              {[
+                { href: "/", label: "Home" },
+                { href: "/job-openings", label: "Job Openings" },
+                { href: "/employee-assements", label: "Assessments" },
+                { href: "/pricing", label: "Pricing" },
+                { href: "/about", label: "About Us" },
+                { href: "/contact", label: "Contact Us" },
+              ].map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={`block rounded-lg p-3 transition ${
+                    pathname === link.href
+                      ? "text-primary-light font-semibold"
+                      : "text-white"
+                  }`}
+                  onClick={() => setIsOpen(false)}
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </nav>
+          </Fade>
+        </div>
       </header>
     </div>
   );

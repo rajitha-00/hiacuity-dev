@@ -29,10 +29,10 @@ export default function Pricing() {
           <WhyChooseHiAcuity />
         </div>
       </div>
-      <div className="relative h-auto w-full mt-20 md:mt-32 py-20 bg-[radial-gradient(circle,rgba(255,255,255,1)_10%,rgba(224,255,240,0.8)_80%)] min-h-[500px]">
+      <div className="relative h-auto w-full mt-20 md:mt-32 py-20 bg-[radial-gradient(circle,rgba(255,255,255,1)_30%,rgba(224,255,240,0.8)_80%)] min-h-[500px]">
         {/* Content Wrapper with Background Image */}
         <div
-          className="relative isolate px-6 md:py-8 lg:px-8 max-w-[1600px] mx-auto z-10 min-h-[500px]"
+          className="relative isolate px-6 md:py-8 lg:px-8 max-w-[1600px] mx-auto z-10 min-h-[700px]"
           style={{
             backgroundImage: "url('/assets/images/WhatsSetusApart.png')",
           }}
@@ -40,6 +40,7 @@ export default function Pricing() {
           <HowItWorks />
         </div>
       </div>
+
       <div className="h-auto   w-full mt-20 md:mt-32  ">
         <div className="relative  isolate px-6 md:py-8 lg:px-8 max-w-[1600px] mx-auto">
           <WhatSetUsApart />

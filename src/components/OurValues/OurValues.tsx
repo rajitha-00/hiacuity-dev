@@ -7,15 +7,15 @@ export const OurValues = () => {
     <div className="y-10">
       <div className="text-start md:text-center w-full justify-center  lg:text-start ">
         <Fade triggerOnce direction="up" delay={100}>
-          <h2 className="text-3xl md:text-5xl font-semibold text-primary-light">
+          <h2 className="text-3xl md:text-6xl font-semibold text-primary-light">
             Our values
           </h2>
         </Fade>
         <Fade triggerOnce direction="up" delay={200}>
-          <p className="mt-10 lg:text-start text-sm md:text-lg text-center text-gray-50">
+          <p className="mt-10 lg:text-start max-w-4xl text-sm md:text-2xl text-center text-gray-50">
             Automated filtering quickly identifies top candidates, making it
             easy to spot the most qualified individuals early in the hiring
-            process. Enhanced by{" "}
+            process.
           </p>
         </Fade>
       </div>
@@ -31,10 +31,10 @@ export const OurValues = () => {
               >
                 <div className="col-span-1 max-w-sm">
                   <div className="rounded-full w-10 h-10">{value.icon}</div>
-                  <h3 className="mt-3 text-lg font-semibold text-primary-light mr-2 md:mb-4">
+                  <h3 className="mt-3 text-2xl font-semibold text-primary-main/90 mr-2 md:mb-4">
                     {value.title}
                   </h3>
-                  <p className="text-md mt-3">{value.description}</p>
+                  <p className="text-xl mt-3">{value.description}</p>
                 </div>
               </Fade>
             ))}

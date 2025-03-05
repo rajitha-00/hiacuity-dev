@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import { Fade } from "react-awesome-reveal";
-import HiringHomePageImage from "../assets/hero/HeroImage.png";
+import HiringHomePageImage from "../assets/hero/HeroImage.svg";
 import BGPattern from "../assets/hero/heroPattern.svg";
 import { AssesmentDemo, SectionRightImage } from "@/components/sectionRight";
 import AIIcon from "../assets/hero/AISVG.svg";
@@ -25,6 +25,7 @@ import { FeatureCard } from "@/components/Cards/FeatureCard";
 import { SectionLeftImage } from "@/components/sectionLeft";
 import BGImage from "../assets/images/GetADemoBg.png";
 import { CircleCheckBig } from "lucide-react";
+import { Button } from "@/components/ui/button";
 const features = [
   { src: AIIcon, title: "Smart AI Insights" },
   { src: AUTSVG, title: "Automated Intelligence" },
@@ -45,54 +46,70 @@ export default function Home() {
       </div>
 
       <div className="relative isolate px-6 pt-14 lg:px-8 w-full max-w-[1600px] mx-auto ">
-        <div className="mx-auto py-20 md:min-h-[85vh] flex flex-col lg:flex-col items-center md:justify-between">
-          <div className="text-center mt-10 lg:text-start w-full flex flex-col gap-5 z-10">
-            <Fade direction="up" triggerOnce delay={300}>
-              <div className="bg-primary-light p-1 rounded-full outline outline-1 outline-primary-main max-w-xs mx-auto">
-                <p className=" text-center text-sm font-semibold text-primary-dark ">
-                  Empowering those who evolve with AI
-                </p>
-              </div>
-            </Fade>
-            <h1 className="text-center mt-5 font-semibold tracking-tight bg-gradient-to-tr from-primary-dark bg-primary-main bg-clip-text text-transparent">
-              <Fade direction="up">
-                <span className="text-balance md:text-8xl text-5xl font-semibold tracking-tight bg-gradient-to-tr from-primary-dark bg-primary-main bg-clip-text text-transparent">
-                  HiAcuity
-                </span>
+        <div className="mx-auto py-20 md:h-[80vh] lg:h-[100vh] flex flex-col lg:flex-col items-center md:justify-between">
+          <div className="text-center justify-center items-center  lg:text-start w-full flex flex-col md:flex-row z-10">
+            <div className="flex flex-col items-center md:items-start gap-5">
+              <Fade direction="up" triggerOnce delay={300}>
+                <div className="bg-primary-light p-1 rounded-full outline outline-1 outline-primary-main max-w-xs mx-auto">
+                  <p className=" text-center text-xs font-semibold text-primary-dark ">
+                    Empowering those who evolve with AI
+                  </p>
+                </div>
               </Fade>
-              <Fade direction="up" triggerOnce delay={100}>
-                <span className="text-text-title  font-semibold md:text-7xl text-3xl">
-                  Hiring Made Simple!
-                </span>
+              <h1 className="text-center mt-5 font-semibold tracking-tight bg-gradient-to-tr from-primary-dark bg-primary-main bg-clip-text text-transparent">
+                <Fade direction="up">
+                  <span className="text-balance md:text-6xl lg:text-8xl text-5xl font-semibold tracking-tight bg-gradient-to-tr from-primary-dark bg-primary-main bg-clip-text text-transparent">
+                    HiAcuity
+                  </span>
+                </Fade>
+              </h1>
+              <h2 className="text-start">
+                <Fade direction="up" triggerOnce delay={100}>
+                  <span className="text-text-title  font-semibold md:text-4xl lg:text-6xl text-3xl">
+                    Hiring Made Simple!
+                  </span>
+                </Fade>
+              </h2>
+
+              <Fade triggerOnce direction="up" delay={400}>
+                <div className="flex flex-row mx-auto gap-2">
+                  <Button className="relative  rounded-lg bg-primary-dark px-4 py-2.5 text-sm font-semibold text-white shadow-md    transition duration-300 ease-in-out">
+                    Get Started
+                  </Button>
+                  <Button className="relative  rounded-lg outline outline-1 outline-primary-dark px-4 py-2.5 text-sm font-semibold text-primary-dark shadow-md    transition duration-300 ease-in-out">
+                    Get a Demo
+                  </Button>
+                </div>
               </Fade>
-            </h1>
-          </div>
-          <div
-            className="relative w-full mt-10 md:mt-0 h-auto "
-            style={{ aspectRatio: "16 / 10" }}
-          >
-            <Fade triggerOnce delay={100}>
-              <Image
-                alt="HIAcuity is ai hiring platform"
-                src={HiringHomePageImage}
-                fill
-                className="object-cover md:object-contain"
-              />
-            </Fade>
+            </div>
+            <div
+              className="relative  w-full mt-5  h-auto "
+              style={{ aspectRatio: "16 / 10" }}
+            >
+              <Fade triggerOnce delay={100}>
+                <Image
+                  alt="HIAcuity is ai hiring platform"
+                  src={HiringHomePageImage}
+                  fill
+                  className="object-contain "
+                />
+              </Fade>
+            </div>
           </div>
         </div>
       </div>
       <div className="relative isolate px-6  w-full lg:px-8 max-w-[1600px] mx-auto ">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-0">
           {features.map((feature, index) => (
-            <div className="col-span-1" key={index}>
+            <div className="col-span-1" key={feature.title}>
               <Fade direction="right" triggerOnce delay={100 * index}>
                 <div className="flex flex-col items-center">
                   <Image
                     alt={feature.title}
                     src={feature.src}
-                    width={120}
-                    height={120}
+                    width={120} // Default width
+                    height={120} // Default height
+                    className="w-[90px] h-[90px] sm:w-[100px] sm:h-[100px] md:w-[120px] md:h-[120px]"
                   />
                 </div>
               </Fade>
