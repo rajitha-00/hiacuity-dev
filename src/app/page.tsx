@@ -228,7 +228,7 @@ export default function Home() {
         </div>
         <div className="flex flex-col z-20 gap-16  md:gap-32 pt-10 md:pt-20 "></div>
       </div>
-      <div className="relative isolate px-6 pt-10 w-full lg:px-8 max-w-[1600px] mx-auto ">
+      <div className="relative isolate w-full lg:px-8 max-w-[1600px] mx-auto ">
         <div className="relative mx-auto flex rounded-[50px] shadow-md flex-col lg:flex-row outline outline-1 outline-gray-100 items-center justify-between overflow-hidden p-10 md:px-20 md:py-20">
           <Image
             src={BGImage}
@@ -240,14 +240,14 @@ export default function Home() {
           {/* Overlay for better readability */}
 
           {/* Right Section - Content */}
-          <div className="relative text-start md:p-16 w-full justify-center z-10">
+          <div className="relative text-start md:p-6 w-full justify-center z-10">
             <Fade triggerOnce direction="up" delay={200}>
               <h2 className="text-xl md:text-5xl font-medium text-white">
                 Get Assessment Demo
               </h2>
             </Fade>
             <Fade triggerOnce direction="up" delay={300}>
-              <p className="mt-5 md:mt-10 text-start text-sm md:text-lg md:text-justify text-white">
+              <p className="mt-5 md:mt-10 text-start text-lg md:text-xl md:text-justify text-white">
                 Hiring delays cost businesses time and money. Our assessments
                 eliminate unqualified candidates, reduce time-to-hire, and
                 ensure only the best talent moves forward.
@@ -322,11 +322,11 @@ export default function Home() {
         >
           {FAQ.map((faq) => (
             <AccordionItem key={faq.question} value={faq.question}>
-              <AccordionTrigger className="text-text-primary px-5 shadow-sm border bg-white z-10 w-full hover:text-primary-dark data-[state=open]:text-primary-dark data-[state=open]:shadow-md">
+              <AccordionTrigger className="text-lg text-text-primary lg:text-xl px-5 shadow-sm border bg-white z-10 w-full hover:text-primary-dark data-[state=open]:text-primary-dark data-[state=open]:shadow-md">
                 {faq.question}
               </AccordionTrigger>
               <AccordionContent>
-                <p className="text-md py-5 leading-tight text-muted-foreground">
+                <p className="text-lg lg:text-xl  py-5 leading-tight text-muted-foreground">
                   {faq.answer}
                 </p>
               </AccordionContent>

@@ -67,7 +67,7 @@ export const AssesmentFlow = () => {
             <h3 className="text-xl md:text-2xl font-semibold">
               {steps[currentStep - 1].title}
             </h3>
-            <p className="mt-2 text-md text-gray-300">
+            <p className="mt-2 text-lg md:text-xl text-gray-300">
               Easily design customized skill assessments tailored to your
               organization’s needs. Choose from a library of pre-built tests or
               create your own with multiple question formats, including

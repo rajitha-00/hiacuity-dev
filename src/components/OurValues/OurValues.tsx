@@ -2,6 +2,7 @@
 import { OUR_VALUES } from "@/constants";
 import Image from "next/image";
 import { Fade } from "react-awesome-reveal";
+import OurValueImage from "../../assets/images/OurValues.svg";
 export const OurValues = () => {
   return (
     <div className="y-10">
@@ -40,7 +41,7 @@ export const OurValues = () => {
             ))}
           </div>
         </div>
-        <div className="max-w-2xl w-full">
+        <div className="max-w-4xl w-full">
           <div
             className="w-full mt-14 rounded-lg relative"
             style={{ paddingTop: "56.25%" }}
@@ -48,11 +49,9 @@ export const OurValues = () => {
             <Fade triggerOnce delay={100}>
               <Image
                 alt="HIAcuity is AI hiring platform"
-                src={
-                  "https://www.hiacuity.com/static/media/HiAcuity_Employer-Assessment_1.024bfe83d6bdd201db59.png"
-                }
+                src={OurValueImage}
                 fill
-                className="rounded-3xl object-cover"
+                className="object-contain"
               />
             </Fade>
           </div>

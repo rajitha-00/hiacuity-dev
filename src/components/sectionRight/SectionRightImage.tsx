@@ -67,7 +67,7 @@ export const SectionRightImage = (props: ISectionRightImage) => {
           </Fade>
         </div>
         <div
-          className="relative w-full max-w-2xl h-auto"
+          className="relative w-full max-w-4xl h-auto"
           style={{ aspectRatio: "16 / 10" }}
         >
           <Fade triggerOnce delay={100}>

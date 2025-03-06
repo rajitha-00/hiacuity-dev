@@ -40,7 +40,7 @@ export const SectionLeftImage = (props: ISectionLeftImage) => {
         `}
       >
         <div
-          className="relative max-w-2xl w-full h-auto"
+          className="relative max-w-4xl w-full h-auto"
           style={{ aspectRatio: "16 / 10" }}
         >
           <Fade triggerOnce delay={100}>
