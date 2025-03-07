@@ -21,7 +21,7 @@ export default function Pricing() {
         title3=""
         url={PricingHero}
         cta=""
-        heroText="HiAcuity  Web transforms job recruitment with AI-driven precision. Automate candidate screening, match talent to the right roles, and streamline hiring with smart insights."
+        heroText="HiAcuity platform transforms job recruitment with AI-driven precision. Automate candidate screening, match talent to the right roles, and conduct Smart Interviews."
         hasImage={false}
       />
       <div className="h-auto pt-20  w-full ">

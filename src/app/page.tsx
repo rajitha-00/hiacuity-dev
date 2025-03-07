@@ -27,10 +27,10 @@ import BGImage from "../assets/images/GetADemoBg.png";
 import { CircleCheckBig } from "lucide-react";
 import { Button } from "@/components/ui/button";
 const features = [
-  { src: AIIcon, title: "Smart AI Insights" },
-  { src: AUTSVG, title: "Automated Intelligence" },
-  { src: INTSVG, title: "Interactive Dashboards" },
-  { src: SCSSVG, title: "Seamless Cloud Sync" },
+  { src: AIIcon, title: "AI Enriched Recruitment" },
+  { src: AUTSVG, title: "Automated Workflows" },
+  { src: INTSVG, title: "Intelligent Candidate Scoring" },
+  { src: SCSSVG, title: "Easy Cloud Access" },
 ];
 export default function Home() {
   return (
@@ -51,7 +51,7 @@ export default function Home() {
             <div className="flex flex-col items-center md:items-start gap-5">
               <Fade direction="up" triggerOnce delay={300}>
                 <div className="bg-primary-light p-1 rounded-full outline outline-1 outline-primary-main max-w-xs mx-auto">
-                  <p className=" text-center text-xs font-semibold text-primary-dark ">
+                  <p className="px-2 text-center text-xs font-semibold text-primary-dark ">
                     Empowering those who evolve with AI
                   </p>
                 </div>
@@ -66,7 +66,7 @@ export default function Home() {
               <h2 className="text-start">
                 <Fade direction="up" triggerOnce delay={100}>
                   <span className="text-text-title  font-semibold md:text-4xl lg:text-6xl text-3xl">
-                    Hiring Made Simple!
+                    Recruitment made easy
                   </span>
                 </Fade>
               </h2>
@@ -83,7 +83,7 @@ export default function Home() {
               </Fade>
             </div>
             <div
-              className="relative  w-full mt-5  h-auto "
+              className="relative  w-full  h-auto "
               style={{ aspectRatio: "16 / 10" }}
             >
               <Fade triggerOnce delay={100}>
@@ -91,7 +91,7 @@ export default function Home() {
                   alt="HIAcuity is ai hiring platform"
                   src={HiringHomePageImage}
                   fill
-                  className="object-contain "
+                  className="object-contain"
                 />
               </Fade>
             </div>
@@ -128,7 +128,7 @@ export default function Home() {
           <h2 className="md:text-balance text-center mt-10 tracking-tight ">
             <Fade direction="up" triggerOnce delay={0}>
               <span className="text-text-title  font-semibold md:text-6xl text-3xl">
-                Enhance Your Corporate Management Efforts with AI!
+                Quicken Your Recruitment Process Using AI
               </span>
             </Fade>
           </h2>
@@ -141,7 +141,7 @@ export default function Home() {
                 individuals early in the hiring process. Enhanced by AI precision, this approach reduces bias and
                 increases accuracy, ensuring a fairer and more reliable selection. By streamlining initial screenings,
                 these tools also save valuable time, allowing recruiters to focus on meaningful candidate interactions."
-            buttonLabel="Learn More"
+            buttonLabel=""
             imageSrc={FeatureImage1}
             hasBg
             hasPadding
@@ -150,17 +150,17 @@ export default function Home() {
           <SectionRightImage
             label="Assessments"
             title="Effortless Hiring"
-            description="A seamless recruitment process is achieved by using intuitive tools that simplify each step, making it easier for recruiters to manage and track progress. Quick onboarding is facilitated through automated workflows, allowing hiring to accelerate efficiently. This enhanced approach improves overall satisfaction for both candidates and recruiters, creating a positive and streamlined experience."
-            buttonLabel="Learn More"
+            description="A seamless recruitment process is achieved by using intuitive tools that simplify each step, making it easier for recruiters to manage and track progress. Low touch assessments is facilitated through automated workflows, allowing hiring to accelerate efficiently. This enhanced approach improves overall satisfaction for both candidates and recruiters, creating a positive and streamlined experience."
+            buttonLabel=""
             imageSrc={FeatureImage2}
             hasBg
             hasPadding
           />
           <SectionLeftImage
-            label="RECRUITING"
+            label="THIRD PARTY ASSESSMENTS"
             title="Partner Insights"
-            description=" Automated filtering efficiently identifies top candidates, helping streamline recruitment by pinpointing the most qualified individuals early in the process. With AI precision, it reduces bias and enhances accuracy, creating a more equitable selection environment. This technology also saves valuable time by simplifying initial screenings, allowing hiring teams to focus on engaging with the best-suited candidates."
-            buttonLabel="Learn More"
+            description="Leveraging automated assessments provides the ability to validate the skills of third party partners. Select the best partner available based on actual competencies rather than paper skills."
+            buttonLabel=""
             imageSrc={FeatureImage3}
             hasBg
             hasPadding
@@ -248,9 +248,9 @@ export default function Home() {
             </Fade>
             <Fade triggerOnce direction="up" delay={300}>
               <p className="mt-5 md:mt-10 text-start text-lg md:text-xl md:text-justify text-white">
-                Hiring delays cost businesses time and money. Our assessments
-                eliminate unqualified candidates, reduce time-to-hire, and
-                ensure only the best talent moves forward.
+                Hiring delays cost businesses time and money. Our recruiting and
+                assessment platform eliminates unqualified candidates, reduces
+                time-to-hire, and ensures only the best talent moves forward.
               </p>
             </Fade>
             <ul>
@@ -262,7 +262,7 @@ export default function Home() {
                     </div>
                     <div>
                       <h3 className="text-sm md:text-xl font-medium text-white">
-                        Cut hiring time from 25+ days.
+                        Reduce the time to hire.
                       </h3>
                     </div>
                   </div>

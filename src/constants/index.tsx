@@ -240,9 +240,9 @@ export const JOB_OPENINGS_WHAT_SET_US_APART = [
   },
   {
     index: 6,
-    title: "Faster Hiring, Better Results",
+    title: "Smart Interviews",
     description:
-      "Reduce screening calls, automate tasks, and eliminate wasted time for a seamless hiring experience.",
+      "Analyse whole interviews within minutes, automatically score and compare each candidate in an interview round.",
     url: WhatsSetUsApart,
   },
 ];
@@ -543,7 +543,7 @@ export const STEPS = [
   },
   {
     number: "06",
-    text: "Human Interviews",
+    text: "Smart Interviews",
     icon: <Speech className="text-primary-dark" />,
   },
   {

@@ -8,7 +8,7 @@ interface Reason {
 
 const reasons: Reason[] = [
   {
-    title: "Resume Can be Misleading",
+    title: "Resumes Can be Misleading",
     description: "Candidates may exaggerate or falsify details.",
   },
   {
