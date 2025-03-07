@@ -13,7 +13,6 @@ import {
 import { Textarea } from "@/components/ui/textarea";
 import { ValuesCard } from "@/components/ContactUs/ValuesCard";
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "@/icons/Icons";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {

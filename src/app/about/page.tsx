@@ -2,7 +2,6 @@ import { HeroSectionCommon } from "@/components/HeroSection";
 import { SectionLeftImage } from "@/components/sectionLeft";
 import { SectionRightImage } from "@/components/sectionRight";
 import { OurValues } from "@/components/OurValues";
-import { BecomeATeamMember } from "@/components/BecomeATeamMember";
 import OurMissionImage from "../../assets/images/OurMission.svg";
 import OurVisionImage from "../../assets/images/OurVision.svg";
 import OurStoryImage from "../../assets/images/OurStory.svg";
