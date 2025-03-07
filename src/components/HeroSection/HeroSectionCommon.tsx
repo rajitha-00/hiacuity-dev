@@ -29,13 +29,15 @@ export const HeroSectionCommon = (props: IHeroSectionCommon) => {
       </div>
       <div className="relative isolate px-6 pt-14 lg:px-8 w-full max-w-[1600px] mx-auto ">
         <div
-          className={`mx-auto py-20 pt-44  flex flex-col lg:flex-row gap-10 items-center justify-between ${
+          className={`mx-auto py-20 pt-44  w-full flex flex-col md:flex-row  gap-10 justify-center items-center ${
             hasImage ? "md:min-h-[75vh]" : "md:min-h-[50vh]"
           }`}
         >
           <div
             className={`w-full flex flex-col gap-5 z-10 ${
-              hasImage ? "text-center lg:text-start" : "text-center"
+              hasImage
+                ? "text-center lg:text-start max-w-xl "
+                : "text-center max-w-9xl "
             }`}
           >
             <h2>

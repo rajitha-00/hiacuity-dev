@@ -2,8 +2,17 @@ import FacebookIcon from "../icons/FacebookIcon.svg";
 import TwitterIcon from "../icons/TwitterIcon.svg";
 import InstaIcon from "../icons/IntagramIcon.svg";
 import YotubeIcon from "../icons/YoutubeIcon.svg";
-import WhatsSetUsApart from "../assets/images/WhatsSetusApart.png";
-
+import JobPostingsSVG from "../assets/homepage/Job Posting.svg";
+import ApplicantAnalizeSVG from "../assets/homepage/Applicant Analysis.svg";
+import AutoSuitabilitySVG from "../assets/homepage/Auto Suitability.svg";
+import AutoOutstandingSVG from "../assets/homepage/Auto Outstanding.svg";
+import AutoAssesmentSVG from "../assets/homepage/Auto Assessments.svg";
+import FasterHiringSVG from "../assets/homepage/Faster Hiring, Better Results.svg";
+import Step1 from "../assets/images/step1.jpg";
+import Step2 from "../assets/images/step2.png";
+import Step3 from "../assets/images/step3.png";
+import Step4 from "../assets/images/step4.jpg";
+import Step5 from "../assets/images/step5.jpg";
 import {
   Ai,
   Approch,
@@ -113,25 +122,25 @@ export const OUR_VALUES = [
     title: "Approachable",
     description:
       "We uphold the highest standards of honesty and ethics in all our operations and interactions.",
-    icon: <Approch className="text-primary-light" />,
+    icon: <Approch className="text-white" />,
   },
   {
     title: "AI Driven",
     description:
       "We are committed to continuous improvement and the pursuit of groundbreaking AI solutions.",
-    icon: <Ai className="text-primary-light" />,
+    icon: <Ai className="text-white" />,
   },
   {
     title: "Transformational",
     description:
       "We believe in the power of teamwork and partnerships to achieve common goals.",
-    icon: <TransForm className="text-primary-light" />,
+    icon: <TransForm className="text-white" />,
   },
   {
     title: "Modern",
     description:
       "We strive for excellence in everything we do, ensuring quality and reliability in our AI-powered services and products.",
-    icon: <Modern className="text-primary-light" />,
+    icon: <Modern className="text-white" />,
   },
 ];
 export const CONTACT_US = [
@@ -208,42 +217,42 @@ export const JOB_OPENINGS_WHAT_SET_US_APART = [
     title: "Job Posting",
     description:
       "One-click applications eliminate form-filling. AI extracts details instantly and reads every resume for the perfect match.",
-    url: WhatsSetUsApart,
+    url: JobPostingsSVG,
   },
   {
     index: 2,
     title: "Applicant Analysis",
     description:
       "Analyze thousands of applicants in one view. AI-powered filtering, keyword matching, and 3D clustering refine selections effortlessly.",
-    url: WhatsSetUsApart,
+    url: ApplicantAnalizeSVG,
   },
   {
     index: 3,
     title: "Auto Suitability",
     description:
       "AI identifies qualified candidates instantly and notifies unsuccessful applicants with optional rejection reasons.",
-    url: WhatsSetUsApart,
+    url: AutoSuitabilitySVG,
   },
   {
     index: 4,
     title: "Auto Outstanding",
     description:
       "Spot top talent the moment they apply. Engage, interview, and hire outstanding candidates before competitors do.",
-    url: WhatsSetUsApart,
+    url: AutoOutstandingSVG,
   },
   {
     index: 5,
     title: "Auto Assessments",
     description:
       "Validate skills with AI-generated tests. Build assessments in seconds and shortlist the most qualified candidates.",
-    url: WhatsSetUsApart,
+    url: AutoAssesmentSVG,
   },
   {
     index: 6,
     title: "Smart Interviews",
     description:
       "Analyse whole interviews within minutes, automatically score and compare each candidate in an interview round.",
-    url: WhatsSetUsApart,
+    url: FasterHiringSVG,
   },
 ];
 export const BLOG_DATA = [
@@ -555,5 +564,42 @@ export const STEPS = [
     number: "08",
     text: "Offer Job",
     icon: <Briefcase className="text-primary-dark" />,
+  },
+];
+export const FLOW_STEPS = [
+  {
+    id: 1,
+    title: "Assessment Creation",
+    url: Step1,
+    description:
+      "Easily design customized skill assessments tailored to your organization’s needs. Choose from a library of pre-built tests or create your own with multiple question formats, including multiple-choice, coding challenges, video responses, and more.",
+  },
+  {
+    id: 2,
+    title: "Invite Candidates",
+    url: Step2,
+    description:
+      "Invite candidates to take the assessment via email, SMS, or a unique link. Candidates can complete the assessment on any device, at any time, and from anywhere.",
+  },
+  {
+    id: 3,
+    title: "Assessment Done by Candidates",
+    url: Step3,
+    description:
+      "Candidates complete the assessment, and their responses are automatically scored and analyzed by our AI-powered platform.",
+  },
+  {
+    id: 4,
+    title: "AI Scoring",
+    url: Step4,
+    description:
+      "Our AI-powered platform scores and analyzes candidate responses, providing you with detailed insights into their skills and abilities.",
+  },
+  {
+    id: 5,
+    title: "Results & Analytics",
+    url: Step5,
+    description:
+      "View detailed results and analytics for each candidate, including overall scores, performance on individual questions, and comparative data to help you make informed hiring decisions.",
   },
 ];

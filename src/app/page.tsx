@@ -229,7 +229,7 @@ export default function Home() {
         <div className="flex flex-col z-20 gap-16  md:gap-32 pt-10 md:pt-20 "></div>
       </div>
       <div className="relative isolate w-full lg:px-8 max-w-[1600px] mx-auto ">
-        <div className="relative mx-auto flex rounded-[50px] shadow-md flex-col lg:flex-row outline outline-1 outline-gray-100 items-center justify-between overflow-hidden p-10 md:px-20 md:py-20">
+        <div className="relative mx-auto flex rounded-[50px] shadow-md flex-col lg:flex-row outline outline-1 outline-gray-100 items-center justify-between overflow-hidden p-5 md:px-16 md:py-16">
           <Image
             src={BGImage}
             alt="Graduation Hat"

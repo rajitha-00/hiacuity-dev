@@ -3,15 +3,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion"; // For smooth animations
 import Image from "next/image";
-import PricingHero from "../../assets/images/WhatsSetusApart.png"; // Placeholder image
-
-const steps = [
-  { id: 1, title: "Assessment Creation" },
-  { id: 2, title: "Invite Candidates" },
-  { id: 3, title: "Assessment Done by Candidates" },
-  { id: 4, title: "AI Scoring" },
-  { id: 5, title: "Results & Analytics" },
-];
+import { FLOW_STEPS } from "@/constants";
 
 export const AssesmentFlow = () => {
   const [currentStep, setCurrentStep] = useState(1);
@@ -19,26 +11,27 @@ export const AssesmentFlow = () => {
   // Auto-progress every 7 seconds
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentStep((prev) => (prev < steps.length ? prev + 1 : 1));
+      setCurrentStep((prev) => (prev < FLOW_STEPS.length ? prev + 1 : 1));
     }, 7000);
     return () => clearInterval(interval);
   }, []);
 
   return (
     <div
-      className="h-auto py-10 z-10 w-full mt-20 md:mt-40"
+      className="h-auto py-10 z-10 w-full mt-20 md:mt-40 backdrop-blur-lg bg-opacity-30 rounded-[50px]  p-5 md:px-16 md:py-16  max-w-[1600px] mx-auto  shadow-lg"
       style={{
         background:
-          "linear-gradient(135deg, #031602 0%, #194D1F 50%, #194D1F 100%)",
+          "linear-gradient(135deg, rgba(3,22,2,0.7) 0%, rgba(25,77,31,0.4) 40%, rgba(25,77,31,0.7) 100%)",
+        border: "1px solid rgba(255, 255, 255, 0.2)",
       }}
     >
       <div className="relative isolate px-6 md:py-8 lg:px-8 max-w-[1600px] mx-auto">
-        <h2 className="text-start max-w-4xl text-3xl md:text-6xl font-medium text-white">
+        <h2 className="text-center  text-3xl md:text-7xl font-medium text-white">
           How SISO Works: AI-Powered Skills Assessment in 5 Steps
         </h2>
 
         {/* Image & Description Section */}
-        <div className="flex flex-col lg:flex-row items-start justify-between mt-10">
+        <div className="flex flex-col lg:flex-row items-start gap-20 justify-between mt-10 md:mt-20">
           {/* Left: Animated Image */}
           <motion.div
             key={currentStep} // Ensures animation restarts on step change
@@ -49,7 +42,7 @@ export const AssesmentFlow = () => {
             className="relative w-full"
           >
             <Image
-              src={PricingHero}
+              src={FLOW_STEPS[currentStep - 1].url}
               alt="Assessment Process"
               className="rounded-2xl w-full"
             />
@@ -57,7 +50,7 @@ export const AssesmentFlow = () => {
 
           {/* Right: Animated Description */}
           <motion.div
-            key={steps[currentStep - 1].title}
+            key={FLOW_STEPS[currentStep - 1].title}
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -50 }}
@@ -65,20 +58,17 @@ export const AssesmentFlow = () => {
             className="w-full text-white md:px-6 mt-5 md:mt-0"
           >
             <h3 className="text-xl md:text-2xl font-semibold">
-              {steps[currentStep - 1].title}
+              {FLOW_STEPS[currentStep - 1].title}
             </h3>
-            <p className="mt-2 text-lg md:text-xl text-gray-300">
-              Easily design customized skill assessments tailored to your
-              organization’s needs. Choose from a library of pre-built tests or
-              create your own with multiple question formats, including
-              multiple-choice, coding challenges, video responses, and more.
+            <p className="mt-2 text-lg md:text-xl text-white">
+              {FLOW_STEPS[currentStep - 1].description}
             </p>
           </motion.div>
         </div>
 
         {/* Separate Progress Bars as Buttons */}
         <div className="mt-10 gap-10 flex flex-row">
-          {steps.map((step) => (
+          {FLOW_STEPS.map((step) => (
             <div
               key={step.id}
               className="w-full cursor-pointer"

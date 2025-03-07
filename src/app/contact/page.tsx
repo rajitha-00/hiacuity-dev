@@ -1,5 +1,5 @@
 import { HeroSectionCommon } from "@/components/HeroSection";
-import HiringHomePageImage from "../../assets/homepage/HiringHomePage.svg";
+import HiringHomePageImage from "../../assets/homepage/ContactHero.svg";
 import { SectionHeader } from "@/components/Typography";
 import { Input } from "@/components/ui/input";
 import {
@@ -133,11 +133,8 @@ export default function Contact() {
                   <Textarea className="text-text-primary mt-2 placeholder:text-text-greyDark" />
                 </div>
               </div>
-              <Button className="relative mt-6 rounded-xl mx-auto w-[200px] bg-primary-light px-4 py-2.5 text-sm font-semibold text-primary-dark shadow-md max-w-ms  transition duration-300 ease-in-out">
-                {"Contact Our Team "}
-                <span aria-hidden="true">
-                  <ArrowRight />
-                </span>
+              <Button className="relative mt-4 w-[200px] mx-auto rounded-xl bg-primary-dark px-4 py-2.5 text-sm font-semibold text-white shadow-md    transition duration-300 ease-in-out">
+                Contact Our Team
               </Button>
             </div>
           </div>

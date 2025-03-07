@@ -13,11 +13,9 @@ export const SectionHeader = (props: ISectionHeader) => {
       <h2 className="text-balance font-extrabold tracking-tight">
         <Fade direction="up" triggerOnce delay={0}>
           <span
-            className={`${
-              hasLightTitle ? "text-primary-light" : "text-text-title"
-            } ${
+            className={`${hasLightTitle ? "text-white" : "text-text-title"} ${
               hasLightTitle ? "font-semibold" : "font-semibold"
-            } md:text-6xl text-4xl`}
+            } md:text-7xl text-4xl`}
           >
             {title}
           </span>

@@ -8,7 +8,7 @@ export const OurValues = () => {
     <div className="y-10">
       <div className="text-start md:text-center w-full justify-center  lg:text-start ">
         <Fade triggerOnce direction="up" delay={100}>
-          <h2 className="text-3xl md:text-6xl font-semibold text-primary-light">
+          <h2 className="text-3xl md:text-7xl font-semibold text-white">
             Our values
           </h2>
         </Fade>
@@ -32,7 +32,7 @@ export const OurValues = () => {
               >
                 <div className="col-span-1 max-w-sm">
                   <div className="rounded-full w-10 h-10">{value.icon}</div>
-                  <h3 className="mt-3 text-2xl font-semibold text-primary-main/90 mr-2 md:mb-4">
+                  <h3 className="mt-3 text-2xl font-semibold text-white mr-2 md:mb-4">
                     {value.title}
                   </h3>
                   <p className="text-xl mt-3">{value.description}</p>
@@ -41,7 +41,7 @@ export const OurValues = () => {
             ))}
           </div>
         </div>
-        <div className="max-w-4xl w-full">
+        <div className="max-w-3xl w-full">
           <div
             className="w-full mt-14 rounded-lg relative"
             style={{ paddingTop: "56.25%" }}

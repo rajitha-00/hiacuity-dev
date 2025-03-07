@@ -1,5 +1,4 @@
 import { HeroSectionCommon } from "@/components/HeroSection";
-import HiringHomePageImage from "../../assets/homepage/HiringHomePage.svg";
 import { SectionLeftImage } from "@/components/sectionLeft";
 import { SectionRightImage } from "@/components/sectionRight";
 import { OurValues } from "@/components/OurValues";
@@ -7,6 +6,7 @@ import { BecomeATeamMember } from "@/components/BecomeATeamMember";
 import OurMissionImage from "../../assets/images/OurMission.svg";
 import OurVisionImage from "../../assets/images/OurVision.svg";
 import OurStoryImage from "../../assets/images/OurStory.svg";
+import HeroImage from "../../assets/homepage/AboutHero.svg";
 import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "HiAcuity | About Us",
@@ -19,7 +19,7 @@ export default function About() {
         title1="Revolutionizing "
         title2="Empower"
         title3="with AI Precision"
-        url={HiringHomePageImage}
+        url={HeroImage}
         cta=""
         heroText=""
         hasImage
@@ -48,10 +48,11 @@ export default function About() {
       </div>
 
       <div
-        className="h-auto py-10  w-full mt-20 md:mt-40"
+        className="h-auto py-10 z-10 w-full mt-20 md:mt-40 backdrop-blur-lg bg-opacity-30 rounded-[50px]  p-5 md:px-16 md:py-16  max-w-[1600px] mx-auto  shadow-lg"
         style={{
           background:
-            "linear-gradient(135deg, #031602 0%, #194D1F 50%, #194D1F 100%)",
+            "linear-gradient(135deg, rgba(3,22,2,0.8) 0%, rgba(25,77,31,0.5) 60%, rgba(25,77,31,0.6) 100%)",
+          border: "1px solid rgba(255, 255, 255, 0.2)",
         }}
       >
         <div className="relative isolate px-6 md:py-8 lg:px-8 max-w-[1600px] mx-auto">
@@ -69,9 +70,9 @@ export default function About() {
         ></div>
         <div className="flex flex-col z-10 gap-16  md:gap-32 pt-10 md:pt-20">
           <SectionLeftImage
-            label="Jane Doe : CEO"
+            label="Michael Cooray : CEO"
             title="Meet Our Founder "
-            description="Jane Doe, our visionary founder, brings over two decades of experience in AI and technology. Her passion for leveraging AI and data to improve decision-making has driven HIAcuity's mission since its inception. Under her leadership, we continue to push the boundaries of what's possible with AI innovation."
+            description="Michael Cooray, our visionary founder, brings over two decades of experience in AI and technology. Her passion for leveraging AI and data to improve decision-making has driven HIAcuity's mission since its inception. Under her leadership, we continue to push the boundaries of what's possible with AI innovation."
             imageSrc={
               "https://media.licdn.com/dms/image/v2/D5603AQGLxY-3THLH5Q/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1722490038263?e=1746662400&v=beta&t=2s_kaVd7ThSgJ8dn_xyvP6PIXZWSe9IZKaAe8wv8DlQ"
             }
@@ -83,13 +84,13 @@ export default function About() {
           />
         </div>
       </div>
-      <div className="relative isolate px-6 pt-20 md:pt-40 w-full lg:px-8 max-w-[1600px] mx-auto ">
+      {/* <div className="relative isolate px-6 pt-20 md:pt-40 w-full lg:px-8 max-w-[1600px] mx-auto ">
         <BecomeATeamMember
           title="Become a team member"
           description="Are you passionate about making a difference with AI? At HIAcuity, we are always looking for talented individuals who share our values and vision. Our AI-powered tools, such as job openings CV filters and AI-supported assessment generators, enhance our recruitment process. Join us and be part of a dynamic team that is shaping the future of insights. Explore our current openings and apply today!"
           buttonLable="See Open Roles"
         />
-      </div>
+      </div> */}
     </div>
   );
 }
