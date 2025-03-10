@@ -60,7 +60,11 @@ import {
   Target,
   Plug,
 } from "lucide-react";
-import AssementsWhats from "../assets/images/AssementsWhats.png";
+
+import AssementsWhats1 from "../assets/images/AssementsWhats1.svg";
+import AssementsWhats2 from "../assets/images/AssementsWhats2.svg";
+import AssementsWhats3 from "../assets/images/AssementsWhats3.svg";
+
 import { StaticImageData } from "next/image";
 export const FAQ = [
   {
@@ -359,7 +363,7 @@ export const USER_TYPE: Record<
   candidates: {
     label: "Candidates",
     featureTitle: "Smarter Hiring, Faster Results",
-    url: AssementsWhats,
+    url: AssementsWhats1,
     description:
       "Hiring delays cost businesses time and money. Our assessments eliminate unqualified candidates, reduce time-to-hire, and ensure only the best talent moves forward.",
     benefits: [
@@ -371,7 +375,6 @@ export const USER_TYPE: Record<
       { point: "Identify high-potential talent.", icon: <User size={24} /> },
     ],
     whyUseTitle: "Featured On",
-    whyUseURL: AssementsWhats,
     whyFeaturedOn: [
       {
         point: "Time-Saving Process",
@@ -408,7 +411,7 @@ export const USER_TYPE: Record<
   employees: {
     label: "Employees",
     featureTitle: "Elevating Employee Performance",
-    url: AssementsWhats,
+    url: AssementsWhats2,
     description:
       "Traditional performance reviews are biased and outdated. Regular, objective assessments help employees stay sharp, track their growth, and stay motivated through KPI-driven evaluations.",
     benefits: [
@@ -423,7 +426,6 @@ export const USER_TYPE: Record<
       },
     ],
     whyUseTitle: "Featured On",
-    whyUseURL: AssementsWhats,
     whyFeaturedOn: [
       {
         point: "Nurture High Achievers",
@@ -460,7 +462,7 @@ export const USER_TYPE: Record<
   partners: {
     label: "Partners",
     featureTitle: "Strengthening Partner Networks",
-    url: AssementsWhats,
+    url: AssementsWhats3,
     description:
       "Business partners drive success, but assessing their expertise is time-consuming. Our automated competency evaluations ensure you work with only the best partners, reducing risk and boosting performance.",
     benefits: [
@@ -469,7 +471,6 @@ export const USER_TYPE: Record<
       { point: "Reduce project risks.", icon: <AlertCircle size={24} /> },
     ],
     whyUseTitle: "Featured on",
-    whyUseURL: AssementsWhats,
     whyFeaturedOn: [
       {
         point: "Nurture High Achievers",

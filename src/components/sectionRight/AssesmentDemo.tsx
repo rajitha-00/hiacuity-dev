@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { Button } from "../ui/button";
 import { Input } from "../ui/input";
 import {
@@ -40,7 +41,6 @@ export const AssesmentDemo = (props: IAssesmentDemo) => {
                 <BookOpenCheck size={60} className="text-white" />
                 <h3 className="text-white text-xl">SISO : Assesment</h3>
               </div>
-
               <div className="mt-5 brder-t border-white">
                 <p className="text-white text-xs">Ask for Demo</p>
                 <Input
@@ -67,9 +67,14 @@ export const AssesmentDemo = (props: IAssesmentDemo) => {
                   </SelectContent>
                 </Select>
               </div>
-              <Button className="relative mt-6 rounded-xl w-full md:w-auto  px-4 py-2.5 text-sm font-semibold text-primary-dark shadow-md  transition duration-300 ease-in-out">
-                {buttonLabel}
-              </Button>
+
+              <div className="flex md:flex-row flex-col gap-2">
+                <Link href="/contact">
+                  <Button className="relative mt-6 rounded-xl w-full md:w-auto  px-4 py-2.5 text-sm font-semibold text-primary-dark shadow-md  transition duration-300 ease-in-out">
+                    {buttonLabel}
+                  </Button>
+                </Link>
+              </div>
             </div>
           </div>
         </div>

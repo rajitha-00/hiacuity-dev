@@ -2,7 +2,8 @@
 import { Fade } from "react-awesome-reveal";
 import { Button } from "../ui/button";
 import Image from "next/image";
-import HireSmater from "../../assets/images/HireSmaterImage.png";
+import HireSmater from "../../assets/images/HireSmaterImage.svg";
+import Link from "next/link";
 export const RequestDemoOrTrial = () => {
   return (
     <div className={`relative mx-auto w-full h-auto  z-10`}>
@@ -18,7 +19,7 @@ export const RequestDemoOrTrial = () => {
               alt="HIAcuity is ai hiring platform"
               src={HireSmater}
               fill
-              className="object-contain"
+              className="object-cover md:rounded-[50px]"
             />
           </Fade>
         </div>
@@ -36,12 +37,17 @@ export const RequestDemoOrTrial = () => {
           </Fade>
           <Fade triggerOnce direction="up" delay={400}>
             <div className="flex md:flex-row flex-col gap-2">
-              <Button className="relative mt-4 rounded-xl bg-primary-dark px-4 py-2.5 text-sm font-semibold text-white shadow-md    transition duration-300 ease-in-out">
-                Start Your Free Trial
-              </Button>
-              <Button className="relative mt-4 rounded-xl outline outline-2 outline-primary-dark px-4 py-2.5 text-sm font-semibold text-primary-dark shadow-md    transition duration-300 ease-in-out">
-                Get a Demo
-              </Button>
+              <Link href="/pricing">
+                <Button className="relative mt-4 rounded-xl bg-primary-dark px-4 py-2.5 text-sm font-semibold text-white shadow-md transition duration-300 ease-in-out">
+                  Start Your Free Trial
+                </Button>
+              </Link>
+
+              <Link href="/contact">
+                <Button className="relative mt-4 rounded-xl outline outline-2 outline-primary-dark px-4 py-2.5 text-sm font-semibold text-primary-dark shadow-md transition duration-300 ease-in-out">
+                  Get a Demo
+                </Button>
+              </Link>
             </div>
           </Fade>
         </div>

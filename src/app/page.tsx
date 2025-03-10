@@ -26,6 +26,7 @@ import { SectionLeftImage } from "@/components/sectionLeft";
 import BGImage from "../assets/images/GetADemoBg.png";
 import { CircleCheckBig } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 const features = [
   { src: AIIcon, title: "AI Enriched Recruitment" },
   { src: AUTSVG, title: "Automated Workflows" },
@@ -72,13 +73,18 @@ export default function Home() {
               </h2>
 
               <Fade triggerOnce direction="up" delay={400}>
-                <div className="flex flex-row mx-auto gap-2">
-                  <Button className="relative  rounded-lg bg-primary-dark px-4 py-2.5 text-sm font-semibold text-white shadow-md    transition duration-300 ease-in-out">
-                    Get Started
-                  </Button>
-                  <Button className="relative  rounded-lg outline outline-1 outline-primary-dark px-4 py-2.5 text-sm font-semibold text-primary-dark shadow-md    transition duration-300 ease-in-out">
-                    Get a Demo
-                  </Button>
+                <div className="flex md:flex-row flex-col gap-2">
+                  <Link href="/pricing">
+                    <Button className="relative mt-4 rounded-xl bg-primary-dark px-4 py-2.5 text-sm font-semibold text-white shadow-md transition duration-300 ease-in-out">
+                      Start Your Free Trial
+                    </Button>
+                  </Link>
+
+                  <Link href="/contact">
+                    <Button className="relative mt-4 rounded-xl outline outline-2 outline-primary-dark px-4 py-2.5 text-sm font-semibold text-primary-dark shadow-md transition duration-300 ease-in-out">
+                      Get a Demo
+                    </Button>
+                  </Link>
                 </div>
               </Fade>
             </div>

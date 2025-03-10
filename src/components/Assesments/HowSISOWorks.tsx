@@ -33,7 +33,7 @@ export const HowSISOWorks = () => {
               className={`relative px-6 py-2 w-[120px] md:w-auto rounded-full font-medium transition-all duration-300 ease-in-out
         ${
           selectedType === type
-            ? "bg-primary-main text-white shadow-lg"
+            ? "bg-primary-dark text-white shadow-lg"
             : "bg-transparent text-gray-600 hover:bg-gray-300"
         }
       `}
@@ -52,7 +52,7 @@ export const HowSISOWorks = () => {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -20 }}
           transition={{ duration: 0.4 }}
-          className="flex flex-col gap-10 lg:flex-row justify-between items-center mt-10"
+          className="flex flex-col gap-10 md:gap-20 lg:flex-row justify-between items-center mt-10"
         >
           {/* Image Section */}
           <Fade triggerOnce delay={100}>
@@ -60,7 +60,7 @@ export const HowSISOWorks = () => {
               <Image
                 alt={USER_TYPE[selectedType].featureTitle}
                 src={USER_TYPE[selectedType].url}
-                className="w-full object-cover rounded-lg shadow-lg"
+                className="w-full object-cover rounded-[50px] shadow-lg"
               />
             </div>
           </Fade>
@@ -84,7 +84,7 @@ export const HowSISOWorks = () => {
                     key={benefit.point}
                     className="flex items-center space-x-3"
                   >
-                    <div className="flex items-center justify-center bg-primary-main p-5 rounded-lg text-white shadow-md">
+                    <div className="flex items-center justify-center bg-primary-dark p-5 rounded-lg text-white shadow-md">
                       {benefit.icon}
                     </div>
                     <span className="text-lg text-gray-700">

@@ -1,6 +1,7 @@
 "use client";
 import { useParams, notFound } from "next/navigation";
 import { BLOG_DATA } from "@/constants";
+import Image from "next/image";
 
 export default function BlogDetail() {
   const params = useParams();
@@ -21,9 +22,11 @@ export default function BlogDetail() {
 
   return (
     <div className="max-w-4xl mx-auto p-6">
-      <img
+      <Image
         src={blog.imageSrc}
         alt={blog.title}
+        layout="fill"
+        objectFit="contain"
         className="w-full h-80 object-cover rounded-md mb-6"
       />
       <h1 className="text-3xl font-semibold mb-4">{blog.title}</h1>
