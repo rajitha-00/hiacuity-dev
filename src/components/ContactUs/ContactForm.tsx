@@ -80,10 +80,13 @@ export default function ContactForm() {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          to: "michael.cooray@hiacuity.com",
           subject: "New Contact Inquiry",
-
-          message: `Name: ${formData.firstName} ${formData.lastName}\nCompany: ${formData.email}\nIndustry: ${formData.industry}\nCompany: ${formData.companyName}\nIndustry: ${formData.industry}\nCountry: ${formData.country}\nDescription: ${formData.description}`,
+          message: `Name: ${formData.firstName} ${formData.lastName}
+Email: ${formData.email}
+Company: ${formData.companyName}
+Industry: ${formData.industry}
+Country: ${formData.country}
+Description: ${formData.description}`,
         }),
       });
 

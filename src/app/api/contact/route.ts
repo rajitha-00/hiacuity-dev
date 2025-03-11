@@ -108,10 +108,10 @@ const generateEmailTemplate = (subject: string, message: string) => `
 export async function POST(req: Request) {
   try {
     // Parse request body
-    const { to, subject, message } = await req.json();
+    const { subject, message } = await req.json();
 
     // Validate required fields
-    if (!to || !subject || !message) {
+    if (!subject || !message) {
       return NextResponse.json(
         {
           success: false,
@@ -127,7 +127,7 @@ export async function POST(req: Request) {
     // SES email parameters
     const params = {
       Source: process.env.AWS_SES_FROM_EMAIL,
-      Destination: { ToAddresses: [to] },
+      Destination: { ToAddresses: ["michael.cooray@hiacuity.com"] },
       Message: {
         Subject: { Data: subject },
         Body: {
