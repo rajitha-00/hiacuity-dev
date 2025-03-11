@@ -5,6 +5,7 @@ import { OurValues } from "@/components/OurValues";
 import OurMissionImage from "../../assets/images/OurMission.svg";
 import OurVisionImage from "../../assets/images/OurVision.svg";
 import OurStoryImage from "../../assets/images/OurStory.svg";
+import FounderImage from "../../assets/images/Founder.svg";
 import HeroImage from "../../assets/homepage/AboutHero.svg";
 import { Metadata } from "next";
 export const metadata: Metadata = {
@@ -69,16 +70,14 @@ export default function About() {
         ></div>
         <div className="flex flex-col z-10 gap-16  md:gap-32 pt-10 md:pt-20">
           <SectionLeftImage
-            label="Michael Cooray : CEO"
+            label="Michael Cooray : Founder"
             title="Meet Our Founder "
-            description="Michael Cooray, our visionary founder, brings over two decades of experience in AI and technology. Her passion for leveraging AI and data to improve decision-making has driven HIAcuity's mission since its inception. Under her leadership, we continue to push the boundaries of what's possible with AI innovation."
-            imageSrc={
-              "https://media.licdn.com/dms/image/v2/D5603AQGLxY-3THLH5Q/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1722490038263?e=1746662400&v=beta&t=2s_kaVd7ThSgJ8dn_xyvP6PIXZWSe9IZKaAe8wv8DlQ"
-            }
+            description="Michael Cooray, our visionary founder, brings over two decades of experience in AI and technology. His passion for leveraging AI and data to improve decision-making has driven HIAcuity's mission since its inception. Under His leadership, we continue to push the boundaries of what's possible with AI innovation."
+            imageSrc={FounderImage}
           />
           <SectionRightImage
             title="Our Story"
-            description="HIAcuity started as a small startup with a big dream: to harness the power of AI and data to transform industries. Over the years, our dedication to innovation and excellence has propelled us to the forefront of AI analytics. Today, we are proud to support organizations worldwide in their quest for transformative outcomes through AI-driven insights."
+            description="HiAcuity started as a small startup with a big dream: to harness the power of AI and data to transform industries. Over the years, our dedication to innovation and excellence has propelled us to the forefront of AI analytics. Today, we are proud to support organizations worldwide in their quest for transformative outcomes through AI-driven insights."
             imageSrc={OurStoryImage}
           />
         </div>
@@ -86,7 +85,7 @@ export default function About() {
       {/* <div className="relative isolate px-6 pt-20 md:pt-40 w-full lg:px-8 max-w-[1600px] mx-auto ">
         <BecomeATeamMember
           title="Become a team member"
-          description="Are you passionate about making a difference with AI? At HIAcuity, we are always looking for talented individuals who share our values and vision. Our AI-powered tools, such as job openings CV filters and AI-supported assessment generators, enhance our recruitment process. Join us and be part of a dynamic team that is shaping the future of insights. Explore our current openings and apply today!"
+          description="Are you passionate about making a difference with AI? At HiAcuity, we are always looking for talented individuals who share our values and vision. Our AI-powered tools, such as job openings CV filters and AI-supported assessment generators, enhance our recruitment process. Join us and be part of a dynamic team that is shaping the future of insights. Explore our current openings and apply today!"
           buttonLable="See Open Roles"
         />
       </div> */}

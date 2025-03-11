@@ -43,7 +43,7 @@ export const GetADemoAssesment = () => {
           </Fade>
           <Fade triggerOnce direction="up" delay={300}>
             <p className="mt-2 text-start text-sm md:text-lg md:text-justify text-white">
-              Unlock the power of HI Acuity to streamline your hiring process,
+              Unlock the power of HiAcuity to streamline your hiring process,
               eliminate guesswork, and identify top talent with precision.
             </p>
           </Fade>

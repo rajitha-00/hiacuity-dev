@@ -220,12 +220,12 @@ export const JOB_OPENINGS_WHAT_SET_US_APART = [
     index: 1,
     title: "Job Posting",
     description:
-      "One-click applications eliminate form-filling. AI extracts details instantly and reads every resume for the perfect match.",
+      "One-click applications eliminate form-filling. AI extracts details instantly and reads every single word on every single resume for the perfect match.",
     url: JobPostingsSVG,
   },
   {
     index: 2,
-    title: "Applicant Analysis",
+    title: "Applicant Analysis (Patent Pending)",
     description:
       "Analyze thousands of applicants in one view. AI-powered filtering, keyword matching, and 3D clustering refine selections effortlessly.",
     url: ApplicantAnalizeSVG,
@@ -248,7 +248,7 @@ export const JOB_OPENINGS_WHAT_SET_US_APART = [
     index: 5,
     title: "Auto Assessments",
     description:
-      "Validate skills with AI-generated tests. Build assessments in seconds and shortlist the most qualified candidates.",
+      "Validate skills with AI-generated tests. Build assessments in seconds and shortlist the most qualified candidates based on objective metrics.",
     url: AutoAssesmentSVG,
   },
   {

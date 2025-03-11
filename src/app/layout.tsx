@@ -12,7 +12,7 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-  title: "Hi Acuity",
+  title: "HiAcuity",
   description:
     "HiAcuity is an automation technology and software development company. Our platform helps organisations assess the skills of job candidates, employees and partners.",
 };

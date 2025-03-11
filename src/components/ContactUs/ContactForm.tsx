@@ -38,8 +38,7 @@ const countries = [
   "Vietnam",
   "Indonesia",
   "Bangladesh",
-  " South Korea",
-  "Japan",
+  "South Korea",
   "New Zealand",
 ];
 

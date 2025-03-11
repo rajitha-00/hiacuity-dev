@@ -21,7 +21,7 @@ export default function Pricing() {
         title3=""
         url={PricingHero}
         cta=""
-        heroText="HiAcuity platform transforms job recruitment with AI-driven precision. Automate candidate screening, match talent to the right roles, and conduct Smart Interviews."
+        heroText="HiAcuity’s SISO platform transforms job recruitment with AI-driven precision. Seamlessly find outstanding candidates for short listing, automate candidate screening and assessments, and conduct Smart Interviews to significantly reduce the overall time to hire."
         hasImage={false}
       />
       <div className="h-auto pt-20  w-full ">
@@ -53,7 +53,7 @@ export default function Pricing() {
       </div>
       <div className="h-auto   w-full mt-20 md:mt-32  ">
         <div className="relative isolate px-6 md:py-8 lg:px-8 max-w-[1600px] mx-auto">
-          <RequestDemoOrTrial />
+          <RequestDemoOrTrial isJobOpenings />
         </div>
       </div>
     </div>

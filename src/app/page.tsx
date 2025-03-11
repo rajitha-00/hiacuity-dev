@@ -142,10 +142,11 @@ export default function Home() {
         <div className="flex flex-col z-10 gap-20 md:pt-20">
           <SectionLeftImage
             label="JOB OPENINGS"
-            title="Smart Screening"
-            description=" Automated filtering quickly identifies top candidates, making it easy to spot the most qualified
+            title="Smart Hiring"
+            description="Utilise AI and automation from Job Requisition to Candidate Job Offer.
+Quickly identify top candidates, making it easy to spot the most qualified
                 individuals early in the hiring process. Enhanced by AI precision, this approach reduces bias and
-                increases accuracy, ensuring a fairer and more reliable selection. By streamlining initial screenings,
+                increases accuracy, ensuring a fairer and more reliable selection. By streamlining initial screenings & interviews,
                 these tools also save valuable time, allowing recruiters to focus on meaningful candidate interactions."
             buttonLabel=""
             imageSrc={FeatureImage1}
@@ -155,8 +156,8 @@ export default function Home() {
 
           <SectionRightImage
             label="Assessments"
-            title="Effortless Hiring"
-            description="A seamless recruitment process is achieved by using intuitive tools that simplify each step, making it easier for recruiters to manage and track progress. Low touch assessments is facilitated through automated workflows, allowing hiring to accelerate efficiently. This enhanced approach improves overall satisfaction for both candidates and recruiters, creating a positive and streamlined experience."
+            title="Multipurpose Assessment Platform."
+            description="Assessing skills is highly important for hiring new candidates, understanding employee performance, and validating partner capabilities. Low touch assessments are facilitated through automated workflows, allowing skill verifications to accelerate efficiently. This enhanced approach improves overall satisfaction and creates a positive and streamlined experience."
             buttonLabel=""
             imageSrc={FeatureImage2}
             hasBg
@@ -200,7 +201,7 @@ export default function Home() {
             </div>
             <div className="col-span-1">
               <FeatureCard
-                description="A seamless recruitment process is achieved by using intuitive tools that simplify each step, making it easier for recruiters to manage and track progress. Quick onboarding is facilitated through automated workflows, allowing hiring to accelerate efficiently. This enhanced approach improves overall satisfaction for both candidates and recruiters, creating a positive and streamlined experience."
+                description="Assessing skills is highly important for hiring new candidates, understanding employee performance, and validating partner capabilities. Low touch assessments are facilitated through automated workflows, allowing skill verifications to accelerate efficiently. This enhanced approach improves overall satisfaction and creates a positive and streamlined experience."
                 imageSrc={Assements}
                 title="Assessment"
                 navigateTo={"/employee-assements"}

@@ -16,7 +16,8 @@ export const WhatSetUsApart = () => {
         </h2>
         <Fade direction="up" triggerOnce delay={300}>
           <p className=" text-pretty md:text-lg font-medium text-text-primary text-center sm:text-xl/8">
-            HiAcuity is free to trial for as long as you’d like
+            End to end modular recruiting platform for all stages of the
+            recruiting process.
           </p>
         </Fade>
       </div>

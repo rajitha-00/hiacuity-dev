@@ -57,7 +57,7 @@ export default function Pricing() {
       </div>
       <h2 className="text-3xl md:text-5xl mt-20 md:mt-40 font-semibold text-text-primary">
         <span className="text-balance md:text-8xl text-7xl font-extrabold tracking-tight bg-gradient-to-tr from-primary-dark bg-primary-main bg-clip-text text-transparent">
-          TRY 2 MONTHS FOR FREE!
+          TRY 1 MONTHS FOR FREE!
         </span>
       </h2>
     </div>

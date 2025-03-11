@@ -9,26 +9,29 @@ interface Reason {
 const reasons: Reason[] = [
   {
     title: "Resumes Can be Misleading",
-    description: "Candidates may exaggerate or falsify details.",
+    description:
+      "Let the HiAcuity SISO platform validate candidates skills and abilities without the need to spend your valuable time on this important task.",
   },
   {
-    title: "Online Tests Are Easy to Cheat",
-    description: "Impersonation and internet searches distort results.",
+    title: "Faster decision making ",
+    description:
+      "Utilizing AI to summarise, score and compare candidates allows for quicker decision making after each interview round.",
   },
   {
     title: "Human Reviews Are Slow & Biased",
     description: "Time-consuming and subjective evaluations.",
   },
   {
-    title: "Recruiters Lack Time & Expertise",
-    description: "Validation requires deep technical knowledge.",
+    title: "Recruiters Lack Expertise",
+    description:
+      "Let us step in the shoes of your hiring managers to validate key competencies required for the multitude of roles within an organisation.",
   },
 ];
 
 export const WhyChooseHiAcuity = () => {
   return (
     <div className="relative mx-auto w-full h-auto z-10">
-      <div className="mx-auto flex flex-col lg:flex-row items-center justify-between">
+      <div className="mx-auto flex flex-col gap-10 md:gap-20 lg:flex-row items-center justify-between">
         <div className="text-start w-full lg:text-start">
           <Fade triggerOnce direction="up" delay={100}>
             <div className="border border-primary-dark rounded-3xl p-2 w-[120px] md:w-[160px] flex justify-center items-center mr-2 md:mb-4">
@@ -39,7 +42,7 @@ export const WhyChooseHiAcuity = () => {
           </Fade>
           <Fade triggerOnce direction="up" delay={200}>
             <h2 className="text-5xl mt-5 md:text-6xl font-semibold text-text-primary">
-              HIAcuity;
+              HiAcuity;
               <br />
               Smarter Hiring,
               <br />
@@ -48,7 +51,8 @@ export const WhyChooseHiAcuity = () => {
           </Fade>
           <Fade triggerOnce direction="up" delay={300}>
             <p className="mt-5 text-start text-sm md:text-lg md:text-justify text-text-primary">
-              The only way to measure real ability.
+              Empowering recruiters with cutting edge technology to hire the
+              best available candidate.
             </p>
           </Fade>
         </div>

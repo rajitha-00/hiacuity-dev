@@ -4,7 +4,11 @@ import { Button } from "../ui/button";
 import Image from "next/image";
 import HireSmater from "../../assets/images/HireSmaterImage.svg";
 import Link from "next/link";
-export const RequestDemoOrTrial = () => {
+interface IRequestDemoTrial {
+  isJobOpenings?: boolean;
+}
+export const RequestDemoOrTrial = (props: IRequestDemoTrial) => {
+  const { isJobOpenings } = props;
   return (
     <div className={`relative mx-auto w-full h-auto  z-10`}>
       <div
@@ -26,13 +30,15 @@ export const RequestDemoOrTrial = () => {
         <div className="text-start p-6 md:p-16 w-full justify-center ">
           <Fade triggerOnce direction="up" delay={200}>
             <h2 className="text-4xl md:text-6xl font-semibold text-text-primary">
-              Hire Smarter, <br /> Faster & With Confidence
+              {isJobOpenings ? "Hire Smarter," : "Assess Smarter,"} <br />{" "}
+              Faster & With Confidence
             </h2>
           </Fade>
           <Fade triggerOnce direction="up" delay={300}>
             <p className="mt-5 text-start text-sm md:text-lg md:text-justify text-text-primary">
-              Unlock the power of HI Acuity to streamline your hiring process,
-              eliminate guesswork, and identify top talent with precision.
+              {isJobOpenings
+                ? "Unlock the power of HiAcuity to streamline your hiring process, eliminate guesswork, and identify top talent with precision."
+                : "Unlock the power of HiAcuity to streamline your assessment process, eliminate guesswork, and identify the best available candidates, employees and partners.r"}
             </p>
           </Fade>
           <Fade triggerOnce direction="up" delay={400}>

@@ -113,7 +113,7 @@ export const PricingCards = () => {
         </h2>
         <Fade direction="up" triggerOnce delay={300}>
           <p className=" text-pretty md:text-lg font-medium text-white text-center sm:text-xl/8">
-            HiAcuity is free to trial for as long as you’d like
+            All prices are in USD. All plans include a 30-day free trial.
           </p>
         </Fade>
       </div>
