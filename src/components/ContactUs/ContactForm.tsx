@@ -31,6 +31,16 @@ const countries = [
   "Italy",
   "Sri Lanka",
   "Spain",
+  "Hong Kong",
+  "Singapore",
+  "Malaysia",
+  "Thailand",
+  "Vietnam",
+  "Indonesia",
+  "Bangladesh",
+  " South Korea",
+  "Japan",
+  "New Zealand",
 ];
 
 const industries = [
